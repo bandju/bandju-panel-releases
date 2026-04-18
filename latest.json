@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "channel": "stable",
   "version": "1.1.8",
-  "publishedAt": "2026-04-18T17:04:51.731Z",
+  "publishedAt": "2026-04-18T17:33:50.893Z",
   "releaseNotes": {
     "ru": [
       "Первый публичный stable-релиз Bandju Panel 1.1.8.",
@@ -20,11 +20,11 @@
     "downloads": {
       "macos": {
         "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.8/Bandju-Panel_1.1.8_universal.dmg",
-        "sha256": "9ef814d66f3d09b026b0ffc44181b3b1b6967be6da1880dc3334f49110497c75"
+        "sha256": "ba9fc02bdbffccaaf817bc003ddb369488248f568402822ba5689fffacff7e8d"
       },
       "windows": {
         "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.8/Bandju-Panel_1.1.8_windows_x64_setup.exe",
-        "sha256": "198aef5e2899bac88a73004f8f3b1ae6d9ed214c5b85787d514ba03e30419fa7"
+        "sha256": "55e1f55c5550c143e83088a956dcf1974507c4f687657db7d5ef845ad38612ca"
       }
     }
   },
