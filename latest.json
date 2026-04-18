@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "channel": "stable",
+  "version": "1.1.8",
+  "publishedAt": "2026-04-18T09:46:39.450Z",
+  "releaseNotes": {
+    "ru": [
+      "Первый публичный stable-релиз Bandju Panel 1.1.8.",
+      "Launcher и panel получили единый центр обновлений.",
+      "Production-обновление panel теперь опирается на опубликованный release image, а не на локальный source tree."
+    ],
+    "en": [
+      "First public Bandju Panel 1.1.8 stable release.",
+      "Launcher and panel now share one update center.",
+      "Production panel updates now use a published release image instead of the local source tree."
+    ]
+  },
+  "launcher": {
+    "version": "1.1.8",
+    "downloads": {
+      "macos": {
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.8/Bandju-Panel_1.1.8_universal.dmg",
+        "sha256": "512585c6075c2979ffc1d0f3cd1e01bb8aa9b67866dbf9c4b531ec7e8d335184"
+      },
+      "windows": {
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.8/Bandju-Panel_1.1.8_windows_x64_setup.exe",
+        "sha256": ""
+      }
+    }
+  },
+  "panel": {
+    "version": "1.1.8",
+    "image": "ghcr.io/bandju/bandju-panel:1.1.8",
+    "stableImage": "ghcr.io/bandju/bandju-panel:stable",
+    "buildRef": "1.1.8+3516f16",
+    "digest": ""
+  }
+}

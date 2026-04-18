@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a public release issue
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for public release issues such as broken assets, bad download links, update manifest problems, or installer failures.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Which Bandju Panel version is affected?
+      placeholder: "1.1.8"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS
+        - Windows
+        - VPS installer
+        - Release manifest
+        - Download page
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to...
+        2. Download...
+        3. Run...
+        4. See...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Add screenshots or relevant error output if available.
