@@ -1,38 +1,44 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.1.8",
-  "publishedAt": "2026-04-18T17:33:50.893Z",
+  "version": "1.1.9",
+  "publishedAt": "2026-04-20T15:02:38.611Z",
   "releaseNotes": {
     "ru": [
-      "Первый публичный stable-релиз Bandju Panel 1.1.8.",
-      "Launcher и panel получили единый центр обновлений.",
-      "Production-обновление panel теперь опирается на опубликованный release image, а не на локальный source tree."
+      "Исправлено сохранение архива диагностики: launcher теперь спрашивает, куда сохранить файл.",
+      "Исправлено открытие журнала из бокового меню.",
+      "Исправлены переводы и runtime-сообщения в модальных окнах presets, транспорта и сервисов.",
+      "Overlay при переключении VPS теперь держится до завершения операции.",
+      "Индикаторы CPU, RAM и диска теперь отрисовываются через SVG, чтобы одинаково выглядеть на macOS и Windows.",
+      "Panel получила последние исправления установки, preset-flow, MTProto и runtime-сообщений."
     ],
     "en": [
-      "First public Bandju Panel 1.1.8 stable release.",
-      "Launcher and panel now share one update center.",
-      "Production panel updates now use a published release image instead of the local source tree."
+      "Fixed diagnostics archive export: the launcher now asks where to save the file.",
+      "Fixed opening the logs screen from the sidebar.",
+      "Fixed translations and runtime messages in preset, transport, and service confirmation modals.",
+      "The VPS switching overlay now stays visible until the operation finishes.",
+      "CPU, RAM, and disk indicators now render as SVG for consistent display on macOS and Windows.",
+      "Panel includes the latest install, preset-flow, MTProto, and runtime-message fixes."
     ]
   },
   "launcher": {
-    "version": "1.1.8",
+    "version": "1.1.9",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.8/Bandju-Panel_1.1.8_universal.dmg",
-        "sha256": "ba9fc02bdbffccaaf817bc003ddb369488248f568402822ba5689fffacff7e8d"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.9/Bandju-Panel_1.1.9_universal.dmg",
+        "sha256": "25cbf7af727c5e7f0a93a92386b5c41566ff78d8b2d8c5f12998ddd4027e2e9e"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.8/Bandju-Panel_1.1.8_windows_x64_setup.exe",
-        "sha256": "55e1f55c5550c143e83088a956dcf1974507c4f687657db7d5ef845ad38612ca"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.9/Bandju-Panel_1.1.9_windows_x64_setup.exe",
+        "sha256": "9dee53713998bf624bbc4a3e0040bf47a70dad4dc3e8bd904103887707791b52"
       }
     }
   },
   "panel": {
-    "version": "1.1.8",
-    "image": "ghcr.io/bandju/bandju-panel:1.1.8",
+    "version": "1.1.9",
+    "image": "ghcr.io/bandju/bandju-panel:1.1.9",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.1.8+72e625d",
-    "digest": "sha256:306fc4660ce43503abe5d9cf6bf37e56c6de833ebe865c257b004ac73494ba5b"
+    "buildRef": "1.1.9+cf41b7f",
+    "digest": "sha256:e514667b8abde8542678309a6f784fb79d1dede373112b102b14e1011636946d"
   }
 }
