@@ -1,44 +1,42 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.1.9",
-  "publishedAt": "2026-04-20T15:02:38.611Z",
+  "version": "1.1.10",
+  "publishedAt": "2026-04-23T11:45:46.199Z",
   "releaseNotes": {
     "ru": [
-      "Исправлено сохранение архива диагностики: launcher теперь спрашивает, куда сохранить файл.",
-      "Исправлено открытие журнала из бокового меню.",
-      "Исправлены переводы и runtime-сообщения в модальных окнах presets, транспорта и сервисов.",
-      "Overlay при переключении VPS теперь держится до завершения операции.",
-      "Индикаторы CPU, RAM и диска теперь отрисовываются через SVG, чтобы одинаково выглядеть на macOS и Windows.",
-      "Panel получила последние исправления установки, preset-flow, MTProto и runtime-сообщений."
+      "Улучшено сохранение конфигов Amnezia и тексты обновлений.",
+      "Исправлены статусы, активность и трафик клиентов.",
+      "Улучшена установка MTProto и сообщения о прогрессе.",
+      "Улучшена совместимость с AmneziaWG-клиентами, созданными вне Bandju Panel.",
+      "Обновлен macOS DMG."
     ],
     "en": [
-      "Fixed diagnostics archive export: the launcher now asks where to save the file.",
-      "Fixed opening the logs screen from the sidebar.",
-      "Fixed translations and runtime messages in preset, transport, and service confirmation modals.",
-      "The VPS switching overlay now stays visible until the operation finishes.",
-      "CPU, RAM, and disk indicators now render as SVG for consistent display on macOS and Windows.",
-      "Panel includes the latest install, preset-flow, MTProto, and runtime-message fixes."
+      "Improved Amnezia config saving and update texts.",
+      "Fixed client status, activity, and traffic display.",
+      "Improved MTProto installation progress messages.",
+      "Improved compatibility with AmneziaWG clients created outside Bandju Panel.",
+      "Polished the macOS DMG."
     ]
   },
   "launcher": {
-    "version": "1.1.9",
+    "version": "1.1.10",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.9/Bandju-Panel_1.1.9_universal.dmg",
-        "sha256": "25cbf7af727c5e7f0a93a92386b5c41566ff78d8b2d8c5f12998ddd4027e2e9e"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.10/Bandju-Panel_1.1.10_universal.dmg",
+        "sha256": "047ed2a0df2320e312bedae8ed00015f4929dd90457372152fe146f187a6e4f5"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.9/Bandju-Panel_1.1.9_windows_x64_setup.exe",
-        "sha256": "9dee53713998bf624bbc4a3e0040bf47a70dad4dc3e8bd904103887707791b52"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.10/Bandju-Panel_1.1.10_windows_x64_setup.exe",
+        "sha256": "5bdede76525b9e43968d2eca3d3f2bc357b5cd69e5af1c0bc5aa51b97a70d6d6"
       }
     }
   },
   "panel": {
-    "version": "1.1.9",
-    "image": "ghcr.io/bandju/bandju-panel:1.1.9",
+    "version": "1.1.10",
+    "image": "ghcr.io/bandju/bandju-panel:1.1.10",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.1.9+cf41b7f",
-    "digest": "sha256:e514667b8abde8542678309a6f784fb79d1dede373112b102b14e1011636946d"
+    "buildRef": "1.1.10+afd65d4",
+    "digest": "sha256:90180196541c756e24deffb551718cba8050c1ff453abcd025835082895d57b8"
   }
 }
