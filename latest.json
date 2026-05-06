@@ -1,40 +1,40 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.1.11",
-  "publishedAt": "2026-05-01T23:12:58.069Z",
+  "version": "1.1.12",
+  "publishedAt": "2026-05-06T22:24:13.469Z",
   "releaseNotes": {
     "ru": [
-      "Обновления теперь запускаются одной кнопкой: launcher и panel обновляются в одном потоке, если для них доступны новые версии.",
-      "Окно обновлений стало проще: информация по launcher и panel объединена в одну карточку, а откат скрыт из основного потока.",
-      "Исправлено удаление клиентов AmneziaWG и XRay: удаленные клиенты больше не должны оставаться в списке доступов.",
-      "Добавлен режим приватности для скрытия IP-адресов в интерфейсе."
+      "Улучшена работа SSH на Windows и после переустановки VPS.",
+      "Добавлена проверка ОС VPS перед установкой.",
+      "Улучшен прогресс установки MTProto и XRay.",
+      "Сайдбар стал компактнее и удобнее."
     ],
     "en": [
-      "Updates now run from one button: the launcher and panel update in one flow when new versions are available.",
-      "The updates dialog is simpler: launcher and panel information is combined in one card, and rollback is hidden from the main flow.",
-      "Fixed AmneziaWG and XRay client deletion so removed clients no longer linger in the access list.",
-      "Added a privacy mode for hiding IP addresses in the interface."
+      "Improved SSH handling on Windows and after VPS reinstall.",
+      "Added VPS OS check before installation.",
+      "Improved MTProto and XRay install progress.",
+      "Made the sidebar more compact and easier to use."
     ]
   },
   "launcher": {
-    "version": "1.1.11",
+    "version": "1.1.12",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.11/Bandju-Panel_1.1.11_universal.dmg",
-        "sha256": "4bcdd332711f70942684927fa4859b83fbe32b39536fa51cb930fc0c3d648384"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.12/Bandju-Panel_1.1.12_universal.dmg",
+        "sha256": "61513ed0238887b1ea546b701f3873606f9453351f66bd7df60a547ad7ca3e7d"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.11/Bandju-Panel_1.1.11_windows_x64_setup.exe",
-        "sha256": "1895c58bae749be5bae19be67be07d07b7b0713597726fc0e334d080e077da6d"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.1.12/Bandju-Panel_1.1.12_windows_x64_setup.exe",
+        "sha256": "0b532c8de0b01170c75259c4c0024c624b6694275b16f1e24e72d0104921485b"
       }
     }
   },
   "panel": {
-    "version": "1.1.11",
-    "image": "ghcr.io/bandju/bandju-panel:1.1.11",
+    "version": "1.1.12",
+    "image": "ghcr.io/bandju/bandju-panel:1.1.12",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.1.11+2fc1bf8",
-    "digest": "sha256:b0dc36355d85d887a805e3a5b2396a18a5974e5d8e3c1a1995dd2cb2ef22a415"
+    "buildRef": "1.1.12+725136e",
+    "digest": "sha256:8484b97ae2af39308d0519f2f89abb4bf552693eca9bd0277caca683800b341c"
   }
 }

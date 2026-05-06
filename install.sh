@@ -26,6 +26,31 @@ warn()  { echo -e "${YELLOW}[!]${NC} $*"; }
 error() { echo -e "${RED}[✗]${NC} $*"; }
 step()  { echo -e "\n${GREEN}▸${NC} $*"; }
 
+check_supported_os() {
+    local os_id=""
+    local os_version=""
+    local os_pretty="unknown Linux"
+
+    if [ -r /etc/os-release ]; then
+        # shellcheck disable=SC1091
+        . /etc/os-release
+        os_id="${ID:-}"
+        os_version="${VERSION_ID:-}"
+        os_pretty="${PRETTY_NAME:-${NAME:-Linux}}"
+    fi
+
+    case "${os_id}:${os_version}" in
+        ubuntu:22.04|ubuntu:24.04)
+            return 0
+            ;;
+    esac
+
+    error "The VPS OS is not verified for bandju panel: ${os_pretty}."
+    echo "  Supported OS versions: Ubuntu 22.04 LTS and Ubuntu 24.04 LTS."
+    echo "  Debian 13 and other OS versions are not verified and may not work."
+    exit 1
+}
+
 current_timestamp() {
     date -u +"%Y-%m-%dT%H:%M:%SZ"
 }
@@ -275,6 +300,8 @@ wait_healthy() {
 }
 
 do_install() {
+    check_supported_os
+
     step "Checking Docker..."
     check_docker
 
@@ -306,6 +333,8 @@ do_install() {
 }
 
 do_update() {
+    check_supported_os
+
     step "Checking Docker..."
     check_docker
 
