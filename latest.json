@@ -1,42 +1,56 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.2.0",
-  "publishedAt": "2026-05-11T22:01:15.759Z",
+  "version": "1.2.1",
+  "publishedAt": "2026-05-15T10:08:56.078Z",
   "releaseNotes": {
     "ru": [
-      "Добавлены разделы Домен и Gateway.",
-      "Добавлены проверка DNS/портов, выпуск Let's Encrypt сертификата и сайт-заглушка.",
-      "XRay теперь может работать через Gateway на 443 вместе с сайтом-заглушкой.",
-      "В Лайт-доступах добавлен выбор источника для XRay и AmneziaWG.",
-      "Улучшены прогресс долгих операций, приватный режим и состояние интерфейса после установки/обновления."
+      "Улучшена стабильность Cascade: исправлены проблемы после перезагрузки VPS, переключения Entry/Exit и смены Direct/WARP.",
+      "MTProto теперь работает отдельно от Cascade и не ломается при включении каскада для AmneziaWG/XRay.",
+      "Установка MTProto стала быстрее и стабильнее: runtime теперь загружается готовым Docker-образом, без компиляции на каждом VPS.",
+      "Добавлена защита MTProto по числу уникальных IP: по умолчанию включён лимит 1000, чтобы снизить риск перегрузки VPS при утечке ссылки.",
+      "Если VPS не может подключиться к core.telegram.org, MTProto теперь показывает понятное предупреждение в модуле, QR-коде и разделе «Доступы».",
+      "Исправлена генерация XRay-ссылок после изменения домена, SNI или Gateway/self-SNI настроек.",
+      "Исправлено состояние новых клиентов XRay: после создания они больше не остаются полупрозрачными до ручного обновления.",
+      "Улучшено переключение между серверами: launcher корректнее обновляет состояние выбранного VPS, режим Lite/Advanced и баннеры обновлений.",
+      "Исправлена очистка при полном удалении panel: SSH-ключи bandju-launcher больше не плодятся при повторной установке.",
+      "Улучшена первая загрузка модулей: экраны больше не должны показывать пустое состояние, если данные уже есть на VPS.",
+      "RealiTLScanner теперь использует кэш результатов и не запускает повторное сканирование при каждом открытии.",
+      "Исправлены мелкие UX-проблемы: состояние кнопок, прогресс-окна, ширина overlay, длинные домены MTProto, сервисные кнопки и иконка Windows taskbar."
     ],
     "en": [
-      "Added Domain and Gateway sections.",
-      "Added DNS/port checks, Let's Encrypt certificate issuing, and a placeholder website.",
-      "XRay can now run through Gateway on 443 together with the placeholder website.",
-      "Lite Access now lets you choose the source for XRay and AmneziaWG clients.",
-      "Improved long-operation progress, privacy mode, and UI state after install/update flows."
+      "Improved Cascade stability after VPS reboot, Entry/Exit switching, and Direct/WARP changes.",
+      "MTProto now stays separate from Cascade and is not affected when cascade is enabled for AmneziaWG/XRay.",
+      "MTProto installation is faster and more reliable: the runtime is pulled as a ready Docker image instead of being compiled on each VPS.",
+      "Added MTProto protection by unique IP count with the default limit set to 1000 to reduce VPS overload risk if a link leaks.",
+      "If a VPS cannot reach core.telegram.org, MTProto now shows clear warnings in the module, QR code, and Accesses.",
+      "Fixed XRay link generation after domain, SNI, or Gateway/self-SNI changes.",
+      "Fixed new XRay clients staying dimmed until manual refresh.",
+      "Improved server switching: the launcher updates the selected VPS state, Lite/Advanced mode, and update banners more reliably.",
+      "Full panel uninstall now cleans launcher SSH keys so bandju-launcher keys do not multiply across reinstall.",
+      "First module load now refreshes real VPS state more reliably instead of showing empty screens when data already exists.",
+      "RealiTLScanner now caches results and avoids rescanning every time.",
+      "Polished UI details: button states, progress overlays, fixed overlay width, long MTProto domains, service buttons, and the Windows taskbar icon."
     ]
   },
   "launcher": {
-    "version": "1.2.0",
+    "version": "1.2.1",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.2.0/Bandju-Panel_1.2.0_universal.dmg",
-        "sha256": "2925a72c156364b8d3928918c93c30e0d3f590817f29e757ed6e840d668e1af8"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.2.1/Bandju-Panel_1.2.1_universal.dmg",
+        "sha256": "42d3119db569218bd6b9bbc7841a585721a589d11582b9f3f46eb6290d22d7c5"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.2.0/Bandju-Panel_1.2.0_windows_x64_setup.exe",
-        "sha256": "377eab37d33c771f10b8228282517e72bcdb0ccaeabc87fc7bf5505918cd8deb"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.2.1/Bandju-Panel_1.2.1_windows_x64_setup.exe",
+        "sha256": "57ccbc3c8c852e3fc5ad759653aaf80e2b49208abcd3d2ea1c9c0e23c5d0950c"
       }
     }
   },
   "panel": {
-    "version": "1.2.0",
-    "image": "ghcr.io/bandju/bandju-panel:1.2.0",
+    "version": "1.2.1",
+    "image": "ghcr.io/bandju/bandju-panel:1.2.1",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.2.0+a1d1d5d",
-    "digest": "sha256:3dd51953464262bb59262b4c25298ba3ce567aab3d22b585bce3526aaad68e8d"
+    "buildRef": "1.2.1+c68097c",
+    "digest": "sha256:2c8d21661c16e2316304b32111abdf631e119b3d2012e930c47b7518f7c4fd82"
   }
 }
