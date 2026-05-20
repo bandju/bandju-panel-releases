@@ -1,52 +1,36 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.3.0",
-  "publishedAt": "2026-05-19T17:52:37.863Z",
+  "version": "1.3.1",
+  "publishedAt": "2026-05-20T08:30:12.603Z",
   "releaseNotes": {
     "ru": [
-      "Раздел «Доступы» переработан вокруг подписок: несколько XRay-транспортов и AmneziaWG можно объединять в один логический доступ.",
-      "Добавлены постоянные публичные subscription-ссылки /s/..., /raw и /b64 для импорта в совместимые клиенты.",
-      "Публичная страница подписки показывает QR, ссылки, трафик, AmneziaWG-конфиги, скачивание .conf и блок приложений для подключения.",
-      "Добавлены иконки и флаги доступов: они хранятся отдельно от имени, показываются в списке и передаются в VLESS-ссылки для совместимых клиентов.",
-      "В Windows исправлено отображение флагов в launcher и на странице подписки в браузере.",
-      "В «Доступах» добавлен выбор периода трафика: всего, сутки, неделя, месяц и произвольный диапазон.",
-      "Улучшены массовые действия, drag-and-drop подписок, фильтры, модалки, синхронизация строк и защита от устаревших ответов.",
-      "Direct XRay-ссылки и AmneziaWG-конфиги стали доступнее в единой модалке «Доступ».",
-      "Исправлена отрисовка индикаторов нагрузки dashboard в Windows.",
-      "Улучшена устойчивость запуска домена/Gateway, когда сервис поднимается медленнее первого запроса."
+      "Исправлено переключение серверов в Windows: launcher очищает зависшие локальные SSH-туннели, чтобы выбранный VPS и реально открытая panel больше не расходились.",
+      "В «Доступах» дочерние строки внутри сгруппированного доступа стали чуть крупнее и легче читаются."
     ],
     "en": [
-      "Accesses have been redesigned around subscriptions: multiple XRay transports and AmneziaWG can be combined into one logical access.",
-      "Added stable public subscription links: /s/..., /raw, and /b64 for import into compatible clients.",
-      "The public subscription page now shows QR codes, links, traffic, AmneziaWG configs, .conf downloads, and app links for connecting.",
-      "Added access icons and flags: they are stored separately from names, shown in the list, and included in VLESS links for compatible clients.",
-      "Fixed flag rendering on Windows in the launcher and on browser subscription pages.",
-      "Accesses now support traffic period selection: total, day, week, month, and custom range.",
-      "Improved bulk actions, subscription drag and drop, filters, modals, row sync, and stale response protection.",
-      "Direct XRay links and AmneziaWG configs are easier to access from the unified Access modal.",
-      "Fixed dashboard load indicator rendering on Windows.",
-      "Improved Domain/Gateway startup recovery when the service starts slower than the first request."
+      "Fixed server switching on Windows: the launcher now clears stale local SSH tunnels so the selected VPS and the opened panel stay in sync.",
+      "Grouped access child rows in Accesses now use slightly larger text for better readability."
     ]
   },
   "launcher": {
-    "version": "1.3.0",
+    "version": "1.3.1",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.3.0/Bandju-Panel_1.3.0_universal.dmg",
-        "sha256": "55279ddbd0f505b4282d3c113b62d9d19416da41203c27482bcf90fa39015dda"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.3.1/Bandju-Panel_1.3.1_universal.dmg",
+        "sha256": "942bc2212ffe1ca3c8a74d20a5b587a9f6723f2ffdb4e58431557a49c9243987"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.3.0/Bandju-Panel_1.3.0_windows_x64_setup.exe",
-        "sha256": "89c63f6a61895076ae7517bd42b2df134f5395d6072a2ef0b28195ca1d261662"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.3.1/Bandju-Panel_1.3.1_windows_x64_setup.exe",
+        "sha256": "cd2d690374a9ca71f1dd826e142788ade9b5dce6b76a36a846f984f4ccb0c043"
       }
     }
   },
   "panel": {
-    "version": "1.3.0",
-    "image": "ghcr.io/bandju/bandju-panel:1.3.0",
+    "version": "1.3.1",
+    "image": "ghcr.io/bandju/bandju-panel:1.3.1",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.3.0+c3624ab",
-    "digest": "sha256:5f4e4f171642c585fa9bfe5f0d22d721bc2b15e74c2e90e453c3678ae8bac4c0"
+    "buildRef": "1.3.1+cef0034",
+    "digest": "sha256:ab51da5fec376a23966e0cbdf2188898b1dde1d33e63acc8fc37a74546500fec"
   }
 }
