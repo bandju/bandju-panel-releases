@@ -1,36 +1,66 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.3.1",
-  "publishedAt": "2026-05-20T08:30:12.603Z",
+  "version": "1.4.0",
+  "publishedAt": "2026-05-23T21:55:49.676Z",
   "releaseNotes": {
     "ru": [
-      "Исправлено переключение серверов в Windows: launcher очищает зависшие локальные SSH-туннели, чтобы выбранный VPS и реально открытая panel больше не расходились.",
-      "В «Доступах» дочерние строки внутри сгруппированного доступа стали чуть крупнее и легче читаются."
+      "Добавлен модуль SSH-доступ для управления SSH-ключами VPS прямо из Bandju Panel.",
+      "В настройках VPS теперь можно выбрать SSH-ключ для подключения, создать новый ключ, скопировать public key, переименовать или удалить private key.",
+      "Если выбранный SSH-ключ не принят сервером, launcher предложит войти по паролю и обновить SSH-доступ.",
+      "Улучшена работа с SSH-ключами на Windows и исправлены ошибки выбора неподходящих файлов ключей.",
+      "Добавлены лимиты доступа: можно задать лимит трафика и дату окончания для всего Access/подписки или отдельного подключения.",
+      "Доступ автоматически блокируется при достижении лимита трафика или даты окончания, а ручное выключение доступа больше не конфликтует с автоматической блокировкой.",
+      "На странице подписки теперь отображаются лимиты доступа, а при необходимости их можно скрыть.",
+      "Улучшена работа AmneziaWG-конфигов после изменения порта или настроек сервера.",
+      "Bandju Panel больше не требует вручную обновлять каждый AmneziaWG-конфиг: актуальный QR-код и .conf выдаются при открытии QR, скачивании конфига или открытии страницы подписки.",
+      "Повторное открытие AmneziaWG QR стало быстрее, а старый QR-код больше не должен кратко появляться перед актуальным.",
+      "Doctor больше не выполняет массовое исправление AmneziaWG-конфигов и не создаёт лишнюю нагрузку на VPS.",
+      "Улучшена устойчивость интерфейса при долгих запросах, временных сбоях проверки VPS и обрыве локального SSH-туннеля.",
+      "Дашборд теперь понятнее показывает устаревшие данные после перезагрузки VPS, переподключения или потери туннеля.",
+      "Исправлены ситуации, когда автообновление не запускалось после обновления panel, переподключения или переключения серверов.",
+      "В Lite-режиме список доступов больше не должен оставаться пустым после переподключения к серверу.",
+      "Исправлена работа Cascade на Exit VPS с нестандартным именем сетевого интерфейса.",
+      "Улучшено переключение активного Entry VPS с одного Exit VPS на другой: новый Exit сохраняется корректно, а старые данные очищаются после отключения."
     ],
     "en": [
-      "Fixed server switching on Windows: the launcher now clears stale local SSH tunnels so the selected VPS and the opened panel stay in sync.",
-      "Grouped access child rows in Accesses now use slightly larger text for better readability."
+      "Added the SSH Access module for managing VPS SSH keys directly from Bandju Panel.",
+      "VPS settings can now select the SSH key used for connection, create a new key, copy a public key, rename a key, or delete a private key.",
+      "If the selected SSH key is not accepted by the server, the launcher offers password login and helps update SSH access.",
+      "Improved SSH key handling on Windows and clearer errors for unsupported key files.",
+      "Added access limits: set a traffic limit and expiration date for an entire Access/subscription or for an individual connection.",
+      "Access is automatically blocked when the traffic limit or expiration date is reached, and manual disabling no longer conflicts with automatic blocking.",
+      "Subscription pages now show access limits, with an option to hide them.",
+      "Improved AmneziaWG configs after server port or settings changes.",
+      "Bandju Panel no longer requires manually refreshing each AmneziaWG config: the current QR code and .conf are returned when opening QR, downloading the config, or opening the subscription page.",
+      "Reopening an AmneziaWG QR is faster, and an old QR code should no longer briefly appear before the current one.",
+      "Doctor no longer performs bulk AmneziaWG config fixes or creates extra VPS load.",
+      "Improved interface resilience during long requests, temporary VPS check failures, and local SSH tunnel disconnects.",
+      "The dashboard now makes stale data clearer after a VPS reboot, reconnect, or tunnel loss.",
+      "Fixed cases where auto-refresh did not restart after panel updates, reconnects, or server switches.",
+      "In Lite mode, the access list should no longer stay empty after reconnecting to a server.",
+      "Fixed Cascade on Exit VPS hosts with non-standard network interface names.",
+      "Improved switching an active Entry VPS from one Exit VPS to another: the new Exit is saved correctly and stale data from the previous Exit is cleared after disconnecting."
     ]
   },
   "launcher": {
-    "version": "1.3.1",
+    "version": "1.4.0",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.3.1/Bandju-Panel_1.3.1_universal.dmg",
-        "sha256": "942bc2212ffe1ca3c8a74d20a5b587a9f6723f2ffdb4e58431557a49c9243987"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.4.0/Bandju-Panel_1.4.0_universal.dmg",
+        "sha256": "e6b206812b8006b440c4b055afe0464786344fbeb3ae2883273971bc1d187cd3"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.3.1/Bandju-Panel_1.3.1_windows_x64_setup.exe",
-        "sha256": "cd2d690374a9ca71f1dd826e142788ade9b5dce6b76a36a846f984f4ccb0c043"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.4.0/Bandju-Panel_1.4.0_windows_x64_setup.exe",
+        "sha256": "c32b02dc4871d36b5164c395815a88eda9830f33074828efe4deee8a77028042"
       }
     }
   },
   "panel": {
-    "version": "1.3.1",
-    "image": "ghcr.io/bandju/bandju-panel:1.3.1",
+    "version": "1.4.0",
+    "image": "ghcr.io/bandju/bandju-panel:1.4.0",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.3.1+cef0034",
-    "digest": "sha256:ab51da5fec376a23966e0cbdf2188898b1dde1d33e63acc8fc37a74546500fec"
+    "buildRef": "1.4.0+b2540e9",
+    "digest": "sha256:43dec4886491248ffcad489082a624a74dddf9f7e49c1c5beb181f3ee1e19de1"
   }
 }
