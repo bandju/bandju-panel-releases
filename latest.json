@@ -1,50 +1,60 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.5.1",
-  "publishedAt": "2026-06-05T18:45:53.312Z",
+  "version": "1.5.2",
+  "publishedAt": "2026-07-05T18:32:36.276Z",
   "releaseNotes": {
     "ru": [
-      "Снижена фоновая нагрузка panel на VPS в режиме простоя.",
-      "Оптимизировано обновление состояния доступов, подписок и лимитов: лишние тяжелые проверки больше не выполняются без необходимости.",
-      "Уменьшены кратковременные пики CPU при проверке лимитов, доступов и подписок.",
-      "Улучшена совместимость подписок с Hiddify, Happ и другими приложениями с поддержкой данных подписки.",
-      "В совместимых приложениях теперь отображаются название подписки, срок действия, использованный трафик и ссылка на страницу подписки.",
-      "Название подписки в совместимых приложениях теперь берется из самой подписки, без добавления названия Bandju Panel.",
-      "Добавлена стандартная подпись: «Подписка создана в BandjuPanel».",
-      "В окне переименования подписки появились поля для своей подписи и Telegram-ссылки.",
-      "Если лимиты скрыты в настройках подписки, они не передаются в данные для совместимых приложений."
+      "Добавлена поддержка HAPP routing для subscription-ссылок.",
+      "Для подписки можно включить отдельную routing-ссылку HAPP, и HAPP получит правила маршрутизации через HTTP header routing при добавлении или обновлении подписки.",
+      "На публичной странице подписки теперь видно, что HAPP routing включен.",
+      "Launcher теперь может устанавливать и обновлять panel не только под root, но и через пользователя с passwordless sudo.",
+      "Проверка VPS показывает состояние root/sudo доступа и понятнее объясняет, почему установка недоступна без root или passwordless sudo.",
+      "Создание XRay- и AmneziaWG-доступов стало устойчивее на медленных VPS.",
+      "Если VPS успел создать доступ, но ответ пришел слишком поздно, launcher пытается найти созданный доступ и открыть QR, конфиг или ссылку автоматически.",
+      "Обновление списков XRay и AmneziaWG клиентов стало терпимее к долгим ответам VPS.",
+      "Улучшена надежность запуска Cascade на медленных VPS и Docker-конфигурациях, где firewall backend определяется не напрямую.",
+      "После включения Cascade launcher проверяет, что panel осталась доступной на Entry и Exit VPS, и автоматически отключает Cascade, если доступ не подтвердился.",
+      "Проверка Cascade дольше ждет медленные VPS и понятнее показывает ситуацию, когда туннель работает, но ping/ICMP недоступен.",
+      "Исправлено применение расширенных настроек AmneziaWG к клиентским конфигам.",
+      "MTU, DNS и I1, заданные в panel, теперь корректно попадают в новые и перевыпущенные конфиги клиентов.",
+      "DNS для клиентов можно настроить вручную; panel проверяет формат и не дает сохранить некорректный список адресов."
     ],
     "en": [
-      "Reduced background panel load on VPS servers while idle.",
-      "Optimized access, subscription, and limit state refreshes so unnecessary heavy checks are avoided.",
-      "Reduced short CPU spikes when checking limits, accesses, and subscriptions.",
-      "Improved subscription compatibility with Hiddify, Happ, and other apps that support subscription data.",
-      "Compatible apps now show the subscription name, expiration, used traffic, and subscription page link.",
-      "Compatible apps now use the subscription's own name without adding the Bandju Panel name.",
-      "Added the default caption: \"Подписка создана в BandjuPanel\".",
-      "The subscription rename window now includes fields for a custom caption and Telegram link.",
-      "When subscription limits are hidden, they are also omitted from compatible app data."
+      "Added HAPP routing support for subscription links.",
+      "A subscription can now include a separate HAPP routing link, and HAPP receives routing rules through the routing HTTP header when the subscription is added or updated.",
+      "The public subscription page now shows when HAPP routing is enabled.",
+      "Launcher can now install and update panel not only as root, but also through a user with passwordless sudo.",
+      "VPS checks now show root/sudo access status and explain more clearly why installation is unavailable without root or passwordless sudo.",
+      "XRay and AmneziaWG access creation is more reliable on slow VPS servers.",
+      "If a VPS created an access but responded too late, launcher now tries to find the created access and open its QR, config, or link automatically.",
+      "XRay and AmneziaWG client list refreshes now tolerate slow VPS responses better.",
+      "Improved Cascade startup reliability on slow VPS servers and Docker configurations where the firewall backend is not detected directly.",
+      "After enabling Cascade, launcher checks that panel remains reachable on Entry and Exit VPS servers and automatically disables Cascade if reachability is not confirmed.",
+      "Cascade checks now wait longer for slow VPS servers and explain more clearly when the tunnel works but ping/ICMP is unavailable.",
+      "Fixed applying advanced AmneziaWG settings to client configs.",
+      "MTU, DNS, and I1 values configured in panel now correctly appear in new and reissued client configs.",
+      "Client DNS can now be configured manually; panel validates the format and prevents saving an invalid address list."
     ]
   },
   "launcher": {
-    "version": "1.5.1",
+    "version": "1.5.2",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.5.1/Bandju-Panel_1.5.1_universal.dmg",
-        "sha256": "5f9bb7065151d7ccf03056c7092b17765bade4fc3686e4bb36b7a07d22aabcf2"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.5.2/Bandju-Panel_1.5.2_universal.dmg",
+        "sha256": "c2a5e72d8ec66b4f5f696cc48bbc2a6f83afbdd64d19700e530894e152916537"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.5.1/Bandju-Panel_1.5.1_windows_x64_setup.exe",
-        "sha256": "29d77ea02250598a95298be7cc30a7baec95a22de7db197c42aee5bf8be6361d"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.5.2/Bandju-Panel_1.5.2_windows_x64_setup.exe",
+        "sha256": "de43f9fb5fbd80b9c94522e2c7b5b2d73172a2a6eb4c68c5933b916709ecd165"
       }
     }
   },
   "panel": {
-    "version": "1.5.1",
-    "image": "ghcr.io/bandju/bandju-panel:1.5.1",
+    "version": "1.5.2",
+    "image": "ghcr.io/bandju/bandju-panel:1.5.2",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.5.1+d805895",
-    "digest": "sha256:cf7095187852d16a31258b971e9b44cdccbe22c292231de00cb29805012c5a5f"
+    "buildRef": "1.5.2+d64388a",
+    "digest": "sha256:51c730e54699740b71cc0be845c7fb4f5c96e4c12b92c5e0d4d7fde134841529"
   }
 }
