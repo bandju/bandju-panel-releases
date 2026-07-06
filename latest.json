@@ -1,60 +1,50 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.5.2",
-  "publishedAt": "2026-07-05T18:32:36.276Z",
+  "version": "1.5.3",
+  "publishedAt": "2026-07-06T20:45:49.865Z",
   "releaseNotes": {
     "ru": [
-      "Добавлена поддержка HAPP routing для subscription-ссылок.",
-      "Для подписки можно включить отдельную routing-ссылку HAPP, и HAPP получит правила маршрутизации через HTTP header routing при добавлении или обновлении подписки.",
-      "На публичной странице подписки теперь видно, что HAPP routing включен.",
-      "Launcher теперь может устанавливать и обновлять panel не только под root, но и через пользователя с passwordless sudo.",
-      "Проверка VPS показывает состояние root/sudo доступа и понятнее объясняет, почему установка недоступна без root или passwordless sudo.",
-      "Создание XRay- и AmneziaWG-доступов стало устойчивее на медленных VPS.",
-      "Если VPS успел создать доступ, но ответ пришел слишком поздно, launcher пытается найти созданный доступ и открыть QR, конфиг или ссылку автоматически.",
-      "Обновление списков XRay и AmneziaWG клиентов стало терпимее к долгим ответам VPS.",
-      "Улучшена надежность запуска Cascade на медленных VPS и Docker-конфигурациях, где firewall backend определяется не напрямую.",
-      "После включения Cascade launcher проверяет, что panel осталась доступной на Entry и Exit VPS, и автоматически отключает Cascade, если доступ не подтвердился.",
-      "Проверка Cascade дольше ждет медленные VPS и понятнее показывает ситуацию, когда туннель работает, но ping/ICMP недоступен.",
-      "Исправлено применение расширенных настроек AmneziaWG к клиентским конфигам.",
-      "MTU, DNS и I1, заданные в panel, теперь корректно попадают в новые и перевыпущенные конфиги клиентов.",
-      "DNS для клиентов можно настроить вручную; panel проверяет формат и не дает сохранить некорректный список адресов."
+      "Исправлена ошибка, из-за которой недоступность сервера обновлений могла блокировать подключение к исправной panel на VPS.",
+      "Добавлены резервные источники обновлений на случай блокировки или временной недоступности основного источника.",
+      "Улучшена совместимость проверки обновлений с антивирусами, прокси и системными сертификатами Windows.",
+      "Проверка обновлений теперь выполняется отдельно и не мешает работе с уже установленной panel.",
+      "Добавлена защищённая проверка данных обновления и более надёжное переключение между источниками обновлений.",
+      "Исправлена работа Cascade на VPS, где подключение выполняется не под root, а под пользователем с passwordless sudo.",
+      "Cascade больше не требует вручную добавлять пользователя в Docker-группу или включать root-вход по SSH, если на VPS доступен passwordless sudo.",
+      "Ошибки Cascade при недостаточных правах теперь показываются понятным сообщением вместо технических ошибок Docker или разбора ответа panel.",
+      "Panel обновлена до версии 1.5.3 для совместимого выпуска; существующие настройки VPS и клиентские доступы сохраняются."
     ],
     "en": [
-      "Added HAPP routing support for subscription links.",
-      "A subscription can now include a separate HAPP routing link, and HAPP receives routing rules through the routing HTTP header when the subscription is added or updated.",
-      "The public subscription page now shows when HAPP routing is enabled.",
-      "Launcher can now install and update panel not only as root, but also through a user with passwordless sudo.",
-      "VPS checks now show root/sudo access status and explain more clearly why installation is unavailable without root or passwordless sudo.",
-      "XRay and AmneziaWG access creation is more reliable on slow VPS servers.",
-      "If a VPS created an access but responded too late, launcher now tries to find the created access and open its QR, config, or link automatically.",
-      "XRay and AmneziaWG client list refreshes now tolerate slow VPS responses better.",
-      "Improved Cascade startup reliability on slow VPS servers and Docker configurations where the firewall backend is not detected directly.",
-      "After enabling Cascade, launcher checks that panel remains reachable on Entry and Exit VPS servers and automatically disables Cascade if reachability is not confirmed.",
-      "Cascade checks now wait longer for slow VPS servers and explain more clearly when the tunnel works but ping/ICMP is unavailable.",
-      "Fixed applying advanced AmneziaWG settings to client configs.",
-      "MTU, DNS, and I1 values configured in panel now correctly appear in new and reissued client configs.",
-      "Client DNS can now be configured manually; panel validates the format and prevents saving an invalid address list."
+      "Fixed an issue where an unavailable update server could block connecting to a healthy panel on a VPS.",
+      "Added fallback update sources for cases where the primary source is blocked or temporarily unavailable.",
+      "Improved update-check compatibility with antivirus software, proxies, and Windows system certificates.",
+      "Update checks now run separately and no longer interfere with working with an already installed panel.",
+      "Added protected update-data verification and more reliable switching between update sources.",
+      "Fixed Cascade on VPS servers where SSH uses a non-root user with passwordless sudo.",
+      "Cascade no longer requires manually adding the user to the Docker group or enabling root SSH login when passwordless sudo is available on the VPS.",
+      "Cascade permission errors now show a clear message instead of low-level Docker or panel response parsing errors.",
+      "Panel was updated to version 1.5.3 for a compatible release; existing VPS settings and client accesses are preserved."
     ]
   },
   "launcher": {
-    "version": "1.5.2",
+    "version": "1.5.3",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.5.2/Bandju-Panel_1.5.2_universal.dmg",
-        "sha256": "c2a5e72d8ec66b4f5f696cc48bbc2a6f83afbdd64d19700e530894e152916537"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.5.3/Bandju-Panel_1.5.3_universal.dmg",
+        "sha256": "9c36954d4d5dd958c353c1728f8a8c84ae760e00a531d978e1f1cac3cf5e0e35"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.5.2/Bandju-Panel_1.5.2_windows_x64_setup.exe",
-        "sha256": "de43f9fb5fbd80b9c94522e2c7b5b2d73172a2a6eb4c68c5933b916709ecd165"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.5.3/Bandju-Panel_1.5.3_windows_x64_setup.exe",
+        "sha256": "6dca2096e3d270e3bde5d8f79e8ceb574af173a5d944afcc84466047379ec959"
       }
     }
   },
   "panel": {
-    "version": "1.5.2",
-    "image": "ghcr.io/bandju/bandju-panel:1.5.2",
+    "version": "1.5.3",
+    "image": "ghcr.io/bandju/bandju-panel:1.5.3",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.5.2+d64388a",
-    "digest": "sha256:51c730e54699740b71cc0be845c7fb4f5c96e4c12b92c5e0d4d7fde134841529"
+    "buildRef": "1.5.3+0520430",
+    "digest": "sha256:562098f7ebc18bc7b2ba1a5c1f4a8aa221ed71d013796d879d723b627e6dde2e"
   }
 }
