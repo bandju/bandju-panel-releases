@@ -1,50 +1,70 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.5.3",
-  "publishedAt": "2026-07-06T20:45:49.865Z",
+  "version": "1.6.0",
+  "publishedAt": "2026-07-20T21:04:12.556Z",
   "releaseNotes": {
     "ru": [
-      "Исправлена ошибка, из-за которой недоступность сервера обновлений могла блокировать подключение к исправной panel на VPS.",
-      "Добавлены резервные источники обновлений на случай блокировки или временной недоступности основного источника.",
-      "Улучшена совместимость проверки обновлений с антивирусами, прокси и системными сертификатами Windows.",
-      "Проверка обновлений теперь выполняется отдельно и не мешает работе с уже установленной panel.",
-      "Добавлена защищённая проверка данных обновления и более надёжное переключение между источниками обновлений.",
-      "Исправлена работа Cascade на VPS, где подключение выполняется не под root, а под пользователем с passwordless sudo.",
-      "Cascade больше не требует вручную добавлять пользователя в Docker-группу или включать root-вход по SSH, если на VPS доступен passwordless sudo.",
-      "Ошибки Cascade при недостаточных правах теперь показываются понятным сообщением вместо технических ошибок Docker или разбора ответа panel.",
-      "Panel обновлена до версии 1.5.3 для совместимого выпуска; существующие настройки VPS и клиентские доступы сохраняются."
+      "В Bandju Panel появился Hysteria2 — быстрый прокси-протокол поверх UDP/QUIC, рассчитанный на работу в нестабильных сетях, при потерях пакетов и высокой задержке. Протокол помогает сохранять скорость там, где обычные TCP-подключения заметно теряют производительность, и маскирует соединение под стандартный HTTP/3-трафик.",
+      "Hysteria2 можно использовать с прямым выходом, через WARP и в составе Cascade. Подключения Hysteria2 с внешних VPS также можно добавлять в общие подписки Bandju.",
+      "Hysteria2 добавлен в список протоколов, трафик которых можно направлять через Cascade.",
+      "Повышена стабильность запуска Cascade и переключения между Direct и WARP.",
+      "При неудачном переключении Bandju Panel пытается автоматически восстановить предыдущий режим.",
+      "Улучшено восстановление после временной потери SSH-соединения.",
+      "Доработано корректное отключение и удаление Cascade на обоих VPS.",
+      "Улучшена кнопка «Тест» для AmneziaWG и XRay.",
+      "Тест создаёт временное подключение на VPS и отдельно измеряет скорость загрузки и отдачи.",
+      "В результатах отображаются handshake, время отклика и фактический маршрут трафика — напрямую или через WARP.",
+      "Добавлен ключ подключения AmneziaVPN в формате vpn://.",
+      "Конфигурацию AmneziaWG теперь можно импортировать в официальное приложение AmneziaVPN по QR-коду или ключу подключения.",
+      "Экспорт обычного файла .conf сохранён для других совместимых клиентов.",
+      "Обновлены иконки AmneziaWG и XRay.",
+      "Добавлено цветовое обозначение протоколов в списках доступов и подписок.",
+      "Улучшены фильтры доступов: транспорт и исходный сервер теперь выбираются отдельно.",
+      "Фильтры стали компактнее и показывают количество применённых условий.",
+      "TLS Scanner теперь автоматически восстанавливается после временного конфликта локального порта; также добавлена возможность повторной проверки его состояния.",
+      "Исправлена работа SSH на Windows, если путь к файлам SSH содержит пробелы или специальные символы."
     ],
     "en": [
-      "Fixed an issue where an unavailable update server could block connecting to a healthy panel on a VPS.",
-      "Added fallback update sources for cases where the primary source is blocked or temporarily unavailable.",
-      "Improved update-check compatibility with antivirus software, proxies, and Windows system certificates.",
-      "Update checks now run separately and no longer interfere with working with an already installed panel.",
-      "Added protected update-data verification and more reliable switching between update sources.",
-      "Fixed Cascade on VPS servers where SSH uses a non-root user with passwordless sudo.",
-      "Cascade no longer requires manually adding the user to the Docker group or enabling root SSH login when passwordless sudo is available on the VPS.",
-      "Cascade permission errors now show a clear message instead of low-level Docker or panel response parsing errors.",
-      "Panel was updated to version 1.5.3 for a compatible release; existing VPS settings and client accesses are preserved."
+      "Bandju Panel now supports Hysteria2, a fast UDP/QUIC proxy protocol designed for unstable networks with packet loss and high latency. It helps maintain speed where conventional TCP connections lose significant performance and disguises the connection as standard HTTP/3 traffic.",
+      "Hysteria2 can use a direct route, WARP, or Cascade. Hysteria2 connections from external VPS servers can also be added to shared Bandju subscriptions.",
+      "Hysteria2 can now be routed through Cascade.",
+      "Improved the stability of Cascade startup and switching between Direct and WARP.",
+      "If switching fails, Bandju Panel attempts to restore the previous mode automatically.",
+      "Improved recovery after a temporary SSH connection loss.",
+      "Improved reliable Cascade shutdown and removal on both VPS servers.",
+      "Improved the Test action for AmneziaWG and XRay.",
+      "The test creates a temporary connection on the VPS and measures download and upload speeds separately.",
+      "Results now show the handshake, latency, and actual traffic route: direct or through WARP.",
+      "Added an AmneziaVPN connection key in vpn:// format.",
+      "AmneziaWG configurations can now be imported into the official AmneziaVPN app using a QR code or connection key.",
+      "Standard .conf file export remains available for other compatible clients.",
+      "Updated the AmneziaWG and XRay icons.",
+      "Added protocol color coding to access and subscription lists.",
+      "Improved access filters: transport and source server can now be selected independently.",
+      "Filters are more compact and show the number of active conditions.",
+      "TLS Scanner now recovers automatically after a temporary local port conflict, and its status can be checked again.",
+      "Fixed SSH on Windows when SSH file paths contain spaces or special characters."
     ]
   },
   "launcher": {
-    "version": "1.5.3",
+    "version": "1.6.0",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.5.3/Bandju-Panel_1.5.3_universal.dmg",
-        "sha256": "9c36954d4d5dd958c353c1728f8a8c84ae760e00a531d978e1f1cac3cf5e0e35"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.0/Bandju-Panel_1.6.0_universal.dmg",
+        "sha256": "a0330d8a6d58f1f1d36f2a3e8e0144862a4cb3148de12d011d7a1fa121be1932"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.5.3/Bandju-Panel_1.5.3_windows_x64_setup.exe",
-        "sha256": "6dca2096e3d270e3bde5d8f79e8ceb574af173a5d944afcc84466047379ec959"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.0/Bandju-Panel_1.6.0_windows_x64_setup.exe",
+        "sha256": "c5c0351aa20feebd6ef6310f65cbdcc580d19344cd15de2b0ed62c74a2e32e56"
       }
     }
   },
   "panel": {
-    "version": "1.5.3",
-    "image": "ghcr.io/bandju/bandju-panel:1.5.3",
+    "version": "1.6.0",
+    "image": "ghcr.io/bandju/bandju-panel:1.6.0",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.5.3+0520430",
-    "digest": "sha256:562098f7ebc18bc7b2ba1a5c1f4a8aa221ed71d013796d879d723b627e6dde2e"
+    "buildRef": "1.6.0+983d78c",
+    "digest": "sha256:4c5cc572169b208b8a6f6461dbf1a164bf87ddb64c6c6ae8d48a0e78e5fe82ac"
   }
 }
