@@ -1,70 +1,46 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.6.0",
-  "publishedAt": "2026-07-20T21:04:12.556Z",
+  "version": "1.6.1",
+  "publishedAt": "2026-07-26T19:49:34.691Z",
   "releaseNotes": {
     "ru": [
-      "В Bandju Panel появился Hysteria2 — быстрый прокси-протокол поверх UDP/QUIC, рассчитанный на работу в нестабильных сетях, при потерях пакетов и высокой задержке. Протокол помогает сохранять скорость там, где обычные TCP-подключения заметно теряют производительность, и маскирует соединение под стандартный HTTP/3-трафик.",
-      "Hysteria2 можно использовать с прямым выходом, через WARP и в составе Cascade. Подключения Hysteria2 с внешних VPS также можно добавлять в общие подписки Bandju.",
-      "Hysteria2 добавлен в список протоколов, трафик которых можно направлять через Cascade.",
-      "Повышена стабильность запуска Cascade и переключения между Direct и WARP.",
-      "При неудачном переключении Bandju Panel пытается автоматически восстановить предыдущий режим.",
-      "Улучшено восстановление после временной потери SSH-соединения.",
-      "Доработано корректное отключение и удаление Cascade на обоих VPS.",
-      "Улучшена кнопка «Тест» для AmneziaWG и XRay.",
-      "Тест создаёт временное подключение на VPS и отдельно измеряет скорость загрузки и отдачи.",
-      "В результатах отображаются handshake, время отклика и фактический маршрут трафика — напрямую или через WARP.",
-      "Добавлен ключ подключения AmneziaVPN в формате vpn://.",
-      "Конфигурацию AmneziaWG теперь можно импортировать в официальное приложение AmneziaVPN по QR-коду или ключу подключения.",
-      "Экспорт обычного файла .conf сохранён для других совместимых клиентов.",
-      "Обновлены иконки AmneziaWG и XRay.",
-      "Добавлено цветовое обозначение протоколов в списках доступов и подписок.",
-      "Улучшены фильтры доступов: транспорт и исходный сервер теперь выбираются отдельно.",
-      "Фильтры стали компактнее и показывают количество применённых условий.",
-      "TLS Scanner теперь автоматически восстанавливается после временного конфликта локального порта; также добавлена возможность повторной проверки его состояния.",
-      "Исправлена работа SSH на Windows, если путь к файлам SSH содержит пробелы или специальные символы."
+      "Launcher теперь проверяет, что открытый SSH-туннель принадлежит выбранной VPS, прежде чем устанавливать или обновлять panel.",
+      "Улучшено завершение устаревших SSH-туннелей в Windows; если локальный порт занят другим процессом, launcher безопасно останавливает операцию и показывает понятную подсказку.",
+      "Launcher автоматически исправляет слишком широкие права доступа к созданным им SSH-ключам в Windows, не заменяя сами ключи. Импортированные пользовательские ключи остаются без изменений.",
+      "Добавлена понятная диагностика известной несовместимости SSH с Ubuntu 26.04 и рекомендация использовать Ubuntu 22.04 или 24.04 LTS.",
+      "Исправлено определение исходной VPS для внешних подключений после переименования или повторного добавления сервера.",
+      "При неоднозначном совпадении launcher больше не выбирает исходную VPS автоматически, чтобы операция не была выполнена на другом сервере.",
+      "Doctor больше не показывает ошибочное предупреждение об устаревших ссылках XRay после изменения настроек подключения."
     ],
     "en": [
-      "Bandju Panel now supports Hysteria2, a fast UDP/QUIC proxy protocol designed for unstable networks with packet loss and high latency. It helps maintain speed where conventional TCP connections lose significant performance and disguises the connection as standard HTTP/3 traffic.",
-      "Hysteria2 can use a direct route, WARP, or Cascade. Hysteria2 connections from external VPS servers can also be added to shared Bandju subscriptions.",
-      "Hysteria2 can now be routed through Cascade.",
-      "Improved the stability of Cascade startup and switching between Direct and WARP.",
-      "If switching fails, Bandju Panel attempts to restore the previous mode automatically.",
-      "Improved recovery after a temporary SSH connection loss.",
-      "Improved reliable Cascade shutdown and removal on both VPS servers.",
-      "Improved the Test action for AmneziaWG and XRay.",
-      "The test creates a temporary connection on the VPS and measures download and upload speeds separately.",
-      "Results now show the handshake, latency, and actual traffic route: direct or through WARP.",
-      "Added an AmneziaVPN connection key in vpn:// format.",
-      "AmneziaWG configurations can now be imported into the official AmneziaVPN app using a QR code or connection key.",
-      "Standard .conf file export remains available for other compatible clients.",
-      "Updated the AmneziaWG and XRay icons.",
-      "Added protocol color coding to access and subscription lists.",
-      "Improved access filters: transport and source server can now be selected independently.",
-      "Filters are more compact and show the number of active conditions.",
-      "TLS Scanner now recovers automatically after a temporary local port conflict, and its status can be checked again.",
-      "Fixed SSH on Windows when SSH file paths contain spaces or special characters."
+      "The launcher now verifies that the open SSH tunnel belongs to the selected VPS before installing or updating panel.",
+      "Improved stale SSH tunnel cleanup on Windows; if the local port is occupied by another process, the launcher safely stops the operation and shows clear guidance.",
+      "The launcher automatically repairs overly broad file permissions on SSH keys it created in Windows without replacing the keys. Imported custom keys remain unchanged.",
+      "Added clear diagnostics for the known SSH incompatibility with Ubuntu 26.04 and guidance to use Ubuntu 22.04 or 24.04 LTS.",
+      "Fixed source VPS detection for external connections after a server is renamed or added again.",
+      "When a match is ambiguous, the launcher no longer selects a source VPS automatically, preventing the operation from running on another server.",
+      "Doctor no longer shows an incorrect warning about outdated XRay links after connection settings change."
     ]
   },
   "launcher": {
-    "version": "1.6.0",
+    "version": "1.6.1",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.0/Bandju-Panel_1.6.0_universal.dmg",
-        "sha256": "a0330d8a6d58f1f1d36f2a3e8e0144862a4cb3148de12d011d7a1fa121be1932"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.1/Bandju-Panel_1.6.1_universal.dmg",
+        "sha256": "f566121adb296ed1c28f19f30c2b283b7f602b63a1874ee411ec15ddb22b732f"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.0/Bandju-Panel_1.6.0_windows_x64_setup.exe",
-        "sha256": "c5c0351aa20feebd6ef6310f65cbdcc580d19344cd15de2b0ed62c74a2e32e56"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.1/Bandju-Panel_1.6.1_windows_x64_setup.exe",
+        "sha256": "79cdfbed4fc9cda89aa4d773b881d9a553172aa1e7c21a1dab9706ed0ade9eb7"
       }
     }
   },
   "panel": {
-    "version": "1.6.0",
-    "image": "ghcr.io/bandju/bandju-panel:1.6.0",
+    "version": "1.6.1",
+    "image": "ghcr.io/bandju/bandju-panel:1.6.1",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.6.0+983d78c",
-    "digest": "sha256:4c5cc572169b208b8a6f6461dbf1a164bf87ddb64c6c6ae8d48a0e78e5fe82ac"
+    "buildRef": "1.6.1+c5f5a40",
+    "digest": "sha256:c375e183a1d24b6c6b4ed8aac713aedb5120fba4cb73a9b702aba2e85ad9cdad"
   }
 }
