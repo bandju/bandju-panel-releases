@@ -8,7 +8,11 @@ set -euo pipefail
 #   Rollback: bash install.sh --rollback
 #   Remove:   bash install.sh --remove
 
-REMOTE_IMAGE="${BANDJU_REMOTE_IMAGE:-ghcr.io/bandju/bandju-panel:stable}"
+REMOTE_IMAGE="${BANDJU_REMOTE_IMAGE:-ghcr.io/bandju/bandju-panel:1.6.1}"
+REMOTE_DIGEST="${BANDJU_REMOTE_DIGEST:-sha256:c375e183a1d24b6c6b4ed8aac713aedb5120fba4cb73a9b702aba2e85ad9cdad}"
+REMOTE_FALLBACK_IMAGES="${BANDJU_REMOTE_FALLBACK_IMAGES:-ghcr.dockerproxy.net/bandju/bandju-panel:1.6.1}"
+REMOTE_RUNTIME_IMAGE="${REMOTE_IMAGE%@*}"
+IMAGE_PULL_TIMEOUT_SECONDS="${BANDJU_IMAGE_PULL_TIMEOUT_SECONDS:-300}"
 PREVIOUS_IMAGE="bandju-panel:previous"
 CONTAINER="bandju-panel"
 DATA_DIR="/opt/bandju-panel/data"
@@ -280,12 +284,81 @@ check_docker() {
     fi
 }
 
+is_sha256_digest() {
+    [[ "${1:-}" =~ ^sha256:[0-9a-f]{64}$ ]]
+}
+
+image_with_digest() {
+    local image="${1%@*}"
+    local digest="$2"
+    printf '%s@%s\n' "${image}" "${digest}"
+}
+
 pull_release_image() {
-    step "Pulling ${REMOTE_IMAGE}..."
-    if ! docker pull "${REMOTE_IMAGE}"; then
-        error "Unable to pull ${REMOTE_IMAGE}"
+    local digest
+    digest=$(printf '%s' "${REMOTE_DIGEST}" | tr '[:upper:]' '[:lower:]')
+    local pull_timeout="${IMAGE_PULL_TIMEOUT_SECONDS}"
+    local candidate ref output pull_ok image_id
+    local -a candidates=("${REMOTE_IMAGE}")
+
+    if ! [[ "${pull_timeout}" =~ ^[1-9][0-9]*$ ]]; then
+        pull_timeout=300
+    fi
+
+    if [ -n "${REMOTE_FALLBACK_IMAGES}" ]; then
+        if ! is_sha256_digest "${digest}"; then
+            error "Fallback image sources require a valid sha256 digest."
+            exit 1
+        fi
+        local -a fallbacks=()
+        read -r -a fallbacks <<< "${REMOTE_FALLBACK_IMAGES}"
+        candidates+=("${fallbacks[@]}")
+    elif [ -n "${digest}" ] && ! is_sha256_digest "${digest}"; then
+        error "The panel image sha256 digest is invalid."
         exit 1
     fi
+
+    for candidate in "${candidates[@]}"; do
+        [ -n "${candidate}" ] || continue
+        ref="${candidate}"
+        if [ -n "${digest}" ]; then
+            ref=$(image_with_digest "${candidate}" "${digest}")
+            image_id=$(docker image inspect "${ref}" --format '{{.Id}}' 2>/dev/null || true)
+            if [ -n "${image_id}" ]; then
+                if ! docker tag "${image_id}" "${REMOTE_RUNTIME_IMAGE}" >/dev/null; then
+                    error "Unable to prepare local image tag ${REMOTE_RUNTIME_IMAGE}"
+                    exit 1
+                fi
+                info "Using verified image from the local Docker cache"
+                return
+            fi
+        fi
+
+        step "Pulling ${candidate}..."
+        if command -v timeout >/dev/null 2>&1; then
+            output=$(timeout --signal=TERM "${pull_timeout}" docker pull "${ref}" 2>&1) && pull_ok=1 || pull_ok=0
+        else
+            output=$(docker pull "${ref}" 2>&1) && pull_ok=1 || pull_ok=0
+        fi
+        if [ "${pull_ok}" = "1" ]; then
+            printf '%s\n' "${output}"
+            image_id=$(docker image inspect "${ref}" --format '{{.Id}}' 2>/dev/null || true)
+            if [ -z "${image_id}" ] || ! docker tag "${image_id}" "${REMOTE_RUNTIME_IMAGE}" >/dev/null; then
+                error "Unable to prepare local image tag ${REMOTE_RUNTIME_IMAGE}"
+                exit 1
+            fi
+            if [ "${candidate}" != "${REMOTE_IMAGE}" ]; then
+                info "Image pulled from fallback source ${candidate}"
+            fi
+            return
+        fi
+
+        warn "Unable to pull ${candidate}"
+        printf '%s\n' "${output}" | tail -n 12 | sed 's/^/  /'
+    done
+
+    error "All panel image sources failed."
+    exit 1
 }
 
 wait_healthy() {
@@ -318,7 +391,7 @@ do_install() {
     fi
 
     step "Starting container..."
-    start_container_with_image "${REMOTE_IMAGE}"
+    start_container_with_image "${REMOTE_RUNTIME_IMAGE}"
 
     if wait_healthy; then
         write_runtime_meta_from_running_panel "" "" "" "0"
@@ -355,7 +428,7 @@ do_update() {
 
     step "Restarting container..."
     docker rm -f "${CONTAINER}" >/dev/null
-    start_container_with_image "${REMOTE_IMAGE}"
+    start_container_with_image "${REMOTE_RUNTIME_IMAGE}"
 
     if wait_healthy; then
         write_runtime_meta_from_running_panel "${rollback_version}" "${rollback_build_ref}" "${rollback_updated_at}" "1"
@@ -499,7 +572,7 @@ case "${1:-}" in
         echo "bandju-panel public installer"
         echo ""
         echo "Usage:"
-        echo "  bash install.sh            Install from stable GHCR image"
+        echo "  bash install.sh            Install from verified production image"
         echo "  bash install.sh --update   Update from release image"
         echo "  bash install.sh --rollback Roll back to previous build"
         echo "  bash install.sh --remove   Remove panel container"

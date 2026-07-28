@@ -42,5 +42,71 @@
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
     "buildRef": "1.6.1+c5f5a40",
     "digest": "sha256:c375e183a1d24b6c6b4ed8aac713aedb5120fba4cb73a9b702aba2e85ad9cdad"
+  },
+  "operationalConfig": {
+    "schemaVersion": 1,
+    "revision": 1,
+    "publishedAt": "2026-07-28T00:00:00Z",
+    "panelImageMirrorRegistries": [
+      "ghcr.dockerproxy.net"
+    ],
+    "runtimeImages": {
+      "probe-curl": [
+        "quay.io/curl/curl:8.12.1@sha256:84ec2a70279219a45d327ec1f2f112d019bc9dcdd0e19f1ba7689b646c2de0c2",
+        "docker.io/curlimages/curl:8.12.1@sha256:94e9e444bcba979c2ea12e27ae39bee4cd10bc7041a472c4727a558e213744e6"
+      ],
+      "domain-nginx": [
+        "docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
+        "ghcr.io/bandju/runtime-nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
+        "ghcr.dockerproxy.net/bandju/runtime-nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10"
+      ],
+      "certbot": [
+        "docker.io/certbot/certbot:v5.6.0@sha256:0107d084c225631fc64a8313e19adb07275f7296fde338f7dfa93986c80b2e3e",
+        "ghcr.io/bandju/runtime-certbot:v5.6.0@sha256:0107d084c225631fc64a8313e19adb07275f7296fde338f7dfa93986c80b2e3e",
+        "ghcr.dockerproxy.net/bandju/runtime-certbot:v5.6.0@sha256:0107d084c225631fc64a8313e19adb07275f7296fde338f7dfa93986c80b2e3e"
+      ],
+      "gateway-haproxy": [
+        "docker.io/library/haproxy:2.9-alpine@sha256:3e29449a6beed63262e36104adf531b4e41b359f61937303f5ea8607987b3748",
+        "ghcr.io/bandju/runtime-haproxy:2.9-alpine@sha256:3e29449a6beed63262e36104adf531b4e41b359f61937303f5ea8607987b3748",
+        "ghcr.dockerproxy.net/bandju/runtime-haproxy:2.9-alpine@sha256:3e29449a6beed63262e36104adf531b4e41b359f61937303f5ea8607987b3748"
+      ],
+      "panel-python-base": [
+        "docker.io/library/python:3.12-alpine@sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df",
+        "ghcr.io/bandju/runtime-python:3.12-alpine@sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df",
+        "ghcr.dockerproxy.net/bandju/runtime-python:3.12-alpine@sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df"
+      ],
+      "mtproxy-debian-base": [
+        "docker.io/library/debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818",
+        "ghcr.io/bandju/runtime-debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818",
+        "ghcr.dockerproxy.net/bandju/runtime-debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818"
+      ],
+      "amneziawg": [
+        "ghcr.io/bandju/amneziawg:latest@sha256:f1a67043051a8db016d01e6310c33be216aabdbe91d8a75336a0b32d65c96d13",
+        "ghcr.dockerproxy.net/bandju/amneziawg:latest@sha256:f1a67043051a8db016d01e6310c33be216aabdbe91d8a75336a0b32d65c96d13"
+      ],
+      "xray": [
+        "ghcr.io/xtls/xray-core:latest@sha256:592ec4d11f656db95598d01e76dbcc6e002d67360b96a5436500a938230f52c7",
+        "ghcr.dockerproxy.net/xtls/xray-core:latest@sha256:592ec4d11f656db95598d01e76dbcc6e002d67360b96a5436500a938230f52c7"
+      ],
+      "hysteria2": [
+        "ghcr.io/bandju/hysteria:v2.9.3@sha256:5d8127a1217f2846571cc2853eb00c05c7da5eb08744bc0c1a5812eabd19581d",
+        "docker.io/tobyxdd/hysteria:v2.9.3@sha256:5d8127a1217f2846571cc2853eb00c05c7da5eb08744bc0c1a5812eabd19581d",
+        "ghcr.dockerproxy.net/bandju/hysteria:v2.9.3@sha256:5d8127a1217f2846571cc2853eb00c05c7da5eb08744bc0c1a5812eabd19581d"
+      ],
+      "hysteria2-warp": [
+        "ghcr.io/xtls/xray-core:26.6.1@sha256:3943bddece5fab72308a4415917f0391917b7b81ddbf50708988b89e6e2bd213",
+        "ghcr.dockerproxy.net/xtls/xray-core:26.6.1@sha256:3943bddece5fab72308a4415917f0391917b7b81ddbf50708988b89e6e2bd213"
+      ],
+      "mtproxy": [
+        "ghcr.io/bandju/mtproxy:2025-11-04@sha256:576d79048bcd2209483806098ffdf78e4b7437fe3472b0c3ffd81fbeab972189",
+        "ghcr.dockerproxy.net/bandju/mtproxy:2025-11-04@sha256:576d79048bcd2209483806098ffdf78e4b7437fe3472b0c3ffd81fbeab972189"
+      ]
+    },
+    "publicIpv4Sources": [
+      "https://api.ipify.org",
+      "https://icanhazip.com",
+      "https://ifconfig.io/ip",
+      "https://ifconfig.me/ip"
+    ]
   }
 }
