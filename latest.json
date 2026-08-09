@@ -1,47 +1,64 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "version": "1.6.1",
-  "publishedAt": "2026-07-26T19:49:34.691Z",
+  "releaseVersion": "1.6.2",
+  "scope": "both",
+  "version": "1.6.2",
+  "publishedAt": "2026-08-09T19:10:31.000Z",
+  "notes": "Добавлено обновление launcher прямо из приложения на Windows и macOS. После установки 1.6.2 следующие версии можно будет устанавливать без ручной замены приложения.\nВо время обновления сохраняются настройки, список VPS и лицензия.\nLauncher и panel теперь могут обновляться независимо: если изменился только один компонент, второй не переустанавливается.\nУлучшены защита и стабильность системы лицензирования.\nПовышена надёжность установки и обновления panel при временной недоступности внешних источников.",
+  "pub_date": "2026-08-09T19:10:31.000Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.2/Bandju-Panel_1.6.2_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVdBZ2NJSm15QUsrZEEvemdoSUYwcldVM0JFbjdCa01FdjA1YVdUUkxxTVQyd29WWGY4c3ZCOHpCZDk2REM2MWJlRUw3UGRtWmFpVVFjekVoTUx0T0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzA1MDY5CWZpbGU6QmFuZGp1IFBhbmVsXzEuNi4yX3g2NC1zZXR1cC5leGUKS2N2QzJHS3JRSzVUK2dxQWN5eG5lM1Z0U1U3TE1JZFdzK1RvRUNtaUFnN1Y2TSt5cWVzMWljVlM4bkF6THlYSUxHQlV0ZnF3anN4aTRPb2tzaCtGQnc9PQo="
+    },
+    "darwin-aarch64": {
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.2/Bandju-Panel_1.6.2_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJEOGg4QzlMSktaUjRzbVpZY2UrMGYrNmNmVjNNc204R29pMmFMeXF4TWZmUFdkVEdEQzBGcitnZFZkWGVtVXZCTnFib1JMTmpqQWhwb2g1eCtlWUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzA0MzU5CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKYXBuemkrMjZHbUlEc2dnM2V0MmZPbTZ1ZzVQZmRXNkd4ODZybTRIMXJocXZ1UktrTFMxTGNXUnFMakFPVTBZbnY2VzFrTy9FV3VzMW1kV3RkZkwzREE9PQo="
+    },
+    "darwin-x86_64": {
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.2/Bandju-Panel_1.6.2_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJEOGg4QzlMSktaUjRzbVpZY2UrMGYrNmNmVjNNc204R29pMmFMeXF4TWZmUFdkVEdEQzBGcitnZFZkWGVtVXZCTnFib1JMTmpqQWhwb2g1eCtlWUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzA0MzU5CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKYXBuemkrMjZHbUlEc2dnM2V0MmZPbTZ1ZzVQZmRXNkd4ODZybTRIMXJocXZ1UktrTFMxTGNXUnFMakFPVTBZbnY2VzFrTy9FV3VzMW1kV3RkZkwzREE9PQo="
+    }
+  },
   "releaseNotes": {
     "ru": [
-      "Launcher теперь проверяет, что открытый SSH-туннель принадлежит выбранной VPS, прежде чем устанавливать или обновлять panel.",
-      "Улучшено завершение устаревших SSH-туннелей в Windows; если локальный порт занят другим процессом, launcher безопасно останавливает операцию и показывает понятную подсказку.",
-      "Launcher автоматически исправляет слишком широкие права доступа к созданным им SSH-ключам в Windows, не заменяя сами ключи. Импортированные пользовательские ключи остаются без изменений.",
-      "Добавлена понятная диагностика известной несовместимости SSH с Ubuntu 26.04 и рекомендация использовать Ubuntu 22.04 или 24.04 LTS.",
-      "Исправлено определение исходной VPS для внешних подключений после переименования или повторного добавления сервера.",
-      "При неоднозначном совпадении launcher больше не выбирает исходную VPS автоматически, чтобы операция не была выполнена на другом сервере.",
-      "Doctor больше не показывает ошибочное предупреждение об устаревших ссылках XRay после изменения настроек подключения."
+      "Добавлено обновление launcher прямо из приложения на Windows и macOS. После установки 1.6.2 следующие версии можно будет устанавливать без ручной замены приложения.",
+      "Во время обновления сохраняются настройки, список VPS и лицензия.",
+      "Launcher и panel теперь могут обновляться независимо: если изменился только один компонент, второй не переустанавливается.",
+      "Улучшены защита и стабильность системы лицензирования.",
+      "Повышена надёжность установки и обновления panel при временной недоступности внешних источников."
     ],
     "en": [
-      "The launcher now verifies that the open SSH tunnel belongs to the selected VPS before installing or updating panel.",
-      "Improved stale SSH tunnel cleanup on Windows; if the local port is occupied by another process, the launcher safely stops the operation and shows clear guidance.",
-      "The launcher automatically repairs overly broad file permissions on SSH keys it created in Windows without replacing the keys. Imported custom keys remain unchanged.",
-      "Added clear diagnostics for the known SSH incompatibility with Ubuntu 26.04 and guidance to use Ubuntu 22.04 or 24.04 LTS.",
-      "Fixed source VPS detection for external connections after a server is renamed or added again.",
-      "When a match is ambiguous, the launcher no longer selects a source VPS automatically, preventing the operation from running on another server.",
-      "Doctor no longer shows an incorrect warning about outdated XRay links after connection settings change."
+      "Launcher updates are now available directly in the app on Windows and macOS. After installing 1.6.2, future versions can be installed without replacing the app manually.",
+      "Settings, saved VPS servers, and the license remain intact during updates.",
+      "Launcher and panel can now be updated independently, so an unchanged component does not need to be reinstalled.",
+      "Improved license system protection and stability.",
+      "Improved panel installation and update reliability during temporary external source outages."
     ]
   },
   "launcher": {
-    "version": "1.6.1",
+    "version": "1.6.2",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.1/Bandju-Panel_1.6.1_universal.dmg",
-        "sha256": "f566121adb296ed1c28f19f30c2b283b7f602b63a1874ee411ec15ddb22b732f"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.2/Bandju-Panel_1.6.2_universal.dmg",
+        "sha256": "d9e55301752cfeabddb9261598cbd21692eb8f5b66aecc8bc76b9b420924ce38"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.1/Bandju-Panel_1.6.1_windows_x64_setup.exe",
-        "sha256": "79cdfbed4fc9cda89aa4d773b881d9a553172aa1e7c21a1dab9706ed0ade9eb7"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.2/Bandju-Panel_1.6.2_windows_x64_setup.exe",
+        "sha256": "cc809cbfee8a26bb8d4ff8d5a95d613b508bd18335a17c17a4835daf873c20c5"
       }
     }
   },
   "panel": {
-    "version": "1.6.1",
-    "image": "ghcr.io/bandju/bandju-panel:1.6.1",
+    "version": "1.6.2",
+    "image": "ghcr.io/bandju/bandju-panel:1.6.2",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-    "buildRef": "1.6.1+c5f5a40",
-    "digest": "sha256:c375e183a1d24b6c6b4ed8aac713aedb5120fba4cb73a9b702aba2e85ad9cdad"
+    "fallbackImages": [
+      "ghcr.dockerproxy.net/bandju/bandju-panel:1.6.2"
+    ],
+    "buildRef": "1.6.2+9793d01",
+    "digest": "sha256:8476751e9b6d660e2fce33a8b5300bfdd145055927cfadfaf789d131a5a9709c"
   },
   "operationalConfig": {
     "schemaVersion": 1,
