@@ -1,69 +1,79 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "releaseVersion": "1.6.2",
+  "releaseVersion": "1.7.0",
   "scope": "both",
-  "version": "1.6.2",
-  "publishedAt": "2026-08-09T19:10:31.000Z",
-  "notes": "Добавлено обновление launcher прямо из приложения на Windows и macOS. После установки 1.6.2 следующие версии можно будет устанавливать без ручной замены приложения.\nВо время обновления сохраняются настройки, список VPS и лицензия.\nLauncher и panel теперь могут обновляться независимо: если изменился только один компонент, второй не переустанавливается.\nУлучшены защита и стабильность системы лицензирования.\nПовышена надёжность установки и обновления panel при временной недоступности внешних источников.",
-  "pub_date": "2026-08-09T19:10:31.000Z",
+  "version": "1.7.0",
+  "publishedAt": "2026-08-16T19:18:11.000Z",
+  "notes": "Добавлена тёмная тема и обновлён внешний вид приложения, включая интегрированную рамку окна.\nОбновления launcher и panel разделены: состояние каждого компонента отображается отдельно.\nДобавлена поддержка AmneziaWG 3.0 для совместимых клиентов.\nДобавлены расширенные настройки XHTTP для Xray и Salamander-обфускации для Hysteria2.\nДобавлено управление порядком подключений в подписках.\nУспешные уведомления стали заметнее, а ссылки Hysteria2 получили наглядные значки доступов.\nРасширена диагностика VPS: появились внешняя проверка доступности и определение региона IP и сервисов.\nУлучшены подсказки при восстановлении лицензии и надёжность подтверждения переноса.\nИсправлены определение входящего IP за Cascade и жизненный цикл MTProto и Gateway.\nУлучшены фоновые проверки panel и обработка его обновлений.",
+  "pub_date": "2026-08-16T19:18:11.000Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.2/Bandju-Panel_1.6.2_windows_x64_setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVdBZ2NJSm15QUsrZEEvemdoSUYwcldVM0JFbjdCa01FdjA1YVdUUkxxTVQyd29WWGY4c3ZCOHpCZDk2REM2MWJlRUw3UGRtWmFpVVFjekVoTUx0T0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzA1MDY5CWZpbGU6QmFuZGp1IFBhbmVsXzEuNi4yX3g2NC1zZXR1cC5leGUKS2N2QzJHS3JRSzVUK2dxQWN5eG5lM1Z0U1U3TE1JZFdzK1RvRUNtaUFnN1Y2TSt5cWVzMWljVlM4bkF6THlYSUxHQlV0ZnF3anN4aTRPb2tzaCtGQnc9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.7.0/Bandju-Panel_1.7.0_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVQ0dm56YVhxZGM0Qm5ZV1c0a29XVXluOHppM3F6WnFNUkJ4T3dHZXByQ3lzTC9RajdIUmNTTWxFZ2JTMlNzQjJJM00vSjBBWTZEVXAxSnIvRlJnMEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2OTA5NzM5CWZpbGU6QmFuZGp1IFBhbmVsXzEuNy4wX3g2NC1zZXR1cC5leGUKNU5USFROazU0NjZYeE9TNHErcWpjY0VLbit4dmx6S3ZsUDh3V1crRUQ2QnlRWGE4VEZmWHdjN0gvYjhsZm1pUjgyMkdrSzhGRmhMclEwZGZYemprQmc9PQo="
     },
     "darwin-aarch64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.2/Bandju-Panel_1.6.2_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJEOGg4QzlMSktaUjRzbVpZY2UrMGYrNmNmVjNNc204R29pMmFMeXF4TWZmUFdkVEdEQzBGcitnZFZkWGVtVXZCTnFib1JMTmpqQWhwb2g1eCtlWUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzA0MzU5CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKYXBuemkrMjZHbUlEc2dnM2V0MmZPbTZ1ZzVQZmRXNkd4ODZybTRIMXJocXZ1UktrTFMxTGNXUnFMakFPVTBZbnY2VzFrTy9FV3VzMW1kV3RkZkwzREE9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.7.0/Bandju-Panel_1.7.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVFNdjhhVXFNWEdFZ1dmcFpEckI5Z0d1WXUwbS9NWlhiaEF1RGlQRjRHeVUxZzFtSzVzQTkraTZJTlRuSkxmVlgwYTNQRkhwVWZPOVpRa2VyeEZjUmdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2OTA4OTM1CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKMFpxUlc3Z1RnWXQ4Uyt4ZUpMS3l4Q054SHJyeDIySUJ4Qko1VHZmbFFqRjZyWkltZlRVTmZqZVpHR25PMFhEME9XUjBkVE1uM3AwYnN3SEpLS2JCQXc9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.2/Bandju-Panel_1.6.2_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJEOGg4QzlMSktaUjRzbVpZY2UrMGYrNmNmVjNNc204R29pMmFMeXF4TWZmUFdkVEdEQzBGcitnZFZkWGVtVXZCTnFib1JMTmpqQWhwb2g1eCtlWUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzA0MzU5CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKYXBuemkrMjZHbUlEc2dnM2V0MmZPbTZ1ZzVQZmRXNkd4ODZybTRIMXJocXZ1UktrTFMxTGNXUnFMakFPVTBZbnY2VzFrTy9FV3VzMW1kV3RkZkwzREE9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.7.0/Bandju-Panel_1.7.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVFNdjhhVXFNWEdFZ1dmcFpEckI5Z0d1WXUwbS9NWlhiaEF1RGlQRjRHeVUxZzFtSzVzQTkraTZJTlRuSkxmVlgwYTNQRkhwVWZPOVpRa2VyeEZjUmdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2OTA4OTM1CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKMFpxUlc3Z1RnWXQ4Uyt4ZUpMS3l4Q054SHJyeDIySUJ4Qko1VHZmbFFqRjZyWkltZlRVTmZqZVpHR25PMFhEME9XUjBkVE1uM3AwYnN3SEpLS2JCQXc9PQo="
     }
   },
   "releaseNotes": {
     "ru": [
-      "Добавлено обновление launcher прямо из приложения на Windows и macOS. После установки 1.6.2 следующие версии можно будет устанавливать без ручной замены приложения.",
-      "Во время обновления сохраняются настройки, список VPS и лицензия.",
-      "Launcher и panel теперь могут обновляться независимо: если изменился только один компонент, второй не переустанавливается.",
-      "Улучшены защита и стабильность системы лицензирования.",
-      "Повышена надёжность установки и обновления panel при временной недоступности внешних источников."
+      "Добавлена тёмная тема и обновлён внешний вид приложения, включая интегрированную рамку окна.",
+      "Обновления launcher и panel разделены: состояние каждого компонента отображается отдельно.",
+      "Добавлена поддержка AmneziaWG 3.0 для совместимых клиентов.",
+      "Добавлены расширенные настройки XHTTP для Xray и Salamander-обфускации для Hysteria2.",
+      "Добавлено управление порядком подключений в подписках.",
+      "Успешные уведомления стали заметнее, а ссылки Hysteria2 получили наглядные значки доступов.",
+      "Расширена диагностика VPS: появились внешняя проверка доступности и определение региона IP и сервисов.",
+      "Улучшены подсказки при восстановлении лицензии и надёжность подтверждения переноса.",
+      "Исправлены определение входящего IP за Cascade и жизненный цикл MTProto и Gateway.",
+      "Улучшены фоновые проверки panel и обработка его обновлений."
     ],
     "en": [
-      "Launcher updates are now available directly in the app on Windows and macOS. After installing 1.6.2, future versions can be installed without replacing the app manually.",
-      "Settings, saved VPS servers, and the license remain intact during updates.",
-      "Launcher and panel can now be updated independently, so an unchanged component does not need to be reinstalled.",
-      "Improved license system protection and stability.",
-      "Improved panel installation and update reliability during temporary external source outages."
+      "Added a dark theme and refreshed the app appearance, including integrated window chrome.",
+      "Separated launcher and panel updates, with each component's status shown independently.",
+      "Added AmneziaWG 3.0 support for compatible clients.",
+      "Added advanced XHTTP settings for Xray and Salamander obfuscation settings for Hysteria2.",
+      "Added subscription connection ordering controls.",
+      "Made success notifications more prominent and added clear access icons to Hysteria2 links.",
+      "Expanded VPS diagnostics with external reachability checks and IP and service region detection.",
+      "Improved license recovery guidance and transfer confirmation reliability.",
+      "Fixed ingress IP detection behind Cascade and MTProto and Gateway lifecycle handling.",
+      "Improved panel background checks and update handling."
     ]
   },
   "launcher": {
-    "version": "1.6.2",
+    "version": "1.7.0",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.2/Bandju-Panel_1.6.2_universal.dmg",
-        "sha256": "d9e55301752cfeabddb9261598cbd21692eb8f5b66aecc8bc76b9b420924ce38"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.7.0/Bandju-Panel_1.7.0_universal.dmg",
+        "sha256": "f6b35d76eaac697e901dbbb3fab37db240a1def4f280b5d7b15c6af7ab657054"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.6.2/Bandju-Panel_1.6.2_windows_x64_setup.exe",
-        "sha256": "cc809cbfee8a26bb8d4ff8d5a95d613b508bd18335a17c17a4835daf873c20c5"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.7.0/Bandju-Panel_1.7.0_windows_x64_setup.exe",
+        "sha256": "c94111e8563ca98657dc3e58c933b570be6fb3a85c4b6fb98c631327a906d096"
       }
     }
   },
   "panel": {
-    "version": "1.6.2",
-    "image": "ghcr.io/bandju/bandju-panel:1.6.2",
+    "version": "1.7.0",
+    "image": "ghcr.io/bandju/bandju-panel:1.7.0",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
     "fallbackImages": [
-      "ghcr.dockerproxy.net/bandju/bandju-panel:1.6.2"
+      "ghcr.dockerproxy.net/bandju/bandju-panel:1.7.0"
     ],
-    "buildRef": "1.6.2+9793d01",
-    "digest": "sha256:8476751e9b6d660e2fce33a8b5300bfdd145055927cfadfaf789d131a5a9709c"
+    "buildRef": "1.7.0+682ff01",
+    "digest": "sha256:23a510e26dd9fcb787021b70f50c900cfa980e83be175f3826546e7146548874"
   },
   "operationalConfig": {
     "schemaVersion": 1,
-    "revision": 1,
-    "publishedAt": "2026-07-28T00:00:00Z",
+    "revision": 2,
+    "publishedAt": "2026-08-12T00:00:00Z",
     "panelImageMirrorRegistries": [
       "ghcr.dockerproxy.net"
     ],
@@ -98,8 +108,8 @@
         "ghcr.dockerproxy.net/bandju/runtime-debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818"
       ],
       "amneziawg": [
-        "ghcr.io/bandju/amneziawg:latest@sha256:f1a67043051a8db016d01e6310c33be216aabdbe91d8a75336a0b32d65c96d13",
-        "ghcr.dockerproxy.net/bandju/amneziawg:latest@sha256:f1a67043051a8db016d01e6310c33be216aabdbe91d8a75336a0b32d65c96d13"
+        "ghcr.io/bandju/amneziawg:latest@sha256:821e0250abcb6c2a0ed12116823d689f14af45450a0bf059c43edd4a71a615eb",
+        "ghcr.dockerproxy.net/bandju/amneziawg:latest@sha256:821e0250abcb6c2a0ed12116823d689f14af45450a0bf059c43edd4a71a615eb"
       ],
       "xray": [
         "ghcr.io/xtls/xray-core:latest@sha256:592ec4d11f656db95598d01e76dbcc6e002d67360b96a5436500a938230f52c7",
