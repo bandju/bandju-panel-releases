@@ -1,79 +1,83 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "releaseVersion": "1.7.0",
+  "releaseVersion": "1.8.0",
   "scope": "both",
-  "version": "1.7.0",
-  "publishedAt": "2026-08-16T19:18:11.000Z",
-  "notes": "Добавлена тёмная тема и обновлён внешний вид приложения, включая интегрированную рамку окна.\nОбновления launcher и panel разделены: состояние каждого компонента отображается отдельно.\nДобавлена поддержка AmneziaWG 3.0 для совместимых клиентов.\nДобавлены расширенные настройки XHTTP для Xray и Salamander-обфускации для Hysteria2.\nДобавлено управление порядком подключений в подписках.\nУспешные уведомления стали заметнее, а ссылки Hysteria2 получили наглядные значки доступов.\nРасширена диагностика VPS: появились внешняя проверка доступности и определение региона IP и сервисов.\nУлучшены подсказки при восстановлении лицензии и надёжность подтверждения переноса.\nИсправлены определение входящего IP за Cascade и жизненный цикл MTProto и Gateway.\nУлучшены фоновые проверки panel и обработка его обновлений.",
-  "pub_date": "2026-08-16T19:18:11.000Z",
+  "version": "1.8.0",
+  "publishedAt": "2026-08-30T18:46:17.000Z",
+  "notes": "Добавлен новый раздел резервных копий: сервисы, настройки и доступы можно сохранить в локальный файл.\nНа чистом VPS доступно полное восстановление, а на рабочем VPS — безопасное добавление доступов без перезаписи текущих настроек.\nПеред восстановлением panel показывает подробный план и проверяет совместимость, недостающие сервисы, порты, домен и DNS.\nДобавлен перенос между VPS: IP и доменные параметры адаптируются, а подключения, требующие нового конфига или повторной привязки, отмечаются отдельно.\nAmneziaWG v3 обновлён до версии 3.1.\nДобавлены доменные endpoint-адреса для AmneziaWG legacy, v2 и v3 с проверкой DNS и поддержкой в резервных копиях.\nHysteria2 обновлена до версии 2.12.2; повышена стабильность тестов, WARP и фонового обновления состояния.\nCascade переведён на AmneziaWG 3.1, улучшено автоматическое восстановление туннеля и добавлена проверка ресурсов VPS и запаса сетевых соединений.\nИсправлена сортировка доступов по суммарному трафику и ускорено фоновое обновление списка без лишней нагрузки на VPS.\nДля Hysteria2 технический логин теперь подписан явно и не выглядит как IP-адрес.\nУлучшено восстановление launcher после временных ошибок соединения и отображение состояния обновлений launcher и panel.\nДобавлено безопасное обслуживание хранилища VPS: ограничение роста логов и очистка старого неиспользуемого кеша.",
+  "pub_date": "2026-08-30T18:46:17.000Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.7.0/Bandju-Panel_1.7.0_windows_x64_setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVQ0dm56YVhxZGM0Qm5ZV1c0a29XVXluOHppM3F6WnFNUkJ4T3dHZXByQ3lzTC9RajdIUmNTTWxFZ2JTMlNzQjJJM00vSjBBWTZEVXAxSnIvRlJnMEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2OTA5NzM5CWZpbGU6QmFuZGp1IFBhbmVsXzEuNy4wX3g2NC1zZXR1cC5leGUKNU5USFROazU0NjZYeE9TNHErcWpjY0VLbit4dmx6S3ZsUDh3V1crRUQ2QnlRWGE4VEZmWHdjN0gvYjhsZm1pUjgyMkdrSzhGRmhMclEwZGZYemprQmc9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.8.0/Bandju-Panel_1.8.0_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVo0TUdvblU4aVJtOUJvdDJINjdLeVVKL0RiWnVNSXZoNWhOK3laWVpRZ0lWdXBVakx1bWF1b1BDa3NCNnQ0czZxZ1lHWWp1eUpidDd5T0xVekZiT0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MTE3MTE1CWZpbGU6QmFuZGp1IFBhbmVsXzEuOC4wX3g2NC1zZXR1cC5leGUKN2RHKzJ2bC9oemFGVDNGdnVYdmtLQzRjWkowNU1TOWw1bld1M2dBWFJMVEV0Umh2SFdzeUtkUXFKODdJdkV0bEpNRWhNV2NtTHVKR1c2R2NiN1UrQVE9PQo="
     },
     "darwin-aarch64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.7.0/Bandju-Panel_1.7.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVFNdjhhVXFNWEdFZ1dmcFpEckI5Z0d1WXUwbS9NWlhiaEF1RGlQRjRHeVUxZzFtSzVzQTkraTZJTlRuSkxmVlgwYTNQRkhwVWZPOVpRa2VyeEZjUmdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2OTA4OTM1CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKMFpxUlc3Z1RnWXQ4Uyt4ZUpMS3l4Q054SHJyeDIySUJ4Qko1VHZmbFFqRjZyWkltZlRVTmZqZVpHR25PMFhEME9XUjBkVE1uM3AwYnN3SEpLS2JCQXc9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.8.0/Bandju-Panel_1.8.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVM4b2V2c2Q4a3Y3a3kzZXg1S2JVQ2lKL0ZlajhkYStIOEg3N3luYmo2bFRlaUlFbVJtMHZTWUJRUXd5VGdwUmhxeGY1T2dVS0JNU1Y4Rkh6bExJQmcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MTE2NjQ1CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKTzNqQWR5b3lnVjhsVjBNM2xScUFxQ2hRK2ZiN3RaNEQ3dUpDT2liOFlnRnl5bDAxQlV4TzdUVjUrM2ZKSW9neitOZW0rQW9GekNTMXpEK2NrclBoQ1E9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.7.0/Bandju-Panel_1.7.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVFNdjhhVXFNWEdFZ1dmcFpEckI5Z0d1WXUwbS9NWlhiaEF1RGlQRjRHeVUxZzFtSzVzQTkraTZJTlRuSkxmVlgwYTNQRkhwVWZPOVpRa2VyeEZjUmdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2OTA4OTM1CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKMFpxUlc3Z1RnWXQ4Uyt4ZUpMS3l4Q054SHJyeDIySUJ4Qko1VHZmbFFqRjZyWkltZlRVTmZqZVpHR25PMFhEME9XUjBkVE1uM3AwYnN3SEpLS2JCQXc9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.8.0/Bandju-Panel_1.8.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVM4b2V2c2Q4a3Y3a3kzZXg1S2JVQ2lKL0ZlajhkYStIOEg3N3luYmo2bFRlaUlFbVJtMHZTWUJRUXd5VGdwUmhxeGY1T2dVS0JNU1Y4Rkh6bExJQmcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4MTE2NjQ1CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKTzNqQWR5b3lnVjhsVjBNM2xScUFxQ2hRK2ZiN3RaNEQ3dUpDT2liOFlnRnl5bDAxQlV4TzdUVjUrM2ZKSW9neitOZW0rQW9GekNTMXpEK2NrclBoQ1E9PQo="
     }
   },
   "releaseNotes": {
     "ru": [
-      "Добавлена тёмная тема и обновлён внешний вид приложения, включая интегрированную рамку окна.",
-      "Обновления launcher и panel разделены: состояние каждого компонента отображается отдельно.",
-      "Добавлена поддержка AmneziaWG 3.0 для совместимых клиентов.",
-      "Добавлены расширенные настройки XHTTP для Xray и Salamander-обфускации для Hysteria2.",
-      "Добавлено управление порядком подключений в подписках.",
-      "Успешные уведомления стали заметнее, а ссылки Hysteria2 получили наглядные значки доступов.",
-      "Расширена диагностика VPS: появились внешняя проверка доступности и определение региона IP и сервисов.",
-      "Улучшены подсказки при восстановлении лицензии и надёжность подтверждения переноса.",
-      "Исправлены определение входящего IP за Cascade и жизненный цикл MTProto и Gateway.",
-      "Улучшены фоновые проверки panel и обработка его обновлений."
+      "Добавлен новый раздел резервных копий: сервисы, настройки и доступы можно сохранить в локальный файл.",
+      "На чистом VPS доступно полное восстановление, а на рабочем VPS — безопасное добавление доступов без перезаписи текущих настроек.",
+      "Перед восстановлением panel показывает подробный план и проверяет совместимость, недостающие сервисы, порты, домен и DNS.",
+      "Добавлен перенос между VPS: IP и доменные параметры адаптируются, а подключения, требующие нового конфига или повторной привязки, отмечаются отдельно.",
+      "AmneziaWG v3 обновлён до версии 3.1.",
+      "Добавлены доменные endpoint-адреса для AmneziaWG legacy, v2 и v3 с проверкой DNS и поддержкой в резервных копиях.",
+      "Hysteria2 обновлена до версии 2.12.2; повышена стабильность тестов, WARP и фонового обновления состояния.",
+      "Cascade переведён на AmneziaWG 3.1, улучшено автоматическое восстановление туннеля и добавлена проверка ресурсов VPS и запаса сетевых соединений.",
+      "Исправлена сортировка доступов по суммарному трафику и ускорено фоновое обновление списка без лишней нагрузки на VPS.",
+      "Для Hysteria2 технический логин теперь подписан явно и не выглядит как IP-адрес.",
+      "Улучшено восстановление launcher после временных ошибок соединения и отображение состояния обновлений launcher и panel.",
+      "Добавлено безопасное обслуживание хранилища VPS: ограничение роста логов и очистка старого неиспользуемого кеша."
     ],
     "en": [
-      "Added a dark theme and refreshed the app appearance, including integrated window chrome.",
-      "Separated launcher and panel updates, with each component's status shown independently.",
-      "Added AmneziaWG 3.0 support for compatible clients.",
-      "Added advanced XHTTP settings for Xray and Salamander obfuscation settings for Hysteria2.",
-      "Added subscription connection ordering controls.",
-      "Made success notifications more prominent and added clear access icons to Hysteria2 links.",
-      "Expanded VPS diagnostics with external reachability checks and IP and service region detection.",
-      "Improved license recovery guidance and transfer confirmation reliability.",
-      "Fixed ingress IP detection behind Cascade and MTProto and Gateway lifecycle handling.",
-      "Improved panel background checks and update handling."
+      "Added a new Backups section for saving services, settings, and accesses to a local file.",
+      "A clean VPS can be fully restored, while a configured VPS can safely import accesses without overwriting its current settings.",
+      "Before restoring, panel shows a detailed plan and checks compatibility, missing services, ports, domain, and DNS.",
+      "Added VPS-to-VPS migration: IP and domain settings are adapted, while connections that need a new config or rebinding are marked separately.",
+      "Updated AmneziaWG v3 to version 3.1.",
+      "Added domain endpoints for AmneziaWG legacy, v2, and v3, with DNS validation and backup support.",
+      "Updated Hysteria2 to version 2.12.2 and improved the reliability of tests, WARP, and background state refreshes.",
+      "Migrated Cascade to AmneziaWG 3.1, improved automatic tunnel recovery, and added VPS resource and connection-capacity checks.",
+      "Fixed access sorting by aggregate traffic and made background list refreshes faster without unnecessary VPS load.",
+      "Hysteria2 technical logins are now labeled explicitly so they are not mistaken for IP addresses.",
+      "Improved launcher recovery after temporary connection failures and clarified launcher and panel update states.",
+      "Added safe VPS storage maintenance to limit log growth and clean up old unused cache data."
     ]
   },
   "launcher": {
-    "version": "1.7.0",
+    "version": "1.8.0",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.7.0/Bandju-Panel_1.7.0_universal.dmg",
-        "sha256": "f6b35d76eaac697e901dbbb3fab37db240a1def4f280b5d7b15c6af7ab657054"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.8.0/Bandju-Panel_1.8.0_universal.dmg",
+        "sha256": "c09c834b97df998f3ca9799c7ea539feee1b0739a2776104ea542decaa424eb7"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.7.0/Bandju-Panel_1.7.0_windows_x64_setup.exe",
-        "sha256": "c94111e8563ca98657dc3e58c933b570be6fb3a85c4b6fb98c631327a906d096"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.8.0/Bandju-Panel_1.8.0_windows_x64_setup.exe",
+        "sha256": "1b1e53f464a11a043090dc1d5b4f51acc3909c0b1c54664a120ca856192cc50c"
       }
     }
   },
   "panel": {
-    "version": "1.7.0",
-    "image": "ghcr.io/bandju/bandju-panel:1.7.0",
+    "version": "1.8.0",
+    "image": "ghcr.io/bandju/bandju-panel:1.8.0",
     "stableImage": "ghcr.io/bandju/bandju-panel:stable",
     "fallbackImages": [
-      "ghcr.dockerproxy.net/bandju/bandju-panel:1.7.0"
+      "ghcr.dockerproxy.net/bandju/bandju-panel:1.8.0"
     ],
-    "buildRef": "1.7.0+682ff01",
-    "digest": "sha256:23a510e26dd9fcb787021b70f50c900cfa980e83be175f3826546e7146548874"
+    "buildRef": "1.8.0+a1d8d0b",
+    "digest": "sha256:41de734c53f48eaffd28361e5c4aeda2757f65deca2fe1a3e292f4aee2c27fa0"
   },
   "operationalConfig": {
     "schemaVersion": 1,
-    "revision": 2,
-    "publishedAt": "2026-08-12T00:00:00Z",
+    "revision": 4,
+    "publishedAt": "2026-08-26T20:50:00Z",
     "panelImageMirrorRegistries": [
       "ghcr.dockerproxy.net"
     ],
@@ -108,17 +112,17 @@
         "ghcr.dockerproxy.net/bandju/runtime-debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818"
       ],
       "amneziawg": [
-        "ghcr.io/bandju/amneziawg:latest@sha256:821e0250abcb6c2a0ed12116823d689f14af45450a0bf059c43edd4a71a615eb",
-        "ghcr.dockerproxy.net/bandju/amneziawg:latest@sha256:821e0250abcb6c2a0ed12116823d689f14af45450a0bf059c43edd4a71a615eb"
+        "ghcr.io/bandju/amneziawg:latest@sha256:20d79b7818f91c376b3287b10c72e51669c2a15dbb65266f2dbd21ed649aaca7",
+        "ghcr.dockerproxy.net/bandju/amneziawg:latest@sha256:20d79b7818f91c376b3287b10c72e51669c2a15dbb65266f2dbd21ed649aaca7"
       ],
       "xray": [
         "ghcr.io/xtls/xray-core:latest@sha256:592ec4d11f656db95598d01e76dbcc6e002d67360b96a5436500a938230f52c7",
         "ghcr.dockerproxy.net/xtls/xray-core:latest@sha256:592ec4d11f656db95598d01e76dbcc6e002d67360b96a5436500a938230f52c7"
       ],
       "hysteria2": [
-        "ghcr.io/bandju/hysteria:v2.9.3@sha256:5d8127a1217f2846571cc2853eb00c05c7da5eb08744bc0c1a5812eabd19581d",
-        "docker.io/tobyxdd/hysteria:v2.9.3@sha256:5d8127a1217f2846571cc2853eb00c05c7da5eb08744bc0c1a5812eabd19581d",
-        "ghcr.dockerproxy.net/bandju/hysteria:v2.9.3@sha256:5d8127a1217f2846571cc2853eb00c05c7da5eb08744bc0c1a5812eabd19581d"
+        "ghcr.io/bandju/hysteria:v2.12.2@sha256:9725222899831fd80ca802c4f6984b5f6ad96672248a25dd7d8f781f5029f87c",
+        "docker.io/tobyxdd/hysteria:v2.12.2@sha256:9725222899831fd80ca802c4f6984b5f6ad96672248a25dd7d8f781f5029f87c",
+        "ghcr.dockerproxy.net/bandju/hysteria:v2.12.2@sha256:9725222899831fd80ca802c4f6984b5f6ad96672248a25dd7d8f781f5029f87c"
       ],
       "hysteria2-warp": [
         "ghcr.io/xtls/xray-core:26.6.1@sha256:3943bddece5fab72308a4415917f0391917b7b81ddbf50708988b89e6e2bd213",
