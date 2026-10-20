@@ -1,55 +1,112 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "releaseVersion": "2.0.1",
+  "releaseVersion": "1.9.0",
   "scope": "both",
-  "version": "2.0.1",
-  "publishedAt": "2026-10-19T12:40:13.000Z",
-  "notes": "Исправлены ошибки обновления панели с 1.9 до 2.0, связанные с проверкой Gateway. Улучшено восстановление предыдущей версии при неудачном обновлении.\nИсправлена подготовка прежних установок AmneziaWG 2 и AmneziaWG 3 к общей маршрутизации. Необходимое обновление выполняется автоматически с сохранением клиентов и ключей.\nИсправлена работа XRay через Gateway при включении маршрутизации на VPS с ограничивающим firewall. Нужное внутреннее соединение настраивается автоматически и восстанавливается после перезагрузки.\nИсправлен преждевременный отказ временных SSH-ключей на серверах с другим часовым поясом. Ранее созданные панелью ключи исправляются автоматически с сохранением назначенного срока действия.\nДобавлена проверка совместимости лаунчера и панели перед настройкой маршрутизации и временного SSH-доступа.",
-  "pub_date": "2026-10-19T12:40:13.000Z",
+  "version": "1.9.0",
+  "publishedAt": "2026-09-08T21:25:25.000Z",
+  "notes": "MTProto получил новое ядро на базе Telemt 3.5.5 с повышенной стабильностью и автоматическим восстановлением после сбоев.\nДобавлены выбор порта, проверка реального MTProto-подключения и диагностика доступности Telegram.\nУлучшены состояния установки и запуска, обработка сетевых ошибок и отображение причин неполадок.\nСнижена фоновая нагрузка от регулярных проверок состояния MTProto.\nДобавлено подключение внешних источников подписок наряду с доступами на собственных VPS.\nПодключения из внешнего источника можно выбирать и добавлять в подписки Bandju.\nИсточники можно редактировать, обновлять и синхронизировать автоматически.\nLauncher показывает доступность внешних подключений и сохраняет последнюю рабочую версию при временных ошибках.\nВнешние подключения учитываются в резервных копиях и автоматически перепривязываются после переноса на другой VPS.\nДобавлен единый центр обновлений для всех сохранённых VPS.\nТеперь можно проверить все серверы и обновить сразу все VPS, которым доступна новая версия panel, либо выбрать только нужные.\nДля каждого сервера отображаются текущая версия, доступность обновления и ход выполнения.\nОбновления выполняются последовательно и проверяются после установки.\nLauncher заранее предупреждает, если обновление может временно затронуть старое подключение Cascade.\nСертификаты Domain теперь автоматически продлеваются заранее — начиная за 15 дней до окончания срока действия.\nПродление выполняется без остановки работающего сайта и связанных сервисов.\nНеудачная попытка не затрагивает действующий сертификат: panel повторит операцию позднее и сообщит о проблеме.\nЕсли Domain не настроен, фоновые проверки сертификата не выполняются.\nДобавлен безопасный выбор SSH-порта с проверкой нового подключения до переключения.\nДействующий SSH-порт сохраняется, а незавершённая настройка автоматически откатывается.\nДействия с VPS перенесены ближе к выбранному серверу; добавлены безопасные варианты удаления.\nСерверы теперь можно переставлять перетаскиванием, а выбранный порядок сохраняется во всех связанных списках.\nУлучшена диагностика SSH в Windows, включая работу с ключами в путях с нелатинскими символами.\nАдреса и нестандартные порты серверов теперь отображаются компактнее и понятнее.\nДля Cascade теперь можно выбрать AmneziaWG 2.0 или 3.1.\nПереключение выполняется согласованно на обеих VPS с автоматическим откатом при ошибке или прерванной операции.\nИсправлены ложные предупреждения об устаревшем Cascade при использовании актуального транспорта.\nИсправлено зависание TLS Scanner при длительном сканировании. Сохранены запуски до 90 секунд, остановка и повторный запуск.\nСрок действия доступа теперь можно задать точной датой или количеством дней.\nУлучшено отображение длинных названий доступов и исправлены флаги стран в Windows.\nУстановка panel стала надёжнее в сетях, где стандартная загрузка Docker недоступна.\nИсправлено ложное определение занятости системного менеджера пакетов.\nУлучшено восстановление интерфейса после временной потери связи с panel.\nДобавлена поддержка дополнительных устройств для лицензии.",
+  "pub_date": "2026-09-08T21:25:25.000Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.1/Bandju-Panel_2.0.1_windows_x64_setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVhyQWxHYzBtQnp0S3h4cEtmdVhMY2NVaWV1dEZoRzJ0Mk5Ucy81dTZpV1pWZzdKSC9BQVRxbmRNMFc1VENTcW16MWkwd2s2Umw1YlFjRURJamsxWVFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNDE1MTkzCWZpbGU6QmFuZGp1IFBhbmVsXzIuMC4xX3g2NC1zZXR1cC5leGUKYytNYTE4bEdKZlVKKzdVV01OMjBBYmVvT0lyd0JUTVhuS3BoUHp0dlFCd0cwWnRmOW54alZ4Zk00L1d6V0UybzJNWGlVWFNFVXlGeHJGWURwY3hpRGc9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.9.0/Bandju-Panel_1.9.0_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVVxN0oxQUNnRWE5TXVzYVF4VjZXNjhkVm4wTWdRdGtwZEdrZGhneDU1Mk1qaGkrak0xZHpBbDZXQThzeFFicFJIZVNIM29kWmdlNEVwcUpaZEUxUXc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4OTA0MjgzCWZpbGU6QmFuZGp1IFBhbmVsXzEuOS4wX3g2NC1zZXR1cC5leGUKbmpEdlFIV2hBaW9DN29kRVVzeitaZEc4aEdGNUMzaWxOQ3B5bFM5UU1VVk5UU01IRUZJQng3NWxjVVVuVUROZDB3cVkwZWNkdHlqbU96SUVObTFYQ3c9PQo="
     },
     "darwin-aarch64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.1/Bandju-Panel_2.0.1_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVlaMDdqRVdKQ3dNMTk0MkxPc1RjOC91Zi9KNEhZNXVLNUdPRFhZVXdFOXc2RXFPMGl3YldZenc2aE1qdjQrR3U4dW56QnJ2bUxOZEY0SmFLK1hjMlFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNDE0NTk4CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKR0E5Z09TTThZN1N3WkJIMUpwUnR1Skx3VmY3S0RzMWNlWkdjYWZtUjQ5aUpKSjVOQ1VFYTdoOEtsVDlVU28vOGVTYkQxd3Q1OEdBbmR5eE1BWTBSQmc9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.9.0/Bandju-Panel_1.9.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVkyM0NlYldQSkVoRVdXTUZncmtNaWR1d2dxcHF6NEVTd0FYRklwOHN3dE56VWEvV3BsemtQMHVGM0kvc29KQ1VoZWhTQWxhQnZqMmlHZjJ0Ly9uT2dzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4OTAzNTIxCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKVURiZXYxa1lqN25CeDR6bmI4Mkx0cGdONmxVNGdRZGYwMTI5VkJDb2pFeDdjTWtQUjk4ZXQxZDNUL3E5MmZKSE5tbCthZEc0Zk90UFA3Y1N0d0x6QXc9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.1/Bandju-Panel_2.0.1_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVlaMDdqRVdKQ3dNMTk0MkxPc1RjOC91Zi9KNEhZNXVLNUdPRFhZVXdFOXc2RXFPMGl3YldZenc2aE1qdjQrR3U4dW56QnJ2bUxOZEY0SmFLK1hjMlFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNDE0NTk4CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKR0E5Z09TTThZN1N3WkJIMUpwUnR1Skx3VmY3S0RzMWNlWkdjYWZtUjQ5aUpKSjVOQ1VFYTdoOEtsVDlVU28vOGVTYkQxd3Q1OEdBbmR5eE1BWTBSQmc9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.9.0/Bandju-Panel_1.9.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVkyM0NlYldQSkVoRVdXTUZncmtNaWR1d2dxcHF6NEVTd0FYRklwOHN3dE56VWEvV3BsemtQMHVGM0kvc29KQ1VoZWhTQWxhQnZqMmlHZjJ0Ly9uT2dzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg4OTAzNTIxCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKVURiZXYxa1lqN25CeDR6bmI4Mkx0cGdONmxVNGdRZGYwMTI5VkJDb2pFeDdjTWtQUjk4ZXQxZDNUL3E5MmZKSE5tbCthZEc0Zk90UFA3Y1N0d0x6QXc9PQo="
     }
   },
   "releaseNotes": {
     "ru": [
-      "Исправлены ошибки обновления панели с 1.9 до 2.0, связанные с проверкой Gateway. Улучшено восстановление предыдущей версии при неудачном обновлении.",
-      "Исправлена подготовка прежних установок AmneziaWG 2 и AmneziaWG 3 к общей маршрутизации. Необходимое обновление выполняется автоматически с сохранением клиентов и ключей.",
-      "Исправлена работа XRay через Gateway при включении маршрутизации на VPS с ограничивающим firewall. Нужное внутреннее соединение настраивается автоматически и восстанавливается после перезагрузки.",
-      "Исправлен преждевременный отказ временных SSH-ключей на серверах с другим часовым поясом. Ранее созданные панелью ключи исправляются автоматически с сохранением назначенного срока действия.",
-      "Добавлена проверка совместимости лаунчера и панели перед настройкой маршрутизации и временного SSH-доступа."
+      "MTProto получил новое ядро на базе Telemt 3.5.5 с повышенной стабильностью и автоматическим восстановлением после сбоев.",
+      "Добавлены выбор порта, проверка реального MTProto-подключения и диагностика доступности Telegram.",
+      "Улучшены состояния установки и запуска, обработка сетевых ошибок и отображение причин неполадок.",
+      "Снижена фоновая нагрузка от регулярных проверок состояния MTProto.",
+      "Добавлено подключение внешних источников подписок наряду с доступами на собственных VPS.",
+      "Подключения из внешнего источника можно выбирать и добавлять в подписки Bandju.",
+      "Источники можно редактировать, обновлять и синхронизировать автоматически.",
+      "Launcher показывает доступность внешних подключений и сохраняет последнюю рабочую версию при временных ошибках.",
+      "Внешние подключения учитываются в резервных копиях и автоматически перепривязываются после переноса на другой VPS.",
+      "Добавлен единый центр обновлений для всех сохранённых VPS.",
+      "Теперь можно проверить все серверы и обновить сразу все VPS, которым доступна новая версия panel, либо выбрать только нужные.",
+      "Для каждого сервера отображаются текущая версия, доступность обновления и ход выполнения.",
+      "Обновления выполняются последовательно и проверяются после установки.",
+      "Launcher заранее предупреждает, если обновление может временно затронуть старое подключение Cascade.",
+      "Сертификаты Domain теперь автоматически продлеваются заранее — начиная за 15 дней до окончания срока действия.",
+      "Продление выполняется без остановки работающего сайта и связанных сервисов.",
+      "Неудачная попытка не затрагивает действующий сертификат: panel повторит операцию позднее и сообщит о проблеме.",
+      "Если Domain не настроен, фоновые проверки сертификата не выполняются.",
+      "Добавлен безопасный выбор SSH-порта с проверкой нового подключения до переключения.",
+      "Действующий SSH-порт сохраняется, а незавершённая настройка автоматически откатывается.",
+      "Действия с VPS перенесены ближе к выбранному серверу; добавлены безопасные варианты удаления.",
+      "Серверы теперь можно переставлять перетаскиванием, а выбранный порядок сохраняется во всех связанных списках.",
+      "Улучшена диагностика SSH в Windows, включая работу с ключами в путях с нелатинскими символами.",
+      "Адреса и нестандартные порты серверов теперь отображаются компактнее и понятнее.",
+      "Для Cascade теперь можно выбрать AmneziaWG 2.0 или 3.1.",
+      "Переключение выполняется согласованно на обеих VPS с автоматическим откатом при ошибке или прерванной операции.",
+      "Исправлены ложные предупреждения об устаревшем Cascade при использовании актуального транспорта.",
+      "Исправлено зависание TLS Scanner при длительном сканировании. Сохранены запуски до 90 секунд, остановка и повторный запуск.",
+      "Срок действия доступа теперь можно задать точной датой или количеством дней.",
+      "Улучшено отображение длинных названий доступов и исправлены флаги стран в Windows.",
+      "Установка panel стала надёжнее в сетях, где стандартная загрузка Docker недоступна.",
+      "Исправлено ложное определение занятости системного менеджера пакетов.",
+      "Улучшено восстановление интерфейса после временной потери связи с panel.",
+      "Добавлена поддержка дополнительных устройств для лицензии."
     ],
     "en": [
-      "Fixed panel upgrade errors from 1.9 to 2.0 related to Gateway validation. Improved recovery of the previous version when an update fails.",
-      "Fixed preparation of older AmneziaWG 2 and AmneziaWG 3 installations for shared routing. Required updates run automatically while preserving clients and keys.",
-      "Fixed XRay connectivity through Gateway when enabling routing on a VPS with a restrictive firewall. The required internal connection is configured automatically and restored after a reboot.",
-      "Fixed temporary SSH keys becoming invalid prematurely on servers in a different time zone. Existing panel-managed keys are repaired automatically while retaining their assigned expiry time.",
-      "Added a launcher and panel compatibility check before configuring routing or temporary SSH access."
+      "MTProto now uses a new core based on Telemt 3.5.5, with improved stability and automatic recovery after failures.",
+      "Added port selection, real MTProto connection checks, and Telegram reachability diagnostics.",
+      "Improved installation and startup states, network error handling, and explanations of detected problems.",
+      "Reduced background load from regular MTProto status checks.",
+      "Added external subscription sources alongside accesses hosted on your own VPS servers.",
+      "Connections from an external source can be selected and added to Bandju subscriptions.",
+      "Sources can be edited, refreshed, and synchronized automatically.",
+      "The launcher shows external connection availability and keeps the last working version during temporary refresh failures.",
+      "External connections are included in backups and automatically rebound after migration to another VPS.",
+      "Added a unified update center for all saved VPS servers.",
+      "You can now check every server and update all VPS servers with an available panel update, or select only the ones you need.",
+      "The current version, update availability, and progress are shown for each server.",
+      "Updates run sequentially and are verified after installation.",
+      "The launcher warns in advance when an update may temporarily affect a legacy Cascade connection.",
+      "Domain certificates are now renewed automatically starting 15 days before expiration.",
+      "Renewal runs without stopping the active website or related services.",
+      "A failed attempt does not affect the active certificate: panel retries later and reports the problem.",
+      "When Domain is not configured, background certificate checks are skipped.",
+      "Added safe SSH port selection with connection verification before switching.",
+      "The active SSH port is preserved, and incomplete configuration is rolled back automatically.",
+      "VPS actions are now placed next to the selected server, with safer removal options.",
+      "Servers can now be reordered by dragging, and the selected order is preserved across related lists.",
+      "Improved SSH diagnostics on Windows, including keys stored in paths containing non-Latin characters.",
+      "Server addresses and non-default ports are now displayed more clearly and compactly.",
+      "Cascade can now use either AmneziaWG 2.0 or 3.1.",
+      "Switching is coordinated across both VPS servers, with automatic rollback after an error or interrupted operation.",
+      "Fixed incorrect legacy Cascade warnings when a current transport is in use.",
+      "Fixed TLS Scanner hangs during long scans while preserving runs of up to 90 seconds, cancellation, and immediate retry.",
+      "Access expiration can now be set using an exact date or a number of days.",
+      "Improved long access-name display and fixed country flags on Windows.",
+      "Panel installation is more reliable on networks where the standard Docker download path is unavailable.",
+      "Fixed package manager activity being detected incorrectly.",
+      "Improved interface recovery after a temporary loss of connection to panel.",
+      "Added support for additional devices on a license."
     ]
   },
   "launcher": {
-    "version": "2.0.1",
+    "version": "1.9.0",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.1/Bandju-Panel_2.0.1_universal.dmg",
-        "sha256": "7c4b0711d70596140ae3bd48984f88f543af6c4ccccab861164e31921b5bff0d"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.9.0/Bandju-Panel_1.9.0_universal.dmg",
+        "sha256": "584137cc49cdcd5d1122c44cb88904807e193ecdec85a91da491552ec1986435"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.1/Bandju-Panel_2.0.1_windows_x64_setup.exe",
-        "sha256": "6e2eb1b616abb671e3b03a5f4c7bdb2a9e8831184816ea58875872e7c9c91685"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.9.0/Bandju-Panel_1.9.0_windows_x64_setup.exe",
+        "sha256": "eb323678e9932bd33e5f989483944fc62fcd92fc1dee2a45a46d56a57f1e534d"
       }
-    },
-    "panelUpdateContract": 1
+    }
   },
   "panel": {
     "version": "1.9.0",
@@ -60,19 +117,6 @@
     ],
     "buildRef": "1.9.0+4600ec3",
     "digest": "sha256:9b028ce978f4cc0b806ef3614a9ca15d3fc38fb5a1e4447763f8464f35d54183"
-  },
-  "panelUpdates": {
-    "contract": 1,
-    "panel": {
-      "version": "2.0.1",
-      "image": "ghcr.io/bandju/bandju-panel:2.0.1",
-      "stableImage": "ghcr.io/bandju/bandju-panel:stable",
-      "fallbackImages": [
-        "ghcr.dockerproxy.net/bandju/bandju-panel:2.0.1"
-      ],
-      "buildRef": "2.0.1+169d489",
-      "digest": "sha256:1324a0f3bc7116ec71be5ad517817e45ed8e1e4970ccc2feddae60dd674e8b2e"
-    }
   },
   "operationalConfig": {
     "schemaVersion": 1,

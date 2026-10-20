@@ -8,9 +8,9 @@ set -euo pipefail
 #   Rollback: bash install.sh --rollback
 #   Remove:   bash install.sh --remove
 
-REMOTE_IMAGE="${BANDJU_REMOTE_IMAGE:-ghcr.io/bandju/bandju-panel:2.0.1}"
-REMOTE_DIGEST="${BANDJU_REMOTE_DIGEST:-sha256:1324a0f3bc7116ec71be5ad517817e45ed8e1e4970ccc2feddae60dd674e8b2e}"
-REMOTE_FALLBACK_IMAGES="${BANDJU_REMOTE_FALLBACK_IMAGES:-ghcr.dockerproxy.net/bandju/bandju-panel:2.0.1}"
+REMOTE_IMAGE="${BANDJU_REMOTE_IMAGE:-ghcr.io/bandju/bandju-panel:1.9.0}"
+REMOTE_DIGEST="${BANDJU_REMOTE_DIGEST:-sha256:9b028ce978f4cc0b806ef3614a9ca15d3fc38fb5a1e4447763f8464f35d54183}"
+REMOTE_FALLBACK_IMAGES="${BANDJU_REMOTE_FALLBACK_IMAGES:-ghcr.dockerproxy.net/bandju/bandju-panel:1.9.0}"
 REMOTE_RUNTIME_IMAGE="${REMOTE_IMAGE%@*}"
 IMAGE_PULL_TIMEOUT_SECONDS="${BANDJU_IMAGE_PULL_TIMEOUT_SECONDS:-300}"
 PREVIOUS_IMAGE="bandju-panel:previous"
