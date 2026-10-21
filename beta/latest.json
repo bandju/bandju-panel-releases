@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "channel": "beta",
+  "releaseVersion": "2.0.2",
+  "scope": "both",
+  "version": "2.0.2",
+  "publishedAt": "2026-10-21T01:17:25.000Z",
+  "notes": "Beta устанавливается отдельно от обычного Bandju Panel: собственный список серверов, метка Beta и отдельные обновления. Можно выбрать серверы из обычного лаунчера и подтвердить их переход в бету.\nСерверы с панелью 2.0.x автоматически появляются в Beta и её Центре обновлений. Обновление запускается только вручную.\nДобавлен возврат выбранных панелей на 1.9.0 с сохранением подключений, ключей, лимитов, учтённого трафика и сроков действия. Совместимые настройки протоколов и MTProto сохраняются; маршрутизация, Cascade и WARP отключаются.\nПеред возвратом автоматически создаётся точка восстановления. После прерывания можно продолжить с сохранённого этапа. Остальные серверы сохраняют свои версии, Beta остаётся установленной. Для работы с возвращёнными серверами используйте стабильный лаунчер; ссылка на страницу загрузки появится после возврата.\nИсправлено обновление панели на VPS с прежними установками XRay и WARP. Клиенты и ключи сохраняются.\nИсправлена работа AmneziaWG с общей маршрутизацией на VPS с ядром Linux 5.15.\nУстановка дополнительной версии AmneziaWG больше не останавливает уже работающую версию.\nСнижены требования к свободной памяти при проверке и применении небольших наборов правил маршрутизации.",
+  "pub_date": "2026-10-21T01:17:25.000Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.2-beta/Bandju-Panel-Beta_2.0.2_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVo2Z1M2L1JEN3pMR1VvNlFVRGN0WEpFaFNLZHdrWTlpby9QMzlCUWF6QzdxcHowN0lCL0JjQlpOdDB4bDBCMi8yOUEySnRWQ1dWQWpvUFpMdUhWaEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQ2NzE3CWZpbGU6QmFuZGp1IFBhbmVsIEJldGFfMi4wLjJfeDY0LXNldHVwLmV4ZQpmYWNIbldKSzdTT1dXMW9wSDBQMmRzSDZnaDlpRW13K2JZUzFIN2prQWlDSGFTdU90cTY1aVJXN0VDZGVPRGNEdjZ2eXlBOVdlR2F5ODltWDZ2MHRCdz09Cg=="
+    },
+    "darwin-aarch64": {
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.2-beta/Bandju-Panel-Beta_2.0.2_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVpGTVBnVm16VDE0bG9OaUJIUVN4QUFCTVpQS2QzdVMvcTBLZk5oc0xrQlpEazh4TnZvZDlwalZEc1pQa2N2NVFuaUdFaUJ3K2NXWlcxRStobFMxZkFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQ2NjUxCWZpbGU6QmFuZGp1IFBhbmVsIEJldGEuYXBwLnRhci5negpkaWJXanU1enNUbWZTTWdUR2dvTkM2ZnNqQ1FocU5CZjZiZWFRczlORTYzejlrMUtWWDFuMVEzYndTWkRVMENaTEZyWnlQTTNFUUE1L0Z2dnlaWmVCZz09Cg=="
+    },
+    "darwin-x86_64": {
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.2-beta/Bandju-Panel-Beta_2.0.2_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVpGTVBnVm16VDE0bG9OaUJIUVN4QUFCTVpQS2QzdVMvcTBLZk5oc0xrQlpEazh4TnZvZDlwalZEc1pQa2N2NVFuaUdFaUJ3K2NXWlcxRStobFMxZkFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNTQ2NjUxCWZpbGU6QmFuZGp1IFBhbmVsIEJldGEuYXBwLnRhci5negpkaWJXanU1enNUbWZTTWdUR2dvTkM2ZnNqQ1FocU5CZjZiZWFRczlORTYzejlrMUtWWDFuMVEzYndTWkRVMENaTEZyWnlQTTNFUUE1L0Z2dnlaWmVCZz09Cg=="
+    }
+  },
+  "releaseNotes": {
+    "ru": [
+      "Beta устанавливается отдельно от обычного Bandju Panel: собственный список серверов, метка Beta и отдельные обновления. Можно выбрать серверы из обычного лаунчера и подтвердить их переход в бету.",
+      "Серверы с панелью 2.0.x автоматически появляются в Beta и её Центре обновлений. Обновление запускается только вручную.",
+      "Добавлен возврат выбранных панелей на 1.9.0 с сохранением подключений, ключей, лимитов, учтённого трафика и сроков действия. Совместимые настройки протоколов и MTProto сохраняются; маршрутизация, Cascade и WARP отключаются.",
+      "Перед возвратом автоматически создаётся точка восстановления. После прерывания можно продолжить с сохранённого этапа. Остальные серверы сохраняют свои версии, Beta остаётся установленной. Для работы с возвращёнными серверами используйте стабильный лаунчер; ссылка на страницу загрузки появится после возврата.",
+      "Исправлено обновление панели на VPS с прежними установками XRay и WARP. Клиенты и ключи сохраняются.",
+      "Исправлена работа AmneziaWG с общей маршрутизацией на VPS с ядром Linux 5.15.",
+      "Установка дополнительной версии AmneziaWG больше не останавливает уже работающую версию.",
+      "Снижены требования к свободной памяти при проверке и применении небольших наборов правил маршрутизации."
+    ],
+    "en": [
+      "Beta installs separately from regular Bandju Panel, with its own server list, Beta badge and updates. Select servers from the regular launcher and explicitly confirm their move to beta.",
+      "Servers running panel 2.0.x automatically appear in Beta and its Update center. Updates are started manually only.",
+      "Added a return of selected panels to 1.9.0, preserving connections, keys, limits, recorded traffic and expiration dates. Compatible protocol settings and MTProto are preserved; Routing, Cascade and WARP are disabled.",
+      "A recovery point is created automatically before returning. Interrupted operations can resume from the saved step. Other servers retain their versions and Beta stays installed. Use the stable launcher to manage returned servers; a link to its download page appears after returning.",
+      "Fixed panel updates on VPS hosts with older XRay and WARP installations. Clients and keys are preserved.",
+      "Fixed AmneziaWG connectivity through shared routing on VPS hosts running Linux kernel 5.15.",
+      "Installing another AmneziaWG version no longer stops the version already running.",
+      "Reduced free-memory requirements when validating and applying small routing rule sets."
+    ]
+  },
+  "launcher": {
+    "version": "2.0.2",
+    "downloads": {
+      "macos": {
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.2-beta/Bandju-Panel-Beta_2.0.2_universal.dmg",
+        "sha256": "46561a5c5a8736a8bcd66968c4614f000822fe4088d109e43142d494718e9301"
+      },
+      "windows": {
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.2-beta/Bandju-Panel-Beta_2.0.2_windows_x64_setup.exe",
+        "sha256": "c80349d1254f24029f019c8a09af90a97b6f195f6f01a28f6cde287ea3cab8af"
+      }
+    },
+    "panelUpdateContract": 1
+  },
+  "panel": {
+    "version": "1.9.0",
+    "image": "ghcr.io/bandju/bandju-panel:1.9.0",
+    "stableImage": "ghcr.io/bandju/bandju-panel:stable",
+    "fallbackImages": [
+      "ghcr.dockerproxy.net/bandju/bandju-panel:1.9.0"
+    ],
+    "buildRef": "1.9.0+4600ec3",
+    "digest": "sha256:9b028ce978f4cc0b806ef3614a9ca15d3fc38fb5a1e4447763f8464f35d54183"
+  },
+  "panelUpdates": {
+    "contract": 1,
+    "panel": {
+      "version": "2.0.2",
+      "image": "ghcr.io/bandju/bandju-panel:2.0.2",
+      "stableImage": "ghcr.io/bandju/bandju-panel:stable",
+      "fallbackImages": [
+        "ghcr.dockerproxy.net/bandju/bandju-panel:2.0.2"
+      ],
+      "buildRef": "2.0.2+de5127e",
+      "digest": "sha256:043a2f1196bae3c7c12093961b1ad8372b0eb8f951eff14734c704fdc01b9e30"
+    }
+  },
+  "operationalConfig": {
+    "schemaVersion": 1,
+    "revision": 9,
+    "publishedAt": "2026-10-13T02:18:18Z",
+    "panelImageMirrorRegistries": [
+      "ghcr.dockerproxy.net"
+    ],
+    "runtimeImages": {
+      "routing-core": [
+        "ghcr.io/bandju/routing-core:test-20261013-amd64-isolation-6@sha256:27afa8c7c358bfd0e3e4785289267479ba8cd93d593f9fa65d6bae903fb6d050",
+        "ghcr.dockerproxy.net/bandju/routing-core:test-20261013-amd64-isolation-6@sha256:27afa8c7c358bfd0e3e4785289267479ba8cd93d593f9fa65d6bae903fb6d050"
+      ],
+      "probe-curl": [
+        "quay.io/curl/curl:8.12.1@sha256:84ec2a70279219a45d327ec1f2f112d019bc9dcdd0e19f1ba7689b646c2de0c2",
+        "docker.io/curlimages/curl:8.12.1@sha256:94e9e444bcba979c2ea12e27ae39bee4cd10bc7041a472c4727a558e213744e6"
+      ],
+      "domain-nginx": [
+        "docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
+        "ghcr.io/bandju/runtime-nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
+        "ghcr.dockerproxy.net/bandju/runtime-nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10"
+      ],
+      "certbot": [
+        "docker.io/certbot/certbot:v5.6.0@sha256:0107d084c225631fc64a8313e19adb07275f7296fde338f7dfa93986c80b2e3e",
+        "ghcr.io/bandju/runtime-certbot:v5.6.0@sha256:0107d084c225631fc64a8313e19adb07275f7296fde338f7dfa93986c80b2e3e",
+        "ghcr.dockerproxy.net/bandju/runtime-certbot:v5.6.0@sha256:0107d084c225631fc64a8313e19adb07275f7296fde338f7dfa93986c80b2e3e"
+      ],
+      "gateway-haproxy": [
+        "docker.io/library/haproxy:2.9-alpine@sha256:3e29449a6beed63262e36104adf531b4e41b359f61937303f5ea8607987b3748",
+        "ghcr.io/bandju/runtime-haproxy:2.9-alpine@sha256:3e29449a6beed63262e36104adf531b4e41b359f61937303f5ea8607987b3748",
+        "ghcr.dockerproxy.net/bandju/runtime-haproxy:2.9-alpine@sha256:3e29449a6beed63262e36104adf531b4e41b359f61937303f5ea8607987b3748"
+      ],
+      "panel-python-base": [
+        "docker.io/library/python:3.12-alpine@sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df",
+        "ghcr.io/bandju/runtime-python:3.12-alpine@sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df",
+        "ghcr.dockerproxy.net/bandju/runtime-python:3.12-alpine@sha256:6d43704baacd1bfbe7c295d7f13079d5d8104ed33568873133f8fc69980419df"
+      ],
+      "mtproxy-debian-base": [
+        "docker.io/library/debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818",
+        "ghcr.io/bandju/runtime-debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818",
+        "ghcr.dockerproxy.net/bandju/runtime-debian:bookworm-slim@sha256:7b140f374b289a7c2befc338f42ebe6441b7ea838a042bbd5acbfca6ec875818"
+      ],
+      "amneziawg": [
+        "ghcr.io/bandju/amneziawg:latest@sha256:20d79b7818f91c376b3287b10c72e51669c2a15dbb65266f2dbd21ed649aaca7",
+        "ghcr.dockerproxy.net/bandju/amneziawg:latest@sha256:20d79b7818f91c376b3287b10c72e51669c2a15dbb65266f2dbd21ed649aaca7"
+      ],
+      "xray": [
+        "ghcr.io/xtls/xray-core:latest@sha256:592ec4d11f656db95598d01e76dbcc6e002d67360b96a5436500a938230f52c7",
+        "ghcr.dockerproxy.net/xtls/xray-core:latest@sha256:592ec4d11f656db95598d01e76dbcc6e002d67360b96a5436500a938230f52c7"
+      ],
+      "hysteria2": [
+        "ghcr.io/bandju/hysteria:v2.12.2@sha256:9725222899831fd80ca802c4f6984b5f6ad96672248a25dd7d8f781f5029f87c",
+        "docker.io/tobyxdd/hysteria:v2.12.2@sha256:9725222899831fd80ca802c4f6984b5f6ad96672248a25dd7d8f781f5029f87c",
+        "ghcr.dockerproxy.net/bandju/hysteria:v2.12.2@sha256:9725222899831fd80ca802c4f6984b5f6ad96672248a25dd7d8f781f5029f87c"
+      ],
+      "hysteria2-warp": [
+        "ghcr.io/xtls/xray-core:26.6.1@sha256:3943bddece5fab72308a4415917f0391917b7b81ddbf50708988b89e6e2bd213",
+        "ghcr.dockerproxy.net/xtls/xray-core:26.6.1@sha256:3943bddece5fab72308a4415917f0391917b7b81ddbf50708988b89e6e2bd213"
+      ],
+      "mtproxy": [
+        "ghcr.io/bandju/mtproxy:telemt-3.5.5@sha256:74396cd10181d2e5f724bf42b48870182e32503febe9419f33a2f835c642f4bb",
+        "ghcr.dockerproxy.net/bandju/mtproxy:telemt-3.5.5@sha256:74396cd10181d2e5f724bf42b48870182e32503febe9419f33a2f835c642f4bb"
+      ],
+      "panel-runtime-base": [
+        "ghcr.io/bandju/runtime-python:panel-ctx-af3cc00ec8bcf7f6dabc221c0d4ba86361b407fcd10c8cf4b9eba473bfb0a8a7@sha256:1d5e6894be5b5a2f0aea7cf7d6bc3a9dd8298d24d4e6ebf9dbe6cb512581a728",
+        "ghcr.dockerproxy.net/bandju/runtime-python:panel-ctx-af3cc00ec8bcf7f6dabc221c0d4ba86361b407fcd10c8cf4b9eba473bfb0a8a7@sha256:1d5e6894be5b5a2f0aea7cf7d6bc3a9dd8298d24d4e6ebf9dbe6cb512581a728"
+      ]
+    },
+    "publicIpv4Sources": [
+      "https://api.ipify.org",
+      "https://icanhazip.com",
+      "https://ifconfig.io/ip",
+      "https://ifconfig.me/ip"
+    ]
+  }
+}
