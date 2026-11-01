@@ -1,54 +1,50 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "releaseVersion": "2.0.4",
+  "releaseVersion": "2.0.5",
   "scope": "both",
-  "version": "2.0.4",
-  "publishedAt": "2026-10-23T12:26:33.000Z",
-  "notes": "Снижена фоновая нагрузка Routing на процессор VPS, в том числе при закрытом лаунчере.\nУлучшены проверка состояния и автоматическое восстановление маршрутизации после сбоев и прерванных операций AmneziaWG.\nИсправлена остановка Gateway при активной маршрутизации. Сохраняется явно выбранная остановка сервисов.\nУлучшено восстановление связей Routing из точек восстановления между сохранёнными серверами. Если связь не удалось восстановить, лаунчер показывает предупреждение.\nИсправлены проверки подключения в Beta-лаунчере.\nВыпуск обновляет лаунчер и панель до версии 2.0.4. Для получения всех исправлений обновите Beta-лаунчер и панель на выбранных VPS.",
-  "pub_date": "2026-10-23T12:26:33.000Z",
+  "version": "2.0.5",
+  "publishedAt": "2026-11-01T20:44:28.000Z",
+  "notes": "Исправлены проверки безопасности при возврате из беты на панель 1.9.0.\nИсправлен повтор прерванного создания подключения XRay после перезапуска сервиса. Выданный ключ сохраняется.\nПовторный перевод в бету автоматически обрабатывает старую запись выключенного Cascade. Ручная очистка больше не требуется.\nДля получения всех исправлений обновите Beta-лаунчер и панель на выбранных VPS до версии 2.0.5.",
+  "pub_date": "2026-11-01T20:44:28.000Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.4-beta/Bandju-Panel-Beta_2.0.4_windows_x64_setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVVWdkNyOUJsNlFOT01POUtMSlc4bTlyd0s2RkdYUE03YiszTjZjeFdEZEtURUFOZUhOM09scnZHQWMzVGZZcmJJU1pTdEtkS3YrV1Jtejhlc00ybXdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzU5ODg5CWZpbGU6QmFuZGp1IFBhbmVsIEJldGFfMi4wLjRfeDY0LXNldHVwLmV4ZQpiRTNldXZCUlZXMmxJeHFva3J1ajYyYU1VYUdyOFpjUzBxem9HYkMrazJkS2RHcWV0bWpuVTMzR2J5UWt3cWxQcGpmd0MxODRNL0xTcnEyUm4wbmlCZz09Cg=="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.5-beta/Bandju-Panel-Beta_2.0.5_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVdXa0ZlUW8xUHVHT0lvWjJNdW5mTndFTjdvZXFxRFgxSVROdSs5anNkYmVjOHIyRVlVZWdkWEd6SkFMWW9PZ3Fzd0puVzNPUzEvblBkNnk1dVdScVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTY3NTgxCWZpbGU6QmFuZGp1IFBhbmVsIEJldGFfMi4wLjVfeDY0LXNldHVwLmV4ZQphNzg4SitpU3pNdy9qNEVKR0V1S2NHRzBmSHlkcklvSXdOZG1ha21uUURlTys3NXlOY3g3T1JVMllLNGZoeGg4emNPVWJuWXp5S3BsMEFTVkNaL3FDZz09Cg=="
     },
     "darwin-aarch64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.4-beta/Bandju-Panel-Beta_2.0.4_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTWErSEFxWVd1Qk1hQzhJMmdJaWxYWVc1cklZWGVBUXh0WG1mT2NVNE9SZnU3akl0TzNLWnBpNkhEMitJdmlVNXNxdGQyTjRBOTArNVFCdE1mRy9ZOUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzU5NTU4CWZpbGU6QmFuZGp1IFBhbmVsIEJldGEuYXBwLnRhci5negpkVVJ4ZEdnczUwUElqSWdxVWttUUpJaEwrdnZIei90YkYzUHh0blVBdTRJK0ZoQkhQRk9BRFh5NEt6VjU4dHF3R3Vwc3g2ZngyKzVXeisvYmNJR0dBQT09Cg=="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.5-beta/Bandju-Panel-Beta_2.0.5_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVNyVEVpT3NtK0FhcnZsZkw4dVo5N0pLSUtJWjllbGJUMWxsQVJPSHRUMnh5UHRnZGdkYUQxZ2liUyt0NTcrUXB1aGdLQ2hwcWcwQVdOemRZK1lTMVFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTY3MDU0CWZpbGU6QmFuZGp1IFBhbmVsIEJldGEuYXBwLnRhci5negowZkg3bGg3T3V2VDJMZEFLTlB2NGdOT0ZWSE1TdkE3NGZxUVJXOGF4YU94R2I0NFRGYzhDV3p0SlUxcTNWenQrZzMxVDhZTHF3U1FTa0xPNmxmMExDZz09Cg=="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.4-beta/Bandju-Panel-Beta_2.0.4_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTWErSEFxWVd1Qk1hQzhJMmdJaWxYWVc1cklZWGVBUXh0WG1mT2NVNE9SZnU3akl0TzNLWnBpNkhEMitJdmlVNXNxdGQyTjRBOTArNVFCdE1mRy9ZOUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkyNzU5NTU4CWZpbGU6QmFuZGp1IFBhbmVsIEJldGEuYXBwLnRhci5negpkVVJ4ZEdnczUwUElqSWdxVWttUUpJaEwrdnZIei90YkYzUHh0blVBdTRJK0ZoQkhQRk9BRFh5NEt6VjU4dHF3R3Vwc3g2ZngyKzVXeisvYmNJR0dBQT09Cg=="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.5-beta/Bandju-Panel-Beta_2.0.5_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVNyVEVpT3NtK0FhcnZsZkw4dVo5N0pLSUtJWjllbGJUMWxsQVJPSHRUMnh5UHRnZGdkYUQxZ2liUyt0NTcrUXB1aGdLQ2hwcWcwQVdOemRZK1lTMVFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNTY3MDU0CWZpbGU6QmFuZGp1IFBhbmVsIEJldGEuYXBwLnRhci5negowZkg3bGg3T3V2VDJMZEFLTlB2NGdOT0ZWSE1TdkE3NGZxUVJXOGF4YU94R2I0NFRGYzhDV3p0SlUxcTNWenQrZzMxVDhZTHF3U1FTa0xPNmxmMExDZz09Cg=="
     }
   },
   "releaseNotes": {
     "ru": [
-      "Снижена фоновая нагрузка Routing на процессор VPS, в том числе при закрытом лаунчере.",
-      "Улучшены проверка состояния и автоматическое восстановление маршрутизации после сбоев и прерванных операций AmneziaWG.",
-      "Исправлена остановка Gateway при активной маршрутизации. Сохраняется явно выбранная остановка сервисов.",
-      "Улучшено восстановление связей Routing из точек восстановления между сохранёнными серверами. Если связь не удалось восстановить, лаунчер показывает предупреждение.",
-      "Исправлены проверки подключения в Beta-лаунчере.",
-      "Выпуск обновляет лаунчер и панель до версии 2.0.4. Для получения всех исправлений обновите Beta-лаунчер и панель на выбранных VPS."
+      "Исправлены проверки безопасности при возврате из беты на панель 1.9.0.",
+      "Исправлен повтор прерванного создания подключения XRay после перезапуска сервиса. Выданный ключ сохраняется.",
+      "Повторный перевод в бету автоматически обрабатывает старую запись выключенного Cascade. Ручная очистка больше не требуется.",
+      "Для получения всех исправлений обновите Beta-лаунчер и панель на выбранных VPS до версии 2.0.5."
     ],
     "en": [
-      "Reduced Routing background CPU usage on the VPS, including when the launcher is closed.",
-      "Improved routing health checks and automatic recovery after failures and interrupted AmneziaWG operations.",
-      "Fixed stopping Gateway while routing is active. Explicitly stopped services remain stopped.",
-      "Improved recovery of Routing links between saved servers from restore points. The launcher shows a warning if a link cannot be restored.",
-      "Fixed connection checks in the Beta launcher.",
-      "This release updates both the launcher and panel to version 2.0.4. Update the Beta launcher and the panel on selected VPSs to receive all fixes."
+      "Fixed safety checks when returning from beta to panel 1.9.0.",
+      "Fixed retrying interrupted XRay access creation after restarting the service. The issued key is preserved.",
+      "Promoting a server to beta again now automatically handles stale disabled Cascade entries. Manual cleanup is no longer required.",
+      "To receive all fixes, update the Beta launcher and the panel on selected VPSs to version 2.0.5."
     ]
   },
   "launcher": {
-    "version": "2.0.4",
+    "version": "2.0.5",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.4-beta/Bandju-Panel-Beta_2.0.4_universal.dmg",
-        "sha256": "87dab402c35f965befb528a450d01bca88db995d2a78cd5d5f37d8891faab105"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.5-beta/Bandju-Panel-Beta_2.0.5_universal.dmg",
+        "sha256": "eee7cba1567611e2ac6de0bdba96177e4d605ec89afec15c391acda22a151e2c"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.4-beta/Bandju-Panel-Beta_2.0.4_windows_x64_setup.exe",
-        "sha256": "d8818bd35d609736a530840fd439dd404d80abb838c18381988a082198ed338d"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v2.0.5-beta/Bandju-Panel-Beta_2.0.5_windows_x64_setup.exe",
+        "sha256": "9cd53487e1c005cc6206ba95fbca593f121f06c227c217c7e92797cdc7339831"
       }
     },
     "panelUpdateContract": 1
@@ -66,14 +62,14 @@
   "panelUpdates": {
     "contract": 1,
     "panel": {
-      "version": "2.0.4",
-      "image": "ghcr.io/bandju/bandju-panel:2.0.4",
+      "version": "2.0.5",
+      "image": "ghcr.io/bandju/bandju-panel:2.0.5",
       "stableImage": "ghcr.io/bandju/bandju-panel:stable",
       "fallbackImages": [
-        "ghcr.dockerproxy.net/bandju/bandju-panel:2.0.4"
+        "ghcr.dockerproxy.net/bandju/bandju-panel:2.0.5"
       ],
-      "buildRef": "2.0.4+0656ddf",
-      "digest": "sha256:22e1b9433f15077fcd83c23212f8198caac07cae53d84973d0cdf884c664491f"
+      "buildRef": "2.0.5+07105da",
+      "digest": "sha256:0b7efa760e5875972ad55d24e315abe0a2b401204adca14e648f84548a4abffa"
     }
   },
   "operationalConfig": {
