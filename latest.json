@@ -1,66 +1,44 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "releaseVersion": "1.10.0",
-  "scope": "both",
-  "version": "1.10.0",
-  "publishedAt": "2026-11-02T20:35:14.000Z",
-  "notes": "Исправлено подключение к уже установленной панели при временных сбоях: повторная проверка без переустановки, кнопка «Проверить снова» и отдельное сообщение при тайм-ауте SSH.\nУпрощена настройка Cascade: создание связки из одного окна, замена выходов и смена ролей серверов.\nДобавлен резервный выход Cascade: автоматическое переключение при отказе основного и возврат после устойчивого восстановления.\nDirect и WARP настраиваются отдельно для каждого выхода Cascade, включая резервный.\nОбновлён интерфейс Cascade: интерактивная схема на всех участниках, компактные настройки, показатели соединения и прогресс операций.\nУлучшены восстановление Cascade после сбоев и прерванных операций, установка, пресет и удаление модуля с сохранением остальных сервисов и доступов.\nТесты протоколов проверяют выбранное подключение и показывают фактический маршрут трафика.\nMTProto получил режимы Auto, ME и Direct, улучшенные проверки соединения и восстановление после сбоев.\nРасширены возможности подписок: автоматический выбор подключения, группировка и дополнительные форматы AmneziaWG.\nУлучшены резервные копии и выборочное восстановление, сохранение настроек WARP, имён доступов, лимитов и сроков действия.\nИсправлено отображение повторяющихся записей SSH-ключей, улучшены отмена обновления и восстановление после ошибок.\nВыпуск обновляет launcher и panel. Для новых возможностей Cascade обновите launcher и panel на всех серверах связки.",
-  "pub_date": "2026-11-02T20:35:14.000Z",
+  "releaseVersion": "1.10.1",
+  "scope": "launcher",
+  "version": "1.10.1",
+  "publishedAt": "2026-11-02T21:38:40.000Z",
+  "notes": "Уточнён выбор версии панели для установки и обновления.",
+  "pub_date": "2026-11-02T21:38:40.000Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.0/Bandju-Panel_1.10.0_windows_x64_setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJCWE5uYTZUbFhCREUzamlsMXN6MDg5WE94b00vV3dxM0kxZHVSMDVJV2RzVkZ2YVJzOHk2QkR4cm1Id0JZcHQyQW9ZUHhSRjlRRURvY1hub1dEVVFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjUzMzM1CWZpbGU6QmFuZGp1IFBhbmVsXzEuMTAuMF94NjQtc2V0dXAuZXhlCmJNWXgzYkdrVFdkRVFYbWFmTzE3VG5JSkVtUG81bGg2UzRxUkd2S0czOFhnZUJpaVk1UXUzTFlNNlFyV0RGYVB2dmcxWEN2RlJ6TTR2TmpScVNQUUJ3PT0K"
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.1/Bandju-Panel_1.10.1_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVZzZURjVkdIcThNSmpvYWhVQ1dEZEhlelhxZktRMk13eUdUakk5TmJJR3NLNzMrYXRmQUs3ZTRGOFVKc0JEazJuMS91L2VPekJMenBjdi9VZDdGOFFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjU2OTIzCWZpbGU6QmFuZGp1IFBhbmVsXzEuMTAuMV94NjQtc2V0dXAuZXhlClJ2Y0JOcjd0WVVMUWlZdTR4ZEtZaW1vakxKYVlHcXZRNTZwZ0d2VHlRa0ZvcllTVEk2NDBhRFdqWlVJbExPSXpYelNjbG41WTY3VzBQbDJUcGpraERRPT0K"
     },
     "darwin-aarch64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.0/Bandju-Panel_1.10.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTWRSWG5oUXdvY09ydVZzQnF1N0ZvOW02VG85ZFJMZ25JMUJOMmNQMGNIcXRyUk8wMDZBK0xuT09zelBCcFBUVDZWQmZBQkc5QWFQQWVMVGJ1K29lTVFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjUyOTI5CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKc3c4UGRKSjR1TzVjZHQzUnZlVmxUeFVuVkFZMEtnMVZVOVk5ajhnWmQ0MlZKU1RCMUhublQ5by9BeExNOTV4Snpwd3BUcjFkWllhUElDVWxnVGIzQ3c9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.1/Bandju-Panel_1.10.1_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVdtbEw1SUx2bWNLemlocVQvUVZVamZiR00xY1VvYVJGSzArMGJZSVFldDVndzZacm5aOCtYQnFuZXZPVTV1cTB0SXM5VzB4STlHaUQvN2s0YTFVNlFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjU2NTYyCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKVml5anRvUGFjeEsxUzJJc1QwR1pmMU9vcUpmMGNTUFl3NlZCcXVsM0lIZUdHL3dXUGF3LzkrSnBxUDc3em8raW55ck1EVkk4U1d6VlI2b2c4dzJmQ1E9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.0/Bandju-Panel_1.10.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTWRSWG5oUXdvY09ydVZzQnF1N0ZvOW02VG85ZFJMZ25JMUJOMmNQMGNIcXRyUk8wMDZBK0xuT09zelBCcFBUVDZWQmZBQkc5QWFQQWVMVGJ1K29lTVFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjUyOTI5CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKc3c4UGRKSjR1TzVjZHQzUnZlVmxUeFVuVkFZMEtnMVZVOVk5ajhnWmQ0MlZKU1RCMUhublQ5by9BeExNOTV4Snpwd3BUcjFkWllhUElDVWxnVGIzQ3c9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.1/Bandju-Panel_1.10.1_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVdtbEw1SUx2bWNLemlocVQvUVZVamZiR00xY1VvYVJGSzArMGJZSVFldDVndzZacm5aOCtYQnFuZXZPVTV1cTB0SXM5VzB4STlHaUQvN2s0YTFVNlFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjU2NTYyCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKVml5anRvUGFjeEsxUzJJc1QwR1pmMU9vcUpmMGNTUFl3NlZCcXVsM0lIZUdHL3dXUGF3LzkrSnBxUDc3em8raW55ck1EVkk4U1d6VlI2b2c4dzJmQ1E9PQo="
     }
   },
   "releaseNotes": {
     "ru": [
-      "Исправлено подключение к уже установленной панели при временных сбоях: повторная проверка без переустановки, кнопка «Проверить снова» и отдельное сообщение при тайм-ауте SSH.",
-      "Упрощена настройка Cascade: создание связки из одного окна, замена выходов и смена ролей серверов.",
-      "Добавлен резервный выход Cascade: автоматическое переключение при отказе основного и возврат после устойчивого восстановления.",
-      "Direct и WARP настраиваются отдельно для каждого выхода Cascade, включая резервный.",
-      "Обновлён интерфейс Cascade: интерактивная схема на всех участниках, компактные настройки, показатели соединения и прогресс операций.",
-      "Улучшены восстановление Cascade после сбоев и прерванных операций, установка, пресет и удаление модуля с сохранением остальных сервисов и доступов.",
-      "Тесты протоколов проверяют выбранное подключение и показывают фактический маршрут трафика.",
-      "MTProto получил режимы Auto, ME и Direct, улучшенные проверки соединения и восстановление после сбоев.",
-      "Расширены возможности подписок: автоматический выбор подключения, группировка и дополнительные форматы AmneziaWG.",
-      "Улучшены резервные копии и выборочное восстановление, сохранение настроек WARP, имён доступов, лимитов и сроков действия.",
-      "Исправлено отображение повторяющихся записей SSH-ключей, улучшены отмена обновления и восстановление после ошибок.",
-      "Выпуск обновляет launcher и panel. Для новых возможностей Cascade обновите launcher и panel на всех серверах связки."
+      "Уточнён выбор версии панели для установки и обновления."
     ],
     "en": [
-      "Fixed sign-in to an existing panel after transient failures, with retried checks without reinstallation, a Retry button and a separate SSH timeout message.",
-      "Simplified Cascade setup: create a topology from one window, replace exits and swap server roles.",
-      "Added a standby Cascade exit with automatic failover when the primary fails and failback after sustained recovery.",
-      "Direct and WARP can be configured independently for each Cascade exit, including the standby.",
-      "Updated the Cascade interface with an interactive route diagram on every participant, compact settings, connection metrics and operation progress.",
-      "Improved Cascade recovery after failures and interrupted operations, installation, the preset and module removal while preserving other services and accesses.",
-      "Protocol tests use the selected connection and show its actual traffic route.",
-      "MTProto now offers Auto, ME and Direct modes, improved connection checks and recovery after failures.",
-      "Expanded subscriptions with automatic connection selection, grouping and additional AmneziaWG formats.",
-      "Improved backups and selective restore, including preservation of WARP settings, access names, limits and expiration dates.",
-      "Fixed duplicate SSH key entries in the interface and improved update cancellation and recovery after errors.",
-      "This release updates both launcher and panel. To use the new Cascade features, update the launcher and panel on every server in the topology."
+      "Improved panel version selection for installations and updates."
     ]
   },
   "launcher": {
-    "version": "1.10.0",
+    "version": "1.10.1",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.0/Bandju-Panel_1.10.0_universal.dmg",
-        "sha256": "e67ca5fc3461dafec02d149d6512d4cad92b6cfac5c8f4cd3ecf3f4acfcf7027"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.1/Bandju-Panel_1.10.1_universal.dmg",
+        "sha256": "530c60c5b88ac542ff36001761d11d6b1106cac118a0dc7f84d96a92cc818fc3"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.0/Bandju-Panel_1.10.0_windows_x64_setup.exe",
-        "sha256": "52246b9fa91efd380ed1ae8b0885376bc34a7793e0f20af3508500337c1780f5"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.1/Bandju-Panel_1.10.1_windows_x64_setup.exe",
+        "sha256": "0279b474691a648f617cb992ea8829640bd6fa9385469f7defe796997d3c190d"
       }
     },
     "panelUpdateContract": 1
