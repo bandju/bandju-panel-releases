@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "releaseVersion": "2.0.5",
-  "scope": "both",
+  "releaseVersion": "2.0.6",
+  "scope": "panel",
   "version": "2.0.5",
-  "publishedAt": "2026-11-01T20:44:28.000Z",
+  "publishedAt": "2026-11-02T07:54:33.000Z",
   "notes": "Исправлены проверки безопасности при возврате из беты на панель 1.9.0.\nИсправлен повтор прерванного создания подключения XRay после перезапуска сервиса. Выданный ключ сохраняется.\nПовторный перевод в бету автоматически обрабатывает старую запись выключенного Cascade. Ручная очистка больше не требуется.\nДля получения всех исправлений обновите Beta-лаунчер и панель на выбранных VPS до версии 2.0.5.",
   "pub_date": "2026-11-01T20:44:28.000Z",
   "platforms": {
@@ -23,16 +23,12 @@
   },
   "releaseNotes": {
     "ru": [
-      "Исправлены проверки безопасности при возврате из беты на панель 1.9.0.",
-      "Исправлен повтор прерванного создания подключения XRay после перезапуска сервиса. Выданный ключ сохраняется.",
-      "Повторный перевод в бету автоматически обрабатывает старую запись выключенного Cascade. Ручная очистка больше не требуется.",
-      "Для получения всех исправлений обновите Beta-лаунчер и панель на выбранных VPS до версии 2.0.5."
+      "Исправлена ошибка, из-за которой активный UDP-трафик AmneziaWG мог мешать обновлению панели и автоматическому возврату предыдущей версии.",
+      "Для получения исправления обновите панель на выбранных VPS до версии 2.0.6 через Beta-лаунчер. Обновление самого лаунчера не требуется."
     ],
     "en": [
-      "Fixed safety checks when returning from beta to panel 1.9.0.",
-      "Fixed retrying interrupted XRay access creation after restarting the service. The issued key is preserved.",
-      "Promoting a server to beta again now automatically handles stale disabled Cascade entries. Manual cleanup is no longer required.",
-      "To receive all fixes, update the Beta launcher and the panel on selected VPSs to version 2.0.5."
+      "Fixed an issue where active AmneziaWG UDP traffic could prevent panel updates and automatic rollback to the previous version.",
+      "To receive this fix, update the panel on selected VPSs to version 2.0.6 through the Beta launcher. No launcher update is required."
     ]
   },
   "launcher": {
@@ -62,14 +58,14 @@
   "panelUpdates": {
     "contract": 1,
     "panel": {
-      "version": "2.0.5",
-      "image": "ghcr.io/bandju/bandju-panel:2.0.5",
+      "version": "2.0.6",
+      "image": "ghcr.io/bandju/bandju-panel:2.0.6",
       "stableImage": "ghcr.io/bandju/bandju-panel:stable",
       "fallbackImages": [
-        "ghcr.dockerproxy.net/bandju/bandju-panel:2.0.5"
+        "ghcr.dockerproxy.net/bandju/bandju-panel:2.0.6"
       ],
-      "buildRef": "2.0.5+07105da",
-      "digest": "sha256:0b7efa760e5875972ad55d24e315abe0a2b401204adca14e648f84548a4abffa"
+      "buildRef": "2.0.6+359967f",
+      "digest": "sha256:d098f13a6cc10c7f0d057a24e8604237071ae5b5f5ef1e1b614a9e40abf710dd"
     }
   },
   "operationalConfig": {
