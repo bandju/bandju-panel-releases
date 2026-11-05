@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "releaseVersion": "1.10.1",
-  "scope": "launcher",
+  "releaseVersion": "1.10.2",
+  "scope": "panel",
   "version": "1.10.1",
-  "publishedAt": "2026-11-02T21:38:40.000Z",
+  "publishedAt": "2026-11-05T08:51:00.000Z",
   "notes": "Уточнён выбор версии панели для установки и обновления.",
   "pub_date": "2026-11-02T21:38:40.000Z",
   "platforms": {
@@ -23,10 +23,10 @@
   },
   "releaseNotes": {
     "ru": [
-      "Уточнён выбор версии панели для установки и обновления."
+      "Исправлено восстановление VPN-подключений через Cascade после сброса системных правил маршрутизации."
     ],
     "en": [
-      "Improved panel version selection for installations and updates."
+      "Fixed recovery of VPN connections through Cascade after system routing rules are reset."
     ]
   },
   "launcher": {
@@ -56,14 +56,14 @@
   "panelUpdates": {
     "contract": 1,
     "panel": {
-      "version": "1.10.0",
-      "image": "ghcr.io/bandju/bandju-panel:1.10.0",
+      "version": "1.10.2",
+      "image": "ghcr.io/bandju/bandju-panel:1.10.2",
       "stableImage": "ghcr.io/bandju/bandju-panel:stable",
       "fallbackImages": [
-        "ghcr.dockerproxy.net/bandju/bandju-panel:1.10.0"
+        "ghcr.dockerproxy.net/bandju/bandju-panel:1.10.2"
       ],
-      "buildRef": "1.10.0+ae90cb8",
-      "digest": "sha256:1cf2df5f47d64fef0c298bb83e2badc2143c805b4d8e3f5b5be3748976636997"
+      "buildRef": "1.10.2+8d185e2",
+      "digest": "sha256:ba1564daf576fe0572bc3617a0b0b3326caab7446e21c65100612369e71d329e"
     }
   },
   "operationalConfig": {
