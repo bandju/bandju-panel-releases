@@ -1,44 +1,56 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "releaseVersion": "1.10.2",
-  "scope": "panel",
-  "version": "1.10.1",
-  "publishedAt": "2026-11-05T08:51:00.000Z",
-  "notes": "Уточнён выбор версии панели для установки и обновления.",
-  "pub_date": "2026-11-02T21:38:40.000Z",
+  "releaseVersion": "1.11.0",
+  "scope": "both",
+  "version": "1.11.0",
+  "publishedAt": "2026-11-12T18:37:53.000Z",
+  "notes": "Теперь можно выбирать, как обрабатывать трафик для отдельных доменов, IPv4-адресов и подсетей — отправлять через Cascade, направлять напрямую или блокировать. Правила проверяются сверху вниз, и применяется первое совпадение. Для остального трафика задаётся маршрут по умолчанию. Например, выбранные сайты можно открывать через Cascade, а остальной трафик направлять напрямую.\nСписки можно составлять вручную, подключать по ссылке с автоматическим обновлением или выбирать из готового каталога. Применение правил можно временно отключить и снова включить. Списки, правила и их порядок сохраняются.\nСмена ролей и восстановление Cascade. Старый маршрут продолжает работать, пока выполняется операция в «Доступах». Если SSH к выходу оборвётся после переключения, лаунчер завершит операцию после восстановления связи. При возврате VPS в роль входа его правила сохраняются. Исправлена очистка сетевых правил после удаления остановленного Cascade.\nАдрес для клиентских подключений. Для каждого VPS можно задать IPv4, который будет подставляться в новые ссылки и конфигурации.\nДоступы и трафик. Исправлены продление импортированных подписок без лимита трафика, учёт трафика XRay и отображение объёмов в терабайтах.\nПодключение к панели. Исправлена работа лаунчера через локальный SSH-туннель при включённом системном прокси.\nДля новых возможностей Cascade обновите лаунчер и панели на всех VPS связки.",
+  "pub_date": "2026-11-12T18:37:53.000Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.1/Bandju-Panel_1.10.1_windows_x64_setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVZzZURjVkdIcThNSmpvYWhVQ1dEZEhlelhxZktRMk13eUdUakk5TmJJR3NLNzMrYXRmQUs3ZTRGOFVKc0JEazJuMS91L2VPekJMenBjdi9VZDdGOFFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjU2OTIzCWZpbGU6QmFuZGp1IFBhbmVsXzEuMTAuMV94NjQtc2V0dXAuZXhlClJ2Y0JOcjd0WVVMUWlZdTR4ZEtZaW1vakxKYVlHcXZRNTZwZ0d2VHlRa0ZvcllTVEk2NDBhRFdqWlVJbExPSXpYelNjbG41WTY3VzBQbDJUcGpraERRPT0K"
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.11.0/Bandju-Panel_1.11.0_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVdpQ0dRdDdXNm91SzVkTDRaZHhBRnF0WWlMYnZOMGw3aTcrSWFrWGVWQytrdk1yN3praDZSNWNjOHRtUWNEWW9Vd0JBSkJpZWhzNGN6aGNmelJZZGdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTEwMjgzCWZpbGU6QmFuZGp1IFBhbmVsXzEuMTEuMF94NjQtc2V0dXAuZXhlCmppdE9RMjA1TE1EbktyV1dFYWVQSUVOWDcrNEJ1eHZDY1I1MUpYUEwrRWN3TEdPY0FCUlp3c1liV1FCVjVXM0Y2YzNmTitLRFF3ZUN2ekJGMjdnOEFBPT0K"
     },
     "darwin-aarch64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.1/Bandju-Panel_1.10.1_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVdtbEw1SUx2bWNLemlocVQvUVZVamZiR00xY1VvYVJGSzArMGJZSVFldDVndzZacm5aOCtYQnFuZXZPVTV1cTB0SXM5VzB4STlHaUQvN2s0YTFVNlFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjU2NTYyCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKVml5anRvUGFjeEsxUzJJc1QwR1pmMU9vcUpmMGNTUFl3NlZCcXVsM0lIZUdHL3dXUGF3LzkrSnBxUDc3em8raW55ck1EVkk4U1d6VlI2b2c4dzJmQ1E9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.11.0/Bandju-Panel_1.11.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVk1RlRUTFpsN2syVmR1LzVBL3k5SE9XRG1pWXFCM2pRTkNqS24rWlZ2VzYvTkZ2THZPOWpuZ0RKRGhZVFF1USt0SHRrYTlseTBINVJaUjg1ZUg1MUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTA5ODc4CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKQ24zOEp0Q09GR2dNZ0pLNFA1YVBycW5ic3N5eFlNNG43OVp0SkFmRk5UV3JQbjErNHhhZk9wMXhPMHhQN2NLQSszdCtmMFoxY0RLanJRRUY1YUErQ3c9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.1/Bandju-Panel_1.10.1_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVdtbEw1SUx2bWNLemlocVQvUVZVamZiR00xY1VvYVJGSzArMGJZSVFldDVndzZacm5aOCtYQnFuZXZPVTV1cTB0SXM5VzB4STlHaUQvN2s0YTFVNlFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzNjU2NTYyCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKVml5anRvUGFjeEsxUzJJc1QwR1pmMU9vcUpmMGNTUFl3NlZCcXVsM0lIZUdHL3dXUGF3LzkrSnBxUDc3em8raW55ck1EVkk4U1d6VlI2b2c4dzJmQ1E9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.11.0/Bandju-Panel_1.11.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVk1RlRUTFpsN2syVmR1LzVBL3k5SE9XRG1pWXFCM2pRTkNqS24rWlZ2VzYvTkZ2THZPOWpuZ0RKRGhZVFF1USt0SHRrYTlseTBINVJaUjg1ZUg1MUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTA5ODc4CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKQ24zOEp0Q09GR2dNZ0pLNFA1YVBycW5ic3N5eFlNNG43OVp0SkFmRk5UV3JQbjErNHhhZk9wMXhPMHhQN2NLQSszdCtmMFoxY0RLanJRRUY1YUErQ3c9PQo="
     }
   },
   "releaseNotes": {
     "ru": [
-      "Исправлено восстановление VPN-подключений через Cascade после сброса системных правил маршрутизации."
+      "Теперь можно выбирать, как обрабатывать трафик для отдельных доменов, IPv4-адресов и подсетей — отправлять через Cascade, направлять напрямую или блокировать. Правила проверяются сверху вниз, и применяется первое совпадение. Для остального трафика задаётся маршрут по умолчанию. Например, выбранные сайты можно открывать через Cascade, а остальной трафик направлять напрямую.",
+      "Списки можно составлять вручную, подключать по ссылке с автоматическим обновлением или выбирать из готового каталога. Применение правил можно временно отключить и снова включить. Списки, правила и их порядок сохраняются.",
+      "Смена ролей и восстановление Cascade. Старый маршрут продолжает работать, пока выполняется операция в «Доступах». Если SSH к выходу оборвётся после переключения, лаунчер завершит операцию после восстановления связи. При возврате VPS в роль входа его правила сохраняются. Исправлена очистка сетевых правил после удаления остановленного Cascade.",
+      "Адрес для клиентских подключений. Для каждого VPS можно задать IPv4, который будет подставляться в новые ссылки и конфигурации.",
+      "Доступы и трафик. Исправлены продление импортированных подписок без лимита трафика, учёт трафика XRay и отображение объёмов в терабайтах.",
+      "Подключение к панели. Исправлена работа лаунчера через локальный SSH-туннель при включённом системном прокси.",
+      "Для новых возможностей Cascade обновите лаунчер и панели на всех VPS связки."
     ],
     "en": [
-      "Fixed recovery of VPN connections through Cascade after system routing rules are reset."
+      "Choose how to handle traffic for specific domains, IPv4 addresses, and subnets. You can send it through Cascade, route it directly, or block it. Rules are checked from top to bottom, and the first match applies. A default route handles all other traffic. For example, you can send selected websites through Cascade and route everything else directly.",
+      "Create lists manually, add them by URL with automatic updates, or choose from the built-in catalog. You can pause and resume routing rules while keeping your lists, rules, and rule order.",
+      "Cascade role swaps and recovery. The existing route stays active while an Access operation is in progress. If SSH to the exit drops after a switch, the launcher finishes the operation when the connection returns. A VPS retains its rules when it returns to the entry role. Fixed network rule cleanup when removing a stopped Cascade.",
+      "Client connection address. Set a per-VPS IPv4 address for newly generated client links and configurations.",
+      "Accesses and traffic. Fixed expiry extensions for imported subscriptions without a traffic quota, XRay traffic accounting, and display of traffic totals in terabytes.",
+      "Panel connection. Fixed launcher access through the local SSH tunnel when a system proxy is enabled.",
+      "Update the launcher and the panel on every VPS in the topology to use the new Cascade features."
     ]
   },
   "launcher": {
-    "version": "1.10.1",
+    "version": "1.11.0",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.1/Bandju-Panel_1.10.1_universal.dmg",
-        "sha256": "530c60c5b88ac542ff36001761d11d6b1106cac118a0dc7f84d96a92cc818fc3"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.11.0/Bandju-Panel_1.11.0_universal.dmg",
+        "sha256": "53f4752d59f0f4ffee7ab1436c2f87f65095961a31602fdfd9474fc667becc17"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.10.1/Bandju-Panel_1.10.1_windows_x64_setup.exe",
-        "sha256": "0279b474691a648f617cb992ea8829640bd6fa9385469f7defe796997d3c190d"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.11.0/Bandju-Panel_1.11.0_windows_x64_setup.exe",
+        "sha256": "6766690271696dfbb746063dc02a08a149698d3e77b4bfe83a03763679656b92"
       }
     },
     "panelUpdateContract": 1
@@ -56,14 +68,14 @@
   "panelUpdates": {
     "contract": 1,
     "panel": {
-      "version": "1.10.2",
-      "image": "ghcr.io/bandju/bandju-panel:1.10.2",
+      "version": "1.11.0",
+      "image": "ghcr.io/bandju/bandju-panel:1.11.0",
       "stableImage": "ghcr.io/bandju/bandju-panel:stable",
       "fallbackImages": [
-        "ghcr.dockerproxy.net/bandju/bandju-panel:1.10.2"
+        "ghcr.dockerproxy.net/bandju/bandju-panel:1.11.0"
       ],
-      "buildRef": "1.10.2+8d185e2",
-      "digest": "sha256:ba1564daf576fe0572bc3617a0b0b3326caab7446e21c65100612369e71d329e"
+      "buildRef": "1.11.0+6a8d486",
+      "digest": "sha256:9a45ba3244f27a804ca8b8a0d6d4a413ae04e53ee4fdb7b4bbc43697ac1b2fe5"
     }
   },
   "operationalConfig": {
