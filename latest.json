@@ -1,56 +1,48 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "releaseVersion": "1.12.0",
-  "scope": "both",
-  "version": "1.12.0",
-  "publishedAt": "2026-11-15T16:52:23.000Z",
-  "notes": "IPv6 между VPS. Для основного и резервного выходов можно независимо выбрать IPv4 или IPv6.\nУправление через входной VPS. Если лаунчер не может подключиться к выходу напрямую, можно настроить управление по SSH через вход по IPv6.\nАвтоматическая проверка MTU. При настройке Cascade проверяет, какой размер пакетов проходит через туннель, и при необходимости уменьшает MTU.\nВосстановление после обрыва SSH. Лаунчер лучше восстанавливает прерванные операции. Если переключение зависло, можно сбросить Cascade на текущем VPS и настроить его заново. Клиентские доступы сохраняются.\nЗамена и удаление выходов. После подтверждённой замены недоступный прежний VPS больше не блокирует «Правила». При удалении выхода Cascade переключается на оставшийся доступный выход. Если его нельзя подготовить, каскад отключается, а удаление модуля на выбранном VPS завершается.\nСостояние и настройки. Статус туннеля учитывается отдельно от проверки выхода в интернет. В списках видны роли занятых VPS, а окно прогресса настройки открывается по центру и блокирует фон до завершения.\nДля новых возможностей Cascade обновите лаунчер и панели на всех VPS связки.",
-  "pub_date": "2026-11-15T16:52:23.000Z",
+  "releaseVersion": "1.12.1",
+  "scope": "launcher",
+  "version": "1.12.1",
+  "publishedAt": "2026-11-15T21:55:08.000Z",
+  "notes": "Исправлена совместимость со старым SSH на Windows и macOS.\nИсправлены таймауты и отключение выходов Cascade.\nДостаточно обновить лаунчер. Панель на VPS обновлять не нужно.",
+  "pub_date": "2026-11-15T21:55:08.000Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.0/Bandju-Panel_1.12.0_windows_x64_setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJMdFBPS1NYNVpCTk1XYnBGY0R2em4zaWhacTl5TEZScHU4OU4zTnhjclVFZ1ROUzA2OFpFTm90Q1lDQzM5dit6dWFqSit6UG5vS0liQ2NmUzJMa2djPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzYzMTEzCWZpbGU6QmFuZGp1IFBhbmVsXzEuMTIuMF94NjQtc2V0dXAuZXhlCnlla0YvY1llaERjZUZrVHc0YllSSHNDQ3lrVW9iRXdzZFpEMU9GZUFMZ1crVU5rem5xTDF5VW92VDJKNUNkdXBQWTVmbGdTZ01WMHdjL1M0QWo0UUFnPT0K"
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.1/Bandju-Panel_1.12.1_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVlBSVk2MWlDcmJPZWRYc3ZOcVpvaHppNFl0RDhoVW1odUZpQkNUZFc0TzBpSGN5cTY3a0RwUkcvL1lNbnNKMnBBNVFTZjN6K2pldklzRWxvTnB5eHdNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzgxMDk3CWZpbGU6QmFuZGp1IFBhbmVsXzEuMTIuMV94NjQtc2V0dXAuZXhlCndYaW13RmNpTktJcW9BUHVLUm94aVJVajRTeGJVc00zbklwN3kwOENXQ3lzV3REejUrUW1sMFM5Rm5vRkhMcitkMVd0VFBlelVQcFJaVi92WE5GTURBPT0K"
     },
     "darwin-aarch64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.0/Bandju-Panel_1.12.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVhKYitTdS9uWEpaT0FVeTlYcncrRFJ5ai8vSmY4c2Q4cXFhT0tJVnA0SEZXVDVWV0g3cDdmM1liT1p6cjFaQ1hmWjNrcTFvb1RTSk15Z3ovTHk3bmdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzYyNDIyCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKc3NvUnRyTmhJbzMvc25VMTRURWhKbkkrb29ZSzE2NCtCOEtyMzBMQ0xVUGFGM2ZBVXFZZHg5b3N4K1F4ZmV2MThYSU5OZDY4UEJJWE1zblJkMGhOREE9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.1/Bandju-Panel_1.12.1_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJOTjJpK3Q0MWpodmhhNmNKZ0lKRXM1dWtjaVB0NnpjcWs5MmVzYmJkbzVKeFpTK2ZVZGRlNDcrY3VvNGU3WWJZNnQ0MTk3ajJpMTFoN2t4UnZuZlFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzgwNzA0CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKa3h4Q2Z3SnNqY0dkZE95Ly8xV0NBNDJnRkFxbCtpeFRuLzZ2SHhqOTBSZkZFYTVNVEJkUkNtUG4reVlwZlV4UWFGUFhJazA1aTFVREVnbmx6OXZwQ0E9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.0/Bandju-Panel_1.12.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVhKYitTdS9uWEpaT0FVeTlYcncrRFJ5ai8vSmY4c2Q4cXFhT0tJVnA0SEZXVDVWV0g3cDdmM1liT1p6cjFaQ1hmWjNrcTFvb1RTSk15Z3ovTHk3bmdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzYyNDIyCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKc3NvUnRyTmhJbzMvc25VMTRURWhKbkkrb29ZSzE2NCtCOEtyMzBMQ0xVUGFGM2ZBVXFZZHg5b3N4K1F4ZmV2MThYSU5OZDY4UEJJWE1zblJkMGhOREE9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.1/Bandju-Panel_1.12.1_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJOTjJpK3Q0MWpodmhhNmNKZ0lKRXM1dWtjaVB0NnpjcWs5MmVzYmJkbzVKeFpTK2ZVZGRlNDcrY3VvNGU3WWJZNnQ0MTk3ajJpMTFoN2t4UnZuZlFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzgwNzA0CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKa3h4Q2Z3SnNqY0dkZE95Ly8xV0NBNDJnRkFxbCtpeFRuLzZ2SHhqOTBSZkZFYTVNVEJkUkNtUG4reVlwZlV4UWFGUFhJazA1aTFVREVnbmx6OXZwQ0E9PQo="
     }
   },
   "releaseNotes": {
     "ru": [
-      "IPv6 между VPS. Для основного и резервного выходов можно независимо выбрать IPv4 или IPv6.",
-      "Управление через входной VPS. Если лаунчер не может подключиться к выходу напрямую, можно настроить управление по SSH через вход по IPv6.",
-      "Автоматическая проверка MTU. При настройке Cascade проверяет, какой размер пакетов проходит через туннель, и при необходимости уменьшает MTU.",
-      "Восстановление после обрыва SSH. Лаунчер лучше восстанавливает прерванные операции. Если переключение зависло, можно сбросить Cascade на текущем VPS и настроить его заново. Клиентские доступы сохраняются.",
-      "Замена и удаление выходов. После подтверждённой замены недоступный прежний VPS больше не блокирует «Правила». При удалении выхода Cascade переключается на оставшийся доступный выход. Если его нельзя подготовить, каскад отключается, а удаление модуля на выбранном VPS завершается.",
-      "Состояние и настройки. Статус туннеля учитывается отдельно от проверки выхода в интернет. В списках видны роли занятых VPS, а окно прогресса настройки открывается по центру и блокирует фон до завершения.",
-      "Для новых возможностей Cascade обновите лаунчер и панели на всех VPS связки."
+      "Исправлена совместимость со старым SSH на Windows и macOS.",
+      "Исправлены таймауты и отключение выходов Cascade.",
+      "Достаточно обновить лаунчер. Панель на VPS обновлять не нужно."
     ],
     "en": [
-      "IPv6 between VPS hosts. Choose IPv4 or IPv6 independently for the primary and standby exits.",
-      "Manage exits through the entry VPS. If the launcher cannot reach an exit directly, you can manage it over SSH through the entry VPS using IPv6.",
-      "Automatic MTU checks. During setup, Cascade tests which packet sizes pass through the tunnel and lowers the MTU when needed.",
-      "Recovery after SSH interruptions. The launcher recovers interrupted operations more reliably. If a switch gets stuck, you can reset Cascade on the current VPS and set it up again. Existing client access is preserved.",
-      "Replacing and removing exits. Once an exit replacement is confirmed, an unreachable former VPS no longer blocks Rules. When an exit is removed, Cascade switches to the remaining exit if it is reachable. If the remaining exit cannot be prepared, Cascade is disabled and module removal completes on the selected VPS.",
-      "Status and settings. Tunnel status is tracked separately from internet egress checks. Server lists show the roles of VPS hosts already in use. The setup progress dialog is centered and blocks interaction with the background until the operation finishes.",
-      "To use the new Cascade features, update the launcher and the panel on every VPS in the topology."
+      "Fixed compatibility with older SSH versions on Windows and macOS.",
+      "Fixed timeouts and Cascade exit shutdown.",
+      "Update the launcher only. No VPS panel update is required."
     ]
   },
   "launcher": {
-    "version": "1.12.0",
+    "version": "1.12.1",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.0/Bandju-Panel_1.12.0_universal.dmg",
-        "sha256": "86f3652f41e34cc2569347bfc0c97a4074b6336c2170f51eeb010a7b5e981e1e"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.1/Bandju-Panel_1.12.1_universal.dmg",
+        "sha256": "15fb7783c138e83fa462f6e0a176d6befd52ce0f59f59895e41c924777591134"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.0/Bandju-Panel_1.12.0_windows_x64_setup.exe",
-        "sha256": "f59d0e877cad26f3c2825ab6f7eeca3fa5a503a963282dcc50b6b62c2db1edef"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.1/Bandju-Panel_1.12.1_windows_x64_setup.exe",
+        "sha256": "3ba509a2ce1f02c77229d42055eedc38b6d0d60dc53e9dfe97a7f25ad84f4e16"
       }
     },
     "panelUpdateContract": 1
