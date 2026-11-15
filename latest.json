@@ -1,56 +1,56 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "releaseVersion": "1.11.0",
+  "releaseVersion": "1.12.0",
   "scope": "both",
-  "version": "1.11.0",
-  "publishedAt": "2026-11-12T18:37:53.000Z",
-  "notes": "Теперь можно выбирать, как обрабатывать трафик для отдельных доменов, IPv4-адресов и подсетей — отправлять через Cascade, направлять напрямую или блокировать. Правила проверяются сверху вниз, и применяется первое совпадение. Для остального трафика задаётся маршрут по умолчанию. Например, выбранные сайты можно открывать через Cascade, а остальной трафик направлять напрямую.\nСписки можно составлять вручную, подключать по ссылке с автоматическим обновлением или выбирать из готового каталога. Применение правил можно временно отключить и снова включить. Списки, правила и их порядок сохраняются.\nСмена ролей и восстановление Cascade. Старый маршрут продолжает работать, пока выполняется операция в «Доступах». Если SSH к выходу оборвётся после переключения, лаунчер завершит операцию после восстановления связи. При возврате VPS в роль входа его правила сохраняются. Исправлена очистка сетевых правил после удаления остановленного Cascade.\nАдрес для клиентских подключений. Для каждого VPS можно задать IPv4, который будет подставляться в новые ссылки и конфигурации.\nДоступы и трафик. Исправлены продление импортированных подписок без лимита трафика, учёт трафика XRay и отображение объёмов в терабайтах.\nПодключение к панели. Исправлена работа лаунчера через локальный SSH-туннель при включённом системном прокси.\nДля новых возможностей Cascade обновите лаунчер и панели на всех VPS связки.",
-  "pub_date": "2026-11-12T18:37:53.000Z",
+  "version": "1.12.0",
+  "publishedAt": "2026-11-15T16:52:23.000Z",
+  "notes": "IPv6 между VPS. Для основного и резервного выходов можно независимо выбрать IPv4 или IPv6.\nУправление через входной VPS. Если лаунчер не может подключиться к выходу напрямую, можно настроить управление по SSH через вход по IPv6.\nАвтоматическая проверка MTU. При настройке Cascade проверяет, какой размер пакетов проходит через туннель, и при необходимости уменьшает MTU.\nВосстановление после обрыва SSH. Лаунчер лучше восстанавливает прерванные операции. Если переключение зависло, можно сбросить Cascade на текущем VPS и настроить его заново. Клиентские доступы сохраняются.\nЗамена и удаление выходов. После подтверждённой замены недоступный прежний VPS больше не блокирует «Правила». При удалении выхода Cascade переключается на оставшийся доступный выход. Если его нельзя подготовить, каскад отключается, а удаление модуля на выбранном VPS завершается.\nСостояние и настройки. Статус туннеля учитывается отдельно от проверки выхода в интернет. В списках видны роли занятых VPS, а окно прогресса настройки открывается по центру и блокирует фон до завершения.\nДля новых возможностей Cascade обновите лаунчер и панели на всех VPS связки.",
+  "pub_date": "2026-11-15T16:52:23.000Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.11.0/Bandju-Panel_1.11.0_windows_x64_setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVdpQ0dRdDdXNm91SzVkTDRaZHhBRnF0WWlMYnZOMGw3aTcrSWFrWGVWQytrdk1yN3praDZSNWNjOHRtUWNEWW9Vd0JBSkJpZWhzNGN6aGNmelJZZGdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTEwMjgzCWZpbGU6QmFuZGp1IFBhbmVsXzEuMTEuMF94NjQtc2V0dXAuZXhlCmppdE9RMjA1TE1EbktyV1dFYWVQSUVOWDcrNEJ1eHZDY1I1MUpYUEwrRWN3TEdPY0FCUlp3c1liV1FCVjVXM0Y2YzNmTitLRFF3ZUN2ekJGMjdnOEFBPT0K"
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.0/Bandju-Panel_1.12.0_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJMdFBPS1NYNVpCTk1XYnBGY0R2em4zaWhacTl5TEZScHU4OU4zTnhjclVFZ1ROUzA2OFpFTm90Q1lDQzM5dit6dWFqSit6UG5vS0liQ2NmUzJMa2djPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzYzMTEzCWZpbGU6QmFuZGp1IFBhbmVsXzEuMTIuMF94NjQtc2V0dXAuZXhlCnlla0YvY1llaERjZUZrVHc0YllSSHNDQ3lrVW9iRXdzZFpEMU9GZUFMZ1crVU5rem5xTDF5VW92VDJKNUNkdXBQWTVmbGdTZ01WMHdjL1M0QWo0UUFnPT0K"
     },
     "darwin-aarch64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.11.0/Bandju-Panel_1.11.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVk1RlRUTFpsN2syVmR1LzVBL3k5SE9XRG1pWXFCM2pRTkNqS24rWlZ2VzYvTkZ2THZPOWpuZ0RKRGhZVFF1USt0SHRrYTlseTBINVJaUjg1ZUg1MUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTA5ODc4CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKQ24zOEp0Q09GR2dNZ0pLNFA1YVBycW5ic3N5eFlNNG43OVp0SkFmRk5UV3JQbjErNHhhZk9wMXhPMHhQN2NLQSszdCtmMFoxY0RLanJRRUY1YUErQ3c9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.0/Bandju-Panel_1.12.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVhKYitTdS9uWEpaT0FVeTlYcncrRFJ5ai8vSmY4c2Q4cXFhT0tJVnA0SEZXVDVWV0g3cDdmM1liT1p6cjFaQ1hmWjNrcTFvb1RTSk15Z3ovTHk3bmdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzYyNDIyCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKc3NvUnRyTmhJbzMvc25VMTRURWhKbkkrb29ZSzE2NCtCOEtyMzBMQ0xVUGFGM2ZBVXFZZHg5b3N4K1F4ZmV2MThYSU5OZDY4UEJJWE1zblJkMGhOREE9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.11.0/Bandju-Panel_1.11.0_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVk1RlRUTFpsN2syVmR1LzVBL3k5SE9XRG1pWXFCM2pRTkNqS24rWlZ2VzYvTkZ2THZPOWpuZ0RKRGhZVFF1USt0SHRrYTlseTBINVJaUjg1ZUg1MUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NTA5ODc4CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKQ24zOEp0Q09GR2dNZ0pLNFA1YVBycW5ic3N5eFlNNG43OVp0SkFmRk5UV3JQbjErNHhhZk9wMXhPMHhQN2NLQSszdCtmMFoxY0RLanJRRUY1YUErQ3c9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.0/Bandju-Panel_1.12.0_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVhKYitTdS9uWEpaT0FVeTlYcncrRFJ5ai8vSmY4c2Q4cXFhT0tJVnA0SEZXVDVWV0g3cDdmM1liT1p6cjFaQ1hmWjNrcTFvb1RTSk15Z3ovTHk3bmdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzYyNDIyCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKc3NvUnRyTmhJbzMvc25VMTRURWhKbkkrb29ZSzE2NCtCOEtyMzBMQ0xVUGFGM2ZBVXFZZHg5b3N4K1F4ZmV2MThYSU5OZDY4UEJJWE1zblJkMGhOREE9PQo="
     }
   },
   "releaseNotes": {
     "ru": [
-      "Теперь можно выбирать, как обрабатывать трафик для отдельных доменов, IPv4-адресов и подсетей — отправлять через Cascade, направлять напрямую или блокировать. Правила проверяются сверху вниз, и применяется первое совпадение. Для остального трафика задаётся маршрут по умолчанию. Например, выбранные сайты можно открывать через Cascade, а остальной трафик направлять напрямую.",
-      "Списки можно составлять вручную, подключать по ссылке с автоматическим обновлением или выбирать из готового каталога. Применение правил можно временно отключить и снова включить. Списки, правила и их порядок сохраняются.",
-      "Смена ролей и восстановление Cascade. Старый маршрут продолжает работать, пока выполняется операция в «Доступах». Если SSH к выходу оборвётся после переключения, лаунчер завершит операцию после восстановления связи. При возврате VPS в роль входа его правила сохраняются. Исправлена очистка сетевых правил после удаления остановленного Cascade.",
-      "Адрес для клиентских подключений. Для каждого VPS можно задать IPv4, который будет подставляться в новые ссылки и конфигурации.",
-      "Доступы и трафик. Исправлены продление импортированных подписок без лимита трафика, учёт трафика XRay и отображение объёмов в терабайтах.",
-      "Подключение к панели. Исправлена работа лаунчера через локальный SSH-туннель при включённом системном прокси.",
+      "IPv6 между VPS. Для основного и резервного выходов можно независимо выбрать IPv4 или IPv6.",
+      "Управление через входной VPS. Если лаунчер не может подключиться к выходу напрямую, можно настроить управление по SSH через вход по IPv6.",
+      "Автоматическая проверка MTU. При настройке Cascade проверяет, какой размер пакетов проходит через туннель, и при необходимости уменьшает MTU.",
+      "Восстановление после обрыва SSH. Лаунчер лучше восстанавливает прерванные операции. Если переключение зависло, можно сбросить Cascade на текущем VPS и настроить его заново. Клиентские доступы сохраняются.",
+      "Замена и удаление выходов. После подтверждённой замены недоступный прежний VPS больше не блокирует «Правила». При удалении выхода Cascade переключается на оставшийся доступный выход. Если его нельзя подготовить, каскад отключается, а удаление модуля на выбранном VPS завершается.",
+      "Состояние и настройки. Статус туннеля учитывается отдельно от проверки выхода в интернет. В списках видны роли занятых VPS, а окно прогресса настройки открывается по центру и блокирует фон до завершения.",
       "Для новых возможностей Cascade обновите лаунчер и панели на всех VPS связки."
     ],
     "en": [
-      "Choose how to handle traffic for specific domains, IPv4 addresses, and subnets. You can send it through Cascade, route it directly, or block it. Rules are checked from top to bottom, and the first match applies. A default route handles all other traffic. For example, you can send selected websites through Cascade and route everything else directly.",
-      "Create lists manually, add them by URL with automatic updates, or choose from the built-in catalog. You can pause and resume routing rules while keeping your lists, rules, and rule order.",
-      "Cascade role swaps and recovery. The existing route stays active while an Access operation is in progress. If SSH to the exit drops after a switch, the launcher finishes the operation when the connection returns. A VPS retains its rules when it returns to the entry role. Fixed network rule cleanup when removing a stopped Cascade.",
-      "Client connection address. Set a per-VPS IPv4 address for newly generated client links and configurations.",
-      "Accesses and traffic. Fixed expiry extensions for imported subscriptions without a traffic quota, XRay traffic accounting, and display of traffic totals in terabytes.",
-      "Panel connection. Fixed launcher access through the local SSH tunnel when a system proxy is enabled.",
-      "Update the launcher and the panel on every VPS in the topology to use the new Cascade features."
+      "IPv6 between VPS hosts. Choose IPv4 or IPv6 independently for the primary and standby exits.",
+      "Manage exits through the entry VPS. If the launcher cannot reach an exit directly, you can manage it over SSH through the entry VPS using IPv6.",
+      "Automatic MTU checks. During setup, Cascade tests which packet sizes pass through the tunnel and lowers the MTU when needed.",
+      "Recovery after SSH interruptions. The launcher recovers interrupted operations more reliably. If a switch gets stuck, you can reset Cascade on the current VPS and set it up again. Existing client access is preserved.",
+      "Replacing and removing exits. Once an exit replacement is confirmed, an unreachable former VPS no longer blocks Rules. When an exit is removed, Cascade switches to the remaining exit if it is reachable. If the remaining exit cannot be prepared, Cascade is disabled and module removal completes on the selected VPS.",
+      "Status and settings. Tunnel status is tracked separately from internet egress checks. Server lists show the roles of VPS hosts already in use. The setup progress dialog is centered and blocks interaction with the background until the operation finishes.",
+      "To use the new Cascade features, update the launcher and the panel on every VPS in the topology."
     ]
   },
   "launcher": {
-    "version": "1.11.0",
+    "version": "1.12.0",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.11.0/Bandju-Panel_1.11.0_universal.dmg",
-        "sha256": "53f4752d59f0f4ffee7ab1436c2f87f65095961a31602fdfd9474fc667becc17"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.0/Bandju-Panel_1.12.0_universal.dmg",
+        "sha256": "86f3652f41e34cc2569347bfc0c97a4074b6336c2170f51eeb010a7b5e981e1e"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.11.0/Bandju-Panel_1.11.0_windows_x64_setup.exe",
-        "sha256": "6766690271696dfbb746063dc02a08a149698d3e77b4bfe83a03763679656b92"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.0/Bandju-Panel_1.12.0_windows_x64_setup.exe",
+        "sha256": "f59d0e877cad26f3c2825ab6f7eeca3fa5a503a963282dcc50b6b62c2db1edef"
       }
     },
     "panelUpdateContract": 1
@@ -68,14 +68,14 @@
   "panelUpdates": {
     "contract": 1,
     "panel": {
-      "version": "1.11.0",
-      "image": "ghcr.io/bandju/bandju-panel:1.11.0",
+      "version": "1.12.0",
+      "image": "ghcr.io/bandju/bandju-panel:1.12.0",
       "stableImage": "ghcr.io/bandju/bandju-panel:stable",
       "fallbackImages": [
-        "ghcr.dockerproxy.net/bandju/bandju-panel:1.11.0"
+        "ghcr.dockerproxy.net/bandju/bandju-panel:1.12.0"
       ],
-      "buildRef": "1.11.0+6a8d486",
-      "digest": "sha256:9a45ba3244f27a804ca8b8a0d6d4a413ae04e53ee4fdb7b4bbc43697ac1b2fe5"
+      "buildRef": "1.12.0+538b14a",
+      "digest": "sha256:dd5145e364be8aa56125f8b2253390f9cd38b6d1eef5f1bb23694673053ceab1"
     }
   },
   "operationalConfig": {
