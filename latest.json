@@ -1,46 +1,46 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "releaseVersion": "1.12.2",
-  "scope": "panel",
-  "version": "1.12.1",
-  "publishedAt": "2026-11-19T09:02:23.000Z",
-  "notes": "Исправлена совместимость со старым SSH на Windows и macOS.\nИсправлены таймауты и отключение выходов Cascade.\nДостаточно обновить лаунчер. Панель на VPS обновлять не нужно.",
-  "pub_date": "2026-11-15T21:55:08.000Z",
+  "releaseVersion": "1.12.3",
+  "scope": "both",
+  "version": "1.12.3",
+  "publishedAt": "2026-11-19T17:31:03.000Z",
+  "notes": "Панель обновляет NGINX сайта-заглушки до 1.30.7 и устраняет CVE-2026-123007. Работающая заглушка обновится автоматически после обновления панели на VPS.\nИсправили обновление адресов клиентских подключений при смене сохранённого SSH-адреса VPS. Лаунчер проверяет, что новый адрес является публичным IPv4.",
+  "pub_date": "2026-11-19T17:31:03.000Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.1/Bandju-Panel_1.12.1_windows_x64_setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVlBSVk2MWlDcmJPZWRYc3ZOcVpvaHppNFl0RDhoVW1odUZpQkNUZFc0TzBpSGN5cTY3a0RwUkcvL1lNbnNKMnBBNVFTZjN6K2pldklzRWxvTnB5eHdNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzgxMDk3CWZpbGU6QmFuZGp1IFBhbmVsXzEuMTIuMV94NjQtc2V0dXAuZXhlCndYaW13RmNpTktJcW9BUHVLUm94aVJVajRTeGJVc00zbklwN3kwOENXQ3lzV3REejUrUW1sMFM5Rm5vRkhMcitkMVd0VFBlelVQcFJaVi92WE5GTURBPT0K"
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.3/Bandju-Panel_1.12.3_windows_x64_setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVh5NU9vODN3MStvR1dVd3BXS1hXeUFVUm9KZGRrUXNlcGMwSFB5QWFJdjVOVGxKTVhLNytydVh4TVZ3Q3NTVEtyRldieEFKVDlhZHhxdmlJbUNOTkFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTEwNjg0CWZpbGU6QmFuZGp1IFBhbmVsXzEuMTIuM194NjQtc2V0dXAuZXhlCmlOU0lVWEVwYXRzSkVlWXcvT1ZRZkRERTBzTmYrR05wckUxbHVpUmJzVFFrK2J5K3ppVytrd01SdEkvenVFTmt5eUtLRC9yYzZvdjhnS1Y0TzM1dURnPT0K"
     },
     "darwin-aarch64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.1/Bandju-Panel_1.12.1_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJOTjJpK3Q0MWpodmhhNmNKZ0lKRXM1dWtjaVB0NnpjcWs5MmVzYmJkbzVKeFpTK2ZVZGRlNDcrY3VvNGU3WWJZNnQ0MTk3ajJpMTFoN2t4UnZuZlFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzgwNzA0CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKa3h4Q2Z3SnNqY0dkZE95Ly8xV0NBNDJnRkFxbCtpeFRuLzZ2SHhqOTBSZkZFYTVNVEJkUkNtUG4reVlwZlV4UWFGUFhJazA1aTFVREVnbmx6OXZwQ0E9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.3/Bandju-Panel_1.12.3_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVpqZUZtME8yK3NSeVJZdWl5MExodWVQZjRWbDdiTVZkWlUvM1NwNjVVTDZ1Mk12cnJnalllY083eHdXRkdZZkMrckU3OXRqekhpemxOajYzK29WN3d3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTEwNjkyCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKdkR6cFlaTXBaUFB6cjhJL0RNdHNRU0RxQWQwR3UrNHFSZHRFdy9McFQxdVUwL2tyMzRUWjJzVWNOeG1UWWR4YXNkS054MGdYcDRmK0RTakpWVzN5Q2c9PQo="
     },
     "darwin-x86_64": {
-      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.1/Bandju-Panel_1.12.1_universal.app.tar.gz",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVJOTjJpK3Q0MWpodmhhNmNKZ0lKRXM1dWtjaVB0NnpjcWs5MmVzYmJkbzVKeFpTK2ZVZGRlNDcrY3VvNGU3WWJZNnQ0MTk3ajJpMTFoN2t4UnZuZlFjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzgwNzA0CWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKa3h4Q2Z3SnNqY0dkZE95Ly8xV0NBNDJnRkFxbCtpeFRuLzZ2SHhqOTBSZkZFYTVNVEJkUkNtUG4reVlwZlV4UWFGUFhJazA1aTFVREVnbmx6OXZwQ0E9PQo="
+      "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.3/Bandju-Panel_1.12.3_universal.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQlRSQXgvN3NWTVpqZUZtME8yK3NSeVJZdWl5MExodWVQZjRWbDdiTVZkWlUvM1NwNjVVTDZ1Mk12cnJnalllY083eHdXRkdZZkMrckU3OXRqekhpemxOajYzK29WN3d3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTEwNjkyCWZpbGU6QmFuZGp1IFBhbmVsLmFwcC50YXIuZ3oKdkR6cFlaTXBaUFB6cjhJL0RNdHNRU0RxQWQwR3UrNHFSZHRFdy9McFQxdVUwL2tyMzRUWjJzVWNOeG1UWWR4YXNkS054MGdYcDRmK0RTakpWVzN5Q2c9PQo="
     }
   },
   "releaseNotes": {
     "ru": [
-      "Списки OpenCCK в Cascade теперь загружаются и обновляются через резервное зеркало, если основной источник недоступен. Это работает и для уже добавленных списков.",
-      "Достаточно обновить панель на входном VPS."
+      "Панель обновляет NGINX сайта-заглушки до 1.30.7 и устраняет CVE-2026-123007. Работающая заглушка обновится автоматически после обновления панели на VPS.",
+      "Исправили обновление адресов клиентских подключений при смене сохранённого SSH-адреса VPS. Лаунчер проверяет, что новый адрес является публичным IPv4."
     ],
     "en": [
-      "Cascade now downloads and refreshes OpenCCK lists from a fallback mirror when the primary source is unavailable. This also applies to lists you’ve already added.",
-      "Update the panel on the entry VPS."
+      "The panel updates the placeholder site to NGINX 1.30.7 and fixes CVE-2026-123007. Running placeholder sites update automatically after you update the panel on the VPS.",
+      "Fixed client endpoint updates when changing a saved VPS SSH address. The launcher checks that the new address is a public IPv4 address."
     ]
   },
   "launcher": {
-    "version": "1.12.1",
+    "version": "1.12.3",
     "downloads": {
       "macos": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.1/Bandju-Panel_1.12.1_universal.dmg",
-        "sha256": "15fb7783c138e83fa462f6e0a176d6befd52ce0f59f59895e41c924777591134"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.3/Bandju-Panel_1.12.3_universal.dmg",
+        "sha256": "9aae7b31ac4ff7671cfb8de84c9373a216a17dca09f295b67379cba39cc13a82"
       },
       "windows": {
-        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.1/Bandju-Panel_1.12.1_windows_x64_setup.exe",
-        "sha256": "3ba509a2ce1f02c77229d42055eedc38b6d0d60dc53e9dfe97a7f25ad84f4e16"
+        "url": "https://github.com/bandju/bandju-panel-releases/releases/download/v1.12.3/Bandju-Panel_1.12.3_windows_x64_setup.exe",
+        "sha256": "84d965f8d1d428b12c1bdf8ba349c83e6330a881ab9339449be30254d7361c94"
       }
     },
     "panelUpdateContract": 1
@@ -58,20 +58,20 @@
   "panelUpdates": {
     "contract": 1,
     "panel": {
-      "version": "1.12.2",
-      "image": "ghcr.io/bandju/bandju-panel:1.12.2",
+      "version": "1.12.3",
+      "image": "ghcr.io/bandju/bandju-panel:1.12.3",
       "stableImage": "ghcr.io/bandju/bandju-panel:stable",
       "fallbackImages": [
-        "ghcr.dockerproxy.net/bandju/bandju-panel:1.12.2"
+        "ghcr.dockerproxy.net/bandju/bandju-panel:1.12.3"
       ],
-      "buildRef": "1.12.2+a90faa1",
-      "digest": "sha256:babd843f11f03b5f9013bf4dabed1f372f4f43a4a634a159e7923bcf01413f7f"
+      "buildRef": "1.12.3+a161eb8",
+      "digest": "sha256:5e3f4ca6436ef988625cbd0917c8cc8e805581bd7ba31564d00c92b68b48d816"
     }
   },
   "operationalConfig": {
     "schemaVersion": 1,
-    "revision": 9,
-    "publishedAt": "2026-10-13T02:18:18Z",
+    "revision": 10,
+    "publishedAt": "2026-11-19T16:58:04Z",
     "panelImageMirrorRegistries": [
       "ghcr.dockerproxy.net"
     ],
@@ -85,9 +85,9 @@
         "docker.io/curlimages/curl:8.12.1@sha256:94e9e444bcba979c2ea12e27ae39bee4cd10bc7041a472c4727a558e213744e6"
       ],
       "domain-nginx": [
-        "docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
-        "ghcr.io/bandju/runtime-nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
-        "ghcr.dockerproxy.net/bandju/runtime-nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10"
+        "docker.io/library/nginx:1.30.7-alpine@sha256:4d1d4ce08432dc7dfe4af762cb224ce6b5273ae878f41e020ea2425d02ea91a4",
+        "ghcr.io/bandju/runtime-nginx:1.30.7-alpine@sha256:4d1d4ce08432dc7dfe4af762cb224ce6b5273ae878f41e020ea2425d02ea91a4",
+        "ghcr.dockerproxy.net/bandju/runtime-nginx:1.30.7-alpine@sha256:4d1d4ce08432dc7dfe4af762cb224ce6b5273ae878f41e020ea2425d02ea91a4"
       ],
       "certbot": [
         "docker.io/certbot/certbot:v5.6.0@sha256:0107d084c225631fc64a8313e19adb07275f7296fde338f7dfa93986c80b2e3e",
