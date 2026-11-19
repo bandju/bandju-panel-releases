@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "releaseVersion": "1.12.1",
-  "scope": "launcher",
+  "releaseVersion": "1.12.2",
+  "scope": "panel",
   "version": "1.12.1",
-  "publishedAt": "2026-11-15T21:55:08.000Z",
+  "publishedAt": "2026-11-19T09:02:23.000Z",
   "notes": "Исправлена совместимость со старым SSH на Windows и macOS.\nИсправлены таймауты и отключение выходов Cascade.\nДостаточно обновить лаунчер. Панель на VPS обновлять не нужно.",
   "pub_date": "2026-11-15T21:55:08.000Z",
   "platforms": {
@@ -23,14 +23,12 @@
   },
   "releaseNotes": {
     "ru": [
-      "Исправлена совместимость со старым SSH на Windows и macOS.",
-      "Исправлены таймауты и отключение выходов Cascade.",
-      "Достаточно обновить лаунчер. Панель на VPS обновлять не нужно."
+      "Списки OpenCCK в Cascade теперь загружаются и обновляются через резервное зеркало, если основной источник недоступен. Это работает и для уже добавленных списков.",
+      "Достаточно обновить панель на входном VPS."
     ],
     "en": [
-      "Fixed compatibility with older SSH versions on Windows and macOS.",
-      "Fixed timeouts and Cascade exit shutdown.",
-      "Update the launcher only. No VPS panel update is required."
+      "Cascade now downloads and refreshes OpenCCK lists from a fallback mirror when the primary source is unavailable. This also applies to lists you’ve already added.",
+      "Update the panel on the entry VPS."
     ]
   },
   "launcher": {
@@ -60,14 +58,14 @@
   "panelUpdates": {
     "contract": 1,
     "panel": {
-      "version": "1.12.0",
-      "image": "ghcr.io/bandju/bandju-panel:1.12.0",
+      "version": "1.12.2",
+      "image": "ghcr.io/bandju/bandju-panel:1.12.2",
       "stableImage": "ghcr.io/bandju/bandju-panel:stable",
       "fallbackImages": [
-        "ghcr.dockerproxy.net/bandju/bandju-panel:1.12.0"
+        "ghcr.dockerproxy.net/bandju/bandju-panel:1.12.2"
       ],
-      "buildRef": "1.12.0+538b14a",
-      "digest": "sha256:dd5145e364be8aa56125f8b2253390f9cd38b6d1eef5f1bb23694673053ceab1"
+      "buildRef": "1.12.2+a90faa1",
+      "digest": "sha256:babd843f11f03b5f9013bf4dabed1f372f4f43a4a634a159e7923bcf01413f7f"
     }
   },
   "operationalConfig": {
