@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "channel": "beta",
-  "releaseVersion": "2.0.6",
+  "releaseVersion": "2.0.7",
   "scope": "panel",
   "version": "2.0.5",
-  "publishedAt": "2026-11-02T07:54:33.000Z",
+  "publishedAt": "2026-11-19T18:07:44.000Z",
   "notes": "Исправлены проверки безопасности при возврате из беты на панель 1.9.0.\nИсправлен повтор прерванного создания подключения XRay после перезапуска сервиса. Выданный ключ сохраняется.\nПовторный перевод в бету автоматически обрабатывает старую запись выключенного Cascade. Ручная очистка больше не требуется.\nДля получения всех исправлений обновите Beta-лаунчер и панель на выбранных VPS до версии 2.0.5.",
   "pub_date": "2026-11-01T20:44:28.000Z",
   "platforms": {
@@ -23,12 +23,12 @@
   },
   "releaseNotes": {
     "ru": [
-      "Исправлена ошибка, из-за которой активный UDP-трафик AmneziaWG мог мешать обновлению панели и автоматическому возврату предыдущей версии.",
-      "Для получения исправления обновите панель на выбранных VPS до версии 2.0.6 через Beta-лаунчер. Обновление самого лаунчера не требуется."
+      "Обновили NGINX сайта-заглушки до 1.30.7, чтобы закрыть уязвимость CVE-2026-123007.",
+      "Обновите панель на VPS до 2.0.7 через Beta-лаунчер. Работающая заглушка обновится автоматически."
     ],
     "en": [
-      "Fixed an issue where active AmneziaWG UDP traffic could prevent panel updates and automatic rollback to the previous version.",
-      "To receive this fix, update the panel on selected VPSs to version 2.0.6 through the Beta launcher. No launcher update is required."
+      "Updated the placeholder site's NGINX to 1.30.7 to fix CVE-2026-123007.",
+      "Update the panel on your VPS to 2.0.7 through the Beta launcher. Running placeholder sites will update automatically."
     ]
   },
   "launcher": {
@@ -58,20 +58,20 @@
   "panelUpdates": {
     "contract": 1,
     "panel": {
-      "version": "2.0.6",
-      "image": "ghcr.io/bandju/bandju-panel:2.0.6",
+      "version": "2.0.7",
+      "image": "ghcr.io/bandju/bandju-panel:2.0.7",
       "stableImage": "ghcr.io/bandju/bandju-panel:stable",
       "fallbackImages": [
-        "ghcr.dockerproxy.net/bandju/bandju-panel:2.0.6"
+        "ghcr.dockerproxy.net/bandju/bandju-panel:2.0.7"
       ],
-      "buildRef": "2.0.6+359967f",
-      "digest": "sha256:d098f13a6cc10c7f0d057a24e8604237071ae5b5f5ef1e1b614a9e40abf710dd"
+      "buildRef": "2.0.7+bf4801c",
+      "digest": "sha256:fb3a305a026e5af8aa36bdbe043542d07293e8bacab482d8265b6fac54df7f50"
     }
   },
   "operationalConfig": {
     "schemaVersion": 1,
-    "revision": 9,
-    "publishedAt": "2026-10-13T02:18:18Z",
+    "revision": 10,
+    "publishedAt": "2026-11-19T16:58:04Z",
     "panelImageMirrorRegistries": [
       "ghcr.dockerproxy.net"
     ],
@@ -85,9 +85,9 @@
         "docker.io/curlimages/curl:8.12.1@sha256:94e9e444bcba979c2ea12e27ae39bee4cd10bc7041a472c4727a558e213744e6"
       ],
       "domain-nginx": [
-        "docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
-        "ghcr.io/bandju/runtime-nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10",
-        "ghcr.dockerproxy.net/bandju/runtime-nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10"
+        "docker.io/library/nginx:1.30.7-alpine@sha256:4d1d4ce08432dc7dfe4af762cb224ce6b5273ae878f41e020ea2425d02ea91a4",
+        "ghcr.io/bandju/runtime-nginx:1.30.7-alpine@sha256:4d1d4ce08432dc7dfe4af762cb224ce6b5273ae878f41e020ea2425d02ea91a4",
+        "ghcr.dockerproxy.net/bandju/runtime-nginx:1.30.7-alpine@sha256:4d1d4ce08432dc7dfe4af762cb224ce6b5273ae878f41e020ea2425d02ea91a4"
       ],
       "certbot": [
         "docker.io/certbot/certbot:v5.6.0@sha256:0107d084c225631fc64a8313e19adb07275f7296fde338f7dfa93986c80b2e3e",
